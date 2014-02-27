@@ -63,7 +63,7 @@ var connectData = {
 oracle.connect(connectData, function(err, connection) {
     if (err) { console.log("Error connecting to db:", err); return; }
 // Execution d'une requete et affichage du résultat dans les logs
-    connection.execute("SELECT  ev.ANNEE_PRO , frm.NOM_FORMATION , ev.PERIODE , ev.ETAT , ev.DESIGNATION FROM EVALUATION ev, FORMATION frm , ENSEIGNANT ens WHERE ev.No_ENSEIGNANT=ens.NO_ENSEIGNANT AND ev.CODE_FORMATION=pro.CODE_FORMATION AND pro.CODE_FORMATION=frm.CODE_FORMATION", [], function(err, results) {
+    connection.execute("SELECT * FROM ENSEIGNANT", [], function(err, results) {
         if (err) { console.log("Error executing query:", err); return; }
         console.log(results);
         connection.close(); // call only when query is finished executing
