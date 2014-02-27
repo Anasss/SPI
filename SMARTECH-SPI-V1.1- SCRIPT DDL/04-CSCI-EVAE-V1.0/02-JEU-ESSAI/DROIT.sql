@@ -1,0 +1,17 @@
+Insert into "DROIT" ("ID_EVALUATION","NO_ENSEIGNANT", "DUPLICATION", "CONSULTATION" )
+values (1, 1, 'O', 'O');
+
+Insert into "DROIT" ("ID_EVALUATION","NO_ENSEIGNANT", "DUPLICATION", "CONSULTATION" )
+values (1, 3, 'O', 'N');
+
+Insert into "DROIT" ("ID_EVALUATION","NO_ENSEIGNANT", "DUPLICATION", "CONSULTATION" )
+values (1, 2, 'N', 'O');
+
+Insert into "DROIT" ("ID_EVALUATION","NO_ENSEIGNANT", "DUPLICATION", "CONSULTATION" )
+values (2, 30, 'O', 'O');
+
+Insert into "DROIT" ("ID_EVALUATION","NO_ENSEIGNANT", "DUPLICATION", "CONSULTATION" )
+values (2, 1, 'N', 'N');
+
+Insert into "DROIT" ("ID_EVALUATION","NO_ENSEIGNANT", "DUPLICATION", "CONSULTATION" )
+values (2, 2, 'O', 'N');

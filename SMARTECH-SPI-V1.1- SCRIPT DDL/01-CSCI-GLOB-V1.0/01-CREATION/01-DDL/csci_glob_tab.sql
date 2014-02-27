@@ -1,0 +1,16 @@
+-- C:\tmp\dosi15\csci_glob.tab
+--
+-- Generated for Oracle 10g on Tue Oct 23  14:47:12 2012 by Server Generator 10.1.2.11.12
+ 
+
+
+PROMPT Creating Table 'CG_REF_CODES'
+CREATE TABLE CG_REF_CODES
+ (RV_DOMAIN VARCHAR2(100) NOT NULL
+ ,RV_LOW_VALUE VARCHAR2(240) NOT NULL
+ ,RV_HIGH_VALUE VARCHAR2(240)
+ ,RV_ABBREVIATION VARCHAR2(240)
+ ,RV_MEANING VARCHAR2(240)
+ )
+/
+
