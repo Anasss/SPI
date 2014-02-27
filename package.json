@@ -1,5 +1,5 @@
 {
-  "name": "Projet SPI",
+  "name": "Oracle",
   "description": "Projet SPI using Oracle database driver",
   "keywords": ["database", "db", "oracle"],
   "engines": {
@@ -16,3 +16,6 @@
   },
   "main": "./index.js"
 }
+
+
+
