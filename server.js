@@ -2,7 +2,8 @@
 var express = require('express')
   ,path = require('path')
   ,app = express()
-  ,eval = require('./routes/eval');
+  , accueil = require('./routes/accueil')  // routes par defaut
+  , eval = require('./routes/eval'); // eval
  
 // les vues seront placées dans le répertoire views
 app.set('views', __dirname + '/views');
@@ -44,8 +45,10 @@ app.get('/', function(req, res){
 });
 
 // la liste des evaluations -- Définie dans routes/eval.js
-app.get('/eval/listeEvaluations', eval.listeEvaluations);
 
+app.get('/eval/liste', eval.listeEvaluation);
+app.get('/index', accueil.index);
+app.post('/eval/edit/:titre', eval.NouvelleEvaluation);
 
 // Paramètres de connexion à la base de données
 module.exports = require('./lib/oracle');
