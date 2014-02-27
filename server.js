@@ -56,14 +56,14 @@ var connectData = {
     hostname: "localhost",
     port: 1521,
     database: "xe", // System ID (SID)
-    user: "system",
-    password: "abe0fe4e"
+    user: "nodejs",
+    password: "12345"
 }
 
 oracle.connect(connectData, function(err, connection) {
     if (err) { console.log("Error connecting to db:", err); return; }
 // Execution d'une requete et affichage du résultat dans les logs
-    connection.execute("SELECT systimestamp FROM dual", [], function(err, results) {
+    connection.execute("SELECT * FROM ENSEIGNANT", [], function(err, results) {
         if (err) { console.log("Error executing query:", err); return; }
         console.log(results);
         connection.close(); // call only when query is finished executing
