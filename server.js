@@ -3,7 +3,9 @@ var express = require('express')
   ,path = require('path')
   ,app = express()
   , accueil = require('./routes/accueil')  // routes par defaut
-  , eval = require('./routes/eval'); // eval
+  , eval = require('./routes/eval') // eval
+  , Afficher = require('./routes/accueil');
+ 
  
 // les vues seront placées dans le répertoire views
 app.set('views', __dirname + '/views');
@@ -33,14 +35,11 @@ app.get('/', function(req, res){
         title: "Utilisation de Node, Handlebars & Foundation",
         body: "Hello World using handlebars depuis server.js !"
     }
-
+	
     res.render('index.hbs', data);
 
     //Tell Express to render views/index.html
     //res.render('index.html', data);
-	
-	
-	
 
 });
 
@@ -68,7 +67,8 @@ oracle.connect(connectData, function(err, connection) {
 // Execution d'une requete et affichage du résultat dans les logs
     connection.execute("SELECT * FROM ENSEIGNANT", [], function(err, results) {
         if (err) { console.log("Error executing query:", err); return; }
-        console.log(results);
+        //accueil.afficher(results);
+		console.log(results);
         connection.close(); // call only when query is finished executing
     });
 });
