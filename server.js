@@ -1,7 +1,8 @@
 // Chargement de modules utilisés. 
 var express = require('express')
   ,path = require('path')
-  ,app = express();
+  ,app = express()
+  ,eval = require('./routes/eval');
  
 // les vues seront placées dans le répertoire views
 app.set('views', __dirname + '/views');
@@ -36,7 +37,14 @@ app.get('/', function(req, res){
 
     //Tell Express to render views/index.html
     //res.render('index.html', data);
+	
+	
+	
+
 });
+
+// la liste des evaluations -- Définie dans routes/eval.js
+app.get('/eval/listeEvaluations', eval.listeEvaluations);
 
 app.listen(9090);
 console.log('Server running at http://127.0.0.1:9090/');
