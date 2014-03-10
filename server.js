@@ -29,19 +29,7 @@ app.configure(function(){
     //app.engine('html', require('hbs').__express); - 
 });
 
-app.get('/', function(req, res){
 
-    var data = {
-        title: "Utilisation de Node, Handlebars & Foundation",
-        body: "Hello World using handlebars depuis server.js !"
-    }
-	
-    res.render('index.hbs', data);
-
-    //Tell Express to render views/index.html
-    //res.render('index.html', data);
-
-});
 
 // la liste des evaluations -- Définie dans routes/eval.js
 
@@ -53,7 +41,7 @@ app.post('/eval/edit/:titre', eval.NouvelleEvaluation);
 module.exports = require('./lib/oracle');
 
 var oracle = require('./lib/oracle');
-
+var Enseignants = {};
 var connectData = {
     hostname: "localhost",
     port: 1521,
@@ -62,15 +50,38 @@ var connectData = {
     password: "12345"
 }
 
+
+
 oracle.connect(connectData, function(err, connection) {
     if (err) { console.log("Error connecting to db:", err); return; }
 // Execution d'une requete et affichage du résultat dans les logs
-    connection.execute("SELECT * FROM ENSEIGNANT", [], function(err, results) {
+    connection.execute("select EVE_ANNEE_PRO,FRM_NOM_FORMATION FROM V_EVALUATION", [], function(err, results) {
         if (err) { console.log("Error executing query:", err); return; }
-        //accueil.afficher(results);
-		console.log(results);
+        accueil.afficher(results);
+		// Affiche le premier nom récupèré depuis la base de données 
+		// results[0].nom donne Clochette
+		Enseignants = results[0].FRM_NOM_FORMATION ;
+		console.log("-------------------------");
+		console.log(Enseignants);		
         connection.close(); // call only when query is finished executing
     });
+
+	
+	app.get('/', function(req, res){
+
+    var data = {
+	// Affichage du nom de la formation à partir de la BDD 
+        title: Enseignants,
+        body: "Hello World using handlebars depuis server.js !"
+    }
+	
+    res.render('index.hbs', data);
+
+    //Tell Express to render views/index.html
+    //res.render('index.html', data);
+
+});
+	
 });
 
 app.listen(9090);
