@@ -1,0 +1,1432 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Phoenix</title>
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!-- ===================== Touch Icons ===================== -->
+    <link rel="shortcut icon" href="favicon.ico">
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="apple-touch-icon-144-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="apple-touch-icon-114-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="apple-touch-icon-72-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" href="apple-touch-icon-57-precomposed.png">
+
+    <!-- ===================== CSS ===================== -->    
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>  
+    <link rel="stylesheet" href="css/bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="css/bootstrap/bootstrap-responsive.min.css">    
+
+    <!-- Site specific - CSS -->   
+    <link rel="stylesheet" href="css/theme_light/prettify.css">
+    <link rel="stylesheet" href="css/theme_light/tables/dataTables.css">         
+    <link rel="stylesheet" href="css/theme_light/jquery-ui-1.8.20.custom.css">
+    <link rel="stylesheet" href="css/theme_light/tagedit/jquery.tagedit.css">
+    <link rel="stylesheet" href="../../blueimp.github.com/Bootstrap-Image-Gallery/css/bootstrap-image-gallery.min.css">
+    <link rel="stylesheet" href="css/theme_light/fileupload/jquery.fileupload-ui.css">
+    <link rel="stylesheet" href="css/theme_light/forms/jquery.cleditor.css">    
+    <link rel="stylesheet" href="css/theme_light/tables/dataTables.css">  
+
+    <!-- Common - CSS -->     
+    <link rel="stylesheet" href="css/theme_light/common.css">  
+    <link rel="stylesheet" href="css/theme_light.css" class="style_set">
+    
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+  <body> 
+    <div id="loader_cont"><img src="img/loaders/page_loader.gif"></div> 
+    <div class="options_cont">
+      <form name="myForm">
+        <a class="options_btn" href="#">OPTIONS</a> 
+        <div class="options group">
+          <div>
+            <p>Background image:</p>
+            <ul class="background_list">
+              <li><a class="current" id='bg_1' href="#">bg_1</a></li>
+              <li><a id='bg_2' href="#">bg_2</a></li>
+              <li><a id='bg_3' href="#">bg_3</a></li>
+              <li><a id='bg_4' href="#">bg_4</a></li>
+              <li><a id='bg_5' href="#">bg_5</a></li>
+              <li><a id='bg_6' href="#">bg_6</a></li>
+              <li><a id='bg_7' href="#">bg_7</a></li>
+              <li><a id='bg_8' href="#">bg_8</a></li>
+              <li><a id='bg_9' href="#">bg_9</a></li>
+              <li><a id='bg_10' href="#">bg_10</a></li>
+            </ul>
+          </div>
+          <div>
+            <p>Color styling:</p>
+            <ul class="color_list">
+              <li><a class="current" id='c_1' href="#" title="Rose">rose</a></li>
+              <li><a id='c_2' href="#" title="Orange">orange</a></li>
+              <li><a id='c_3' href="#" title="Apple Green">apple_green</a></li>
+              <li><a id='c_4' href="#" title="Sky Blue">sky_blue</a></li>
+              <li><a id='c_5' href="#" title="Purple">purple</a></li>
+            </ul>            
+          </div>
+          <div class="top_mn_setup">
+            <p>Display top menu on:</p>
+            <div>
+              <input id="top_menu_click" checked="checked" type="radio" value="1" class="menu_show" name="top_menu_show"><label for="top_menu_click">Click</label>
+              <input id="top_menu_hover" type="radio" value="0" class="menu_show" name="top_menu_show"><label for="top_menu_hover">Hover</label>
+            </div>            
+          </div>  
+          <div class="clear_cache_cont"><a class="btn btn-mini" href="#">Clear Cache</a></div>              
+        </div> 
+      </form> 
+    </div>    
+    <div class="navbar navbar-fixed-top">
+      <div class="navbar-inner">
+        <div class="container">
+          <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+            <span class="sweet-gray sweet-go-back-from-screen">&nbsp;</span>
+          </a>
+          <div class="nav-collapse">            
+            <ul class="nav main_nav" role="navigation">                
+                <li id="mail" class="styled dropdown mail">
+                  <a class="dropdown-toggle" data-toggle="dropdown" href="#">Mail<span class="info">2</span></a>
+                  <ul class="dropdown-menu top_menu">
+                      <li><a class="mn_new_msg" href="mail.html"><span>New Message</span></a></li>
+                      <li><a class="mn_inbox" href="mail.html"><span>Inbox</span></a></li>
+                      <li><a class="mn_outbox" href="mail.html"><span>OutBox</span></a></li>
+                      <li><a class="mn_spam" href="mail.html"><span>Spam</span></a></li>
+                      <li><a class="mn_trash" href="mail.html"><span>Trash</span></a></li>
+                  </ul>
+                </li>
+                <li id="chat" class="styled chat">
+                  <a data-toggle="modal" href="#chat_modal">Chat<span class="info">5</span></a>     
+                </li>
+                <li id="notification" class="styled dropdown notification">
+                  <a class="dropdown-toggle" data-toggle="dropdown" href="#">Notification<span class="info">4</span></a>
+                  <ul class="dropdown-menu">
+                    <li>
+                        <a href="#">                          
+                          Lorem ipsum dolor sit amet, consectetur adipiscing elit...
+                            <span>07/19/2012</span>                       
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                          Vivamus ut enim vitae nibh aliquet pre-tium lobortis sit amet tortor...
+                            <span>07/19/2012</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                          Ut id dui arcu, non tempus nunc...
+                            <span>07/19/2012</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                          Morbi faucibus suscipit nibh, ut pellen-tesque lectus pellentesque non....
+                            <span>07/19/2012</span>
+                        </a>
+                    </li>                        
+                    <li class="show_all"><a href="#">Show all notifications</a></li> 
+                  </ul>
+                </li>                          
+            </ul> 
+            <ul class="main_nav nav pull-right">                
+                <li id="search" class="search"> 
+                  <a href="#">Search</a> 
+                  <div class="search_cont">
+                      <form class="navbar-search form-search">                          
+                          <input type="text" class="input-medium search-query" placeholder="Search">
+                          <button type="submit">Search</button>
+                      </form> 
+                  </div>              
+                </li> 
+                <li id="settings" class="styled dropdown settings">
+                  <a class="dropdown-toggle" data-toggle="dropdown" href="#">Settings</a>
+                    <ul class="dropdown-menu top_menu">
+                        <li class="show_all">Settings</li>
+                        <li><a class="mn_site" href="#"><span>Site</span></a></li>
+                        <li><a class="mn_admin" href="#"><span>Admin</span></a></li>
+                        <li><a class="mn_mail" href="#"><span>Mail</span></a></li>
+                        <li><a class="mn_user" href="#"><span>User</span></a></li>
+                    </ul>
+                </li>
+                <li id="profile" class="styled dropdown profile">
+                  <a class="dropdown-toggle" data-toggle="dropdown" href="#">Profile</a>
+                    <ul class="dropdown-menu top_menu">                        
+                        <li class="profile group">
+                          <img src="img/general/user_1.jpg" width="50" height="50" alt="User">
+                          <ul>
+                            <li><strong>John Doe</strong></li>
+                            <li>@johndoe</li>
+                            <li><span>Administrator</span></li>
+                          </ul>
+                        </li>
+                        <li><a class="mn_settings" href="#"><span>My Settings</span></a></li>
+                        <li><a class="mn_profile" href="#"><span>My Profile</span></a></li>
+                        <li><a class="mn_logout" href="login.html"><span>Logout</span></a></li>
+                    </ul>
+                </li>                          
+            </ul>           
+          </div>
+          <h1 class="brand"><a href="index-2.html">PHOENIX</a></h1>                                       
+        </div>
+      </div>
+    </div>
+            
+    <div class="container">              
+      <div class="main_content row-fluid">
+
+        <div class="span3">
+
+          <div class="side_nav sidebar-nav" data-spy="affix" data-offset-top="150">
+			<h3 class="main_menu group">
+                <span class="title">Main Menu</span>
+                <a id="nav_list_btn" class="btn-collapse btn btn-inverse">
+                  <span class="sweet-gray sweet-go-back-from-screen">&nbsp;</span>              
+                </a>
+            </h3>
+            <ul class="nav nav-list">                          
+              <li><a class="home" href="index-2.html">Dashboard</a></li>
+              <li class="sub">
+                <a class="forms" href="#">Forms<span>4</span></a>
+                <ul>
+                  <li><a href="forms_layout.html">Layout</a></li>
+                  <li><a href="forms_elements.html">Elements</a></li>
+                  <li><a href="forms_validation.html">Validation</a></li>
+                  <li><a href="forms_uploader.html">File uploader &amp; WYSIWYG</a></li>                  
+                </ul>
+              </li>
+              <li><a class="charts" href="charts.html">Charts</a></li>
+              <li class="sub">
+                <a class="tables" href="#">Tables<span>2</span></a>
+                <ul>
+                  <li><a href="tables_basic.html">Basic</a></li>
+                  <li><a href="tables_advanced.html">Advanced</a></li>
+                </ul>
+              </li>
+              <li><a class="calendar" href="calendar.html">Calendar</a></li>
+              <li><a class="gallery" href="gallery.html">Gallery</a></li>
+              <li class="sub">
+                <a class="uielements" href="#">UI Elements<span>8</span></a>
+                <ul>
+                  <li><a href="accordions.html">Accordions</a></li>                  
+                  <li><a href="buttons_icons.html">Buttons and Icons</a></li>
+                  <li><a href="breadcrumbs.html">Breadcrumbs</a></li>
+                  <li><a href="progressbars.html">Progressbars</a></li>                  
+                  <li><a href="sliders.html">Sliders</a></li>                                    
+                  <li><a href="tabs.html">Tabs</a></li>        
+                  <li><a href="tooltips_popovers.html">Tooltips and Popovers</a></li>                                    
+                  <li><a href="miscellaneous.html">Misc</a></li>
+                </ul>
+              </li>              
+              <li><a class="filemanager" href="file_manager.html">File Manager</a></li>
+              <li><a class="typography" href="typography.html">Typography</a></li>
+              <li><a class="gridsystem" href="grid_system.html">Grid System</a></li>
+              <li><a class="widgets" href="widgets.html">Widgets</a></li>
+              <li class="sub active open">
+                <a class="pages" href="#">Pages<span>4</span></a>
+                <ul>
+                  <li><a href="login.html">Login</a></li>                  
+                  <li><a href="search.html">Search</a></li>
+                  <li class="active"><a href="mail.html">Mail</a></li>
+                  <li class="sub"> 
+                    <a href="#">Error<span>6</span></a>
+                    <ul>
+                      <li><a href="error_403.html">403</a></li>
+                      <li><a href="error_404.html">404</a></li>
+                      <li><a href="error_405.html">405</a></li>
+                      <li><a href="error_500.html">500</a></li>
+                      <li><a href="error_503.html">503</a></li>
+                      <li><a href="offline.html">Offline</a></li>
+                    </ul>
+                  </li>                  
+                </ul>
+              </li>                        
+            </ul>
+          </div><!--/.well -->
+        </div><!--/span-->
+        <div class="span9">
+          <div class="row-fluid">
+            <div class="span12">
+
+              <ul class="breadcrumb br_styled no_space">   
+                <li>
+                  <a href="index-2.html">Dashboard</a> <span class="divider">/</span>
+                </li>                             
+                <li class="active">Mail</li>
+              </ul> 
+              <div class="mail_cont">
+                <ul id="mailTab" class="nav nav-tabs tab_styled_mail">
+                  <li class="active"><a href="#new_msg"><i class="sweet-gray sweet-pencil"></i>New Message</a></li>
+                  <li><a href="#inbox"><i class="sweet-gray sweet-mail"></i>Inbox</a></li>                  
+                  <li><a href="#outbox"><i class="sweet-gray sweet-bended-arrow-up"></i>OutBox</a></li>                  
+                  <li><a href="#spam"><i class="sweet-gray sweet-pacman-ghost"></i>Spam</a></li>                  
+                  <li><a href="#trash"><i class="sweet-gray sweet-trashcan"></i>Trash</a></li>                  
+                </ul>
+                <div class="tab-content tab_content_mail">
+                  <div id="new_msg" class="tab-pane new_msg">
+                      <ul class="new_msg_input">
+                        <li><span class="title">To</span><input type="text" name="tag[]" value="" class="tag"/></li>
+                        <li class="cc_cont"><span class="title">Cc</span><input type="text" name="tag[]"  value="" class="cc"/></li>
+                        <li class="bcc_cont"><span class="title">Bcc</span><input type="text" name="tag[]" value="" class="bcc"/></li>
+                        <li class="subject_cont"><span class="title">Subject</span><input type="text" name="subject" value=""></li>
+                      </ul>
+                      <div class="file_upload_cont">
+                        <div class="btn-group new_msg_options" data-toggle="buttons-checkbox">
+                          <button id="attach_file" class="btn btn-small" type="button">Attach files</button>
+                          <button class="btn btn-small cc_btn">CC</button>
+                          <button class="btn btn-small bcc_btn">BCC</button>
+                        </div>
+                        
+                        <div class="file_upload">
+                          <form id="fileupload" action="http://themes.loxdesign.net/phoenix/server/php/" method="POST" enctype="multipart/form-data">
+                              <!-- The fileupload-buttonbar contains buttons to add/delete files and start/cancel the upload -->
+                              <div class="fileupload-buttonbar">
+                                  <div>
+                                      <!-- The fileinput-button span is used to style the file input field as button -->
+                                      <span class="btn btn-small btn-success fileinput-button">
+                                          <i class="icon-plus icon-white"></i>
+                                          <span>Add files...</span>
+                                          <input type="file" name="files[]" multiple>
+                                      </span>
+                                      <button type="submit" class="btn btn-small btn-primary start">
+                                          <i class="icon-upload icon-white"></i>
+                                          <span>Start upload</span>
+                                      </button>
+                                      <button type="reset" class="btn btn-small btn-warning cancel">
+                                          <i class="icon-ban-circle icon-white"></i>
+                                          <span>Cancel upload</span>
+                                      </button>
+                                      <button type="button" class="btn btn-small btn-danger delete">
+                                          <i class="icon-trash icon-white"></i>
+                                          <span>Delete</span>
+                                      </button>
+                                      <input type="checkbox" class="toggle delete_all">
+                                      <span class="btn btn-small btn-inverse bezar">
+                                          <i class="icon-remove icon-white"></i>                                          
+                                      </span>
+                                  </div>
+                                  <!-- The global progress information -->
+                                  <div class="fileupload-progress fade">
+                                      <!-- The global progress bar -->
+                                      <div class="progress progress-success progress-striped active" role="progressbar" aria-valuemin="0" aria-valuemax="100">
+                                          <div class="bar" style="width:0%;"></div>
+                                      </div>
+                                      <!-- The extended global progress information -->
+                                      <div class="progress-extended">&nbsp;</div>
+                                  </div>
+                              </div>
+                              <!-- The loading indicator is shown during file processing -->
+                              <div class="fileupload-loading"></div>
+                              <br>
+                              <!-- The table listing the files available for upload/download -->
+                              <table role="presentation" class="table table-striped"><tbody class="files" data-toggle="modal-gallery" data-target="#modal-gallery"></tbody></table>
+                          </form>
+                        </div>
+                      </div>
+
+                      <div class="new_msg_text"><textarea id="cleeditor" name="cleeditor"></textarea></div>
+                      <div class="btn_align">
+                        <button class="btn btn-inverse btn-small" type="button">Send</button>
+                      </div>
+
+                  </div>
+                  <div id="inbox" class="tab-pane group">
+                    <table class="example display message_tbl">
+                        <thead>
+                            <tr>
+                                <th class="col"><input name="chbox" type="checkbox" value=""></th>
+                                <th class="col"><i class="icon-gray icon-exclamation-sign"></i></th>
+                                <th><strong>FROM</strong></th>
+                                <th><strong>SUBJECT</strong></th>
+                                <th><strong>DATE</strong></th>
+                                <th class="col"><i class="sweet-gray sweet-paperclip"></i></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="new">
+                                <td class="col"><input name="chbox" type="checkbox" value=""></td>
+                                <td class="col"><i class="icon-gray icon-exclamation-sign" title="New message"></i></td>
+                                <td><a href="#">lorem@impsum.com</a></td>
+                                <td><a href="#">Lorem ipsum dolor sit amet, consectetur adipiscing elit</a></td>
+                                <td>12/09/2012</td>
+                                <td class="col"><i class="sweet-gray sweet-paperclip"  title="This message has attached files"></i></td>
+                            </tr>
+                            <tr class="new">
+                                <td class="col"><input name="chbox" type="checkbox" value=""></td>
+                                <td class="col"><i class="icon-gray icon-exclamation-sign" title="New message"></i></td>
+                                <td><a href="#">lorem@impsum.com</a></td>
+                                <td><a href="#">Lorem ipsum dolor sit amet, consectetur adipiscing elit</a></td>
+                                <td>11/09/2012</td>
+                                <td class="col"><i class="sweet-gray sweet-paperclip"  title="This message has attached files"></i></td>
+                            </tr>
+                            <tr>
+                                <td class="col"><input name="chbox" type="checkbox" value=""></td>
+                                <td class="col"><i class="sweet-gray sweet-bended-arrow-left" title="Replied"></i></td>
+                                <td><a href="#">nulla@sit.com</a></td>
+                                <td><a href="#">Cras adipiscing nulla non elit dignissim nec euismod eros tristique</a></td>
+                                <td>08/09/2012</td>
+                                <td class="col">&nbsp;</td>
+                            </tr>
+                            <tr>
+                                <td class="col"><input name="chbox" type="checkbox" value=""></td>
+                                <td class="col"></td>
+                                <td><a href="#">dolor@sit.com</a></td>
+                                <td><a href="#">Fusce sit amet dui at mauris cursus egestas sed at enim</a></td>
+                                <td>02/09/2012</td>
+                                <td class="col">&nbsp;</td>
+                            </tr>
+                            <tr>
+                                <td class="col"><input name="chbox" type="checkbox" value=""></td>
+                                <td class="col"><i class="sweet-gray sweet-bended-arrow-right" title="Forwarded"></i></td>
+                                <td><a href="#">lectus@nisi.com</a></td>
+                                <td><a href="#">In non nisi lectus, at molestie metus</a></td>
+                                <td>30/08/2012</td>
+                                <td class="col"><i class="sweet-gray sweet-paperclip" title="This message has attached files"></i></td>
+                            </tr>                            
+                            <tr>
+                                <td class="col"><input name="chbox" type="checkbox" value=""></td>
+                                <td class="col">&nbsp;</td>
+                                <td><a href="#">lectus@nisi.com</a></td>
+                                <td><a href="#">In ut neque a eros molestie feugiat ut sit amet ligula</a></td>
+                                <td>28/08/2012</td>
+                                <td class="col">&nbsp;</td>
+                            </tr>
+                            <tr>
+                                <td class="col"><input name="chbox" type="checkbox" value=""></td>
+                                <td class="col">&nbsp;</td>
+                                <td><a href="#">eros@vitae.com</a></td>
+                                <td><a href="#">Maecenas vitae velit tortor, nec semper nibh</a></td>
+                                <td>16/08/2012</td>
+                                <td class="col">&nbsp;</td>
+                            </tr>
+                            <tr>
+                                <td class="col"><input name="chbox" type="checkbox" value=""></td>
+                                <td class="col"><i class="sweet-gray sweet-bended-arrow-left" title="Replied"></i></td>
+                                <td><a href="#">risus@nisi.com</a></td>
+                                <td><a href="#">Sed ac ante risus, in bibendum est</a></td>
+                                <td>12/08/2012</td>
+                                <td class="col">&nbsp;</td>
+                            </tr>
+                            <tr>
+                                <td class="col"><input name="chbox" type="checkbox" value=""></td>
+                                <td class="col">&nbsp;</td>
+                                <td><a href="#">lectus@eget.com</a></td>
+                                <td><a href="#">Suspendisse sit amet mauris eget augue ornare egestas</a></td>
+                                <td>07/08/2012</td>
+                                <td class="col">&nbsp;</td>
+                            </tr>
+                            <tr>
+                                <td class="col"><input name="chbox" type="checkbox" value=""></td>
+                                <td class="col"><i class="sweet-gray sweet-bended-arrow-right" title="Forwarded"></i></td>
+                                <td><a href="#">orci@nisi.com</a></td>
+                                <td><a href="#">Nam adipiscing orci sit amet risus congue at auctor magna molestie</a></td>
+                                <td>05/08/2012</td>
+                                <td class="col"><i class="sweet-gray sweet-paperclip" title="This message has attached files"></i></td>
+                            </tr>
+                            <tr>
+                                <td class="col"><input name="chbox" type="checkbox" value=""></td>
+                                <td class="col"><i class="sweet-gray sweet-bended-arrow-left" title="Replied"></i></td>
+                                <td><a href="#">nulla@sit.com</a></td>
+                                <td><a href="#">Cras adipiscing nulla non elit dignissim nec euismod eros tristique</a></td>
+                                <td>05/08/2012</td>
+                                <td class="col">&nbsp;</td>
+                            </tr>
+                            <tr>
+                                <td class="col"><input name="chbox" type="checkbox" value=""></td>
+                                <td class="col"></td>
+                                <td><a href="#">dolor@sit.com</a></td>
+                                <td><a href="#">Fusce sit amet dui at mauris cursus egestas sed at enim</a></td>
+                                <td>01/08/2012</td>
+                                <td class="col">&nbsp;</td>
+                            </tr>
+                            <tr>
+                                <td class="col"><input name="chbox" type="checkbox" value=""></td>
+                                <td class="col"><i class="sweet-gray sweet-bended-arrow-right" title="Forwarded"></i></td>
+                                <td><a href="#">lectus@nisi.com</a></td>
+                                <td><a href="#">In non nisi lectus, at molestie metus</a></td>
+                                <td>24/07/2012</td>
+                                <td class="col"><i class="sweet-gray sweet-paperclip" title="This message has attached files"></i></td>
+                            </tr>
+                            <tr>
+                                <td class="col"><input name="chbox" type="checkbox" value=""></td>
+                                <td class="col"><i class="icon-gray icon-exclamation-sign" title="New message"></i></td>
+                                <td><a href="#">lorem@impsum.com</a></td>
+                                <td><a href="#">Lorem ipsum dolor sit amet, consectetur adipiscing elit</a></td>
+                                <td>21/07/2012</td>
+                                <td class="col"><i class="sweet-gray sweet-paperclip"  title="This message has attached files"></i></td>
+                            </tr>
+                            <tr>
+                                <td class="col"><input name="chbox" type="checkbox" value=""></td>
+                                <td class="col">&nbsp;</td>
+                                <td><a href="#">lectus@nisi.com</a></td>
+                                <td><a href="#">In ut neque a eros molestie feugiat ut sit amet ligula</a></td>
+                                <td>14/07/2012</td>
+                                <td class="col">&nbsp;</td>
+                            </tr>
+                            <tr>
+                                <td class="col"><input name="chbox" type="checkbox" value=""></td>
+                                <td class="col">&nbsp;</td>
+                                <td><a href="#">eros@vitae.com</a></td>
+                                <td><a href="#">Maecenas vitae velit tortor, nec semper nibh</a></td>
+                                <td>12/07/2012</td>
+                                <td class="col">&nbsp;</td>
+                            </tr>
+                            <tr>
+                                <td class="col"><input name="chbox" type="checkbox" value=""></td>
+                                <td class="col"><i class="sweet-gray sweet-bended-arrow-left" title="Replied"></i></td>
+                                <td><a href="#">risus@nisi.com</a></td>
+                                <td><a href="#">Sed ac ante risus, in bibendum est</a></td>
+                                <td>11/07/2012</td>
+                                <td class="col">&nbsp;</td>
+                            </tr>
+                            <tr>
+                                <td class="col"><input name="chbox" type="checkbox" value=""></td>
+                                <td class="col">&nbsp;</td>
+                                <td><a href="#">lectus@eget.com</a></td>
+                                <td><a href="#">Suspendisse sit amet mauris eget augue ornare egestas</a></td>
+                                <td>11/07/2012</td>
+                                <td class="col">&nbsp;</td>
+                            </tr>
+                            <tr>
+                                <td class="col"><input name="chbox" type="checkbox" value=""></td>
+                                <td class="col"><i class="sweet-gray sweet-bended-arrow-right" title="Forwarded"></i></td>
+                                <td><a href="#">orci@nisi.com</a></td>
+                                <td><a href="#">Nam adipiscing orci sit amet risus congue at auctor magna molestie</a></td>
+                                <td>10/07/2012</td>
+                                <td class="col"><i class="sweet-gray sweet-paperclip" title="This message has attached files"></i></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <div class="message_details">
+                      <ul class="pager first">
+                        <li class="previous">
+                          <a class="back" href="#"><i class="icon-gray icon-arrow-up" title="Back"></i> Back</a>
+                        </li>                        
+                      </ul>
+                      <ul class="info group">
+                        <li>
+                            <h2>Lorem ipsum dolor sit amet, consectetur adipiscing elit</h2>                             
+                            <div class="btn-group">
+                              <a class="btn btn-mini dropdown-toggle" data-toggle="dropdown" href="#">
+                                <i class="sweet-gray sweet-bended-arrow-left"></i>
+                                <span class="caret"></span>
+                              </a>  
+                              <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu">
+                                <li><a tabindex="1" href="#"><i class="sweet-gray sweet-bended-arrow-left"></i>Reply</a></li>
+                                <li><a tabindex="2" href="#"><i class="sweet-gray sweet-bended-arrow-right"></i>Forward</a></li>
+                                <li><a tabindex="3" href="#"><i class="sweet-gray sweet-trashcan"></i>Delete</a></li>    
+                              </ul>
+                            </div>
+                            <span class="date">Thursday, September 13, 2012 8:19 AM</span>
+                        </li>
+                        <li><strong>FROM</strong>lorem@impsum.com</li>
+                        <li><strong>TO</strong>lectus@eget.com</li>                        
+                        <li><strong><i class="sweet-gray sweet-paperclip" title="This message has attached files"></i></strong> <a href="#">image001.jpg</a>, <a href="#">excel.xlsx</a>, <a href="#">doc.pdf</a></li>
+                        
+                      </ul>
+                      <div class="message">
+                        <p>
+                          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean ut justo erat, id dignissim nunc. Aliquam id mauris ut libero scelerisque fringilla. Aliquam convallis lacinia porta. Praesent sit amet placerat nulla. Pellentesque a lobortis ipsum. Pellentesque porttitor scelerisque placerat. Cras posuere nisi vitae quam tristique interdum. 
+                        </p>
+                        <ul>
+                          <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
+                          <li>Cras adipiscing nulla non elit dignissim nec euismod eros tristique.</li>
+                          <li>Fusce sit amet dui at mauris cursus egestas sed at enim.</li>
+                          <li>In non nisi lectus, at molestie metus.</li>
+                          <li>In ut neque a eros molestie feugiat ut sit amet ligula.</li>
+                          <li>Maecenas vitae velit tortor, nec semper nibh.</li>
+                        </ul>
+                      </div>   
+                      <ul class="pager">
+                        <li class="previous">
+                          <a href="#"><i class="icon-gray icon-arrow-left" title="Previous"></i> Previous</a>
+                        </li>
+                        <li class="next">
+                          <a href="#">Next <i class="icon-gray icon-arrow-right" title="Next"></i></a>
+                        </li>
+                      </ul> 
+                    </div>
+                  </div>                  
+                  <div id="outbox" class="tab-pane group">
+                    <table class="example display message_tbl">
+                        <thead>
+                            <tr>
+                                <th class="col"><input name="chbox" type="checkbox" value=""></th>
+                                <th class="col"><i class="icon-gray icon-exclamation-sign"></i></th>
+                                <th><strong>TO</strong></th>
+                                <th><strong>SUBJECT</strong></th>
+                                <th><strong>DATE</strong></th>
+                                <th class="col"><i class="sweet-gray sweet-paperclip"></i></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="col"><input name="chbox" type="checkbox" value=""></td>
+                                <td class="col"><i class="icon-gray icon-exclamation-sign" title="New message"></i></td>
+                                <td><a href="#">lorem@impsum.com</a></td>
+                                <td><a href="#">Lorem ipsum dolor sit amet, consectetur adipiscing elit</a></td>
+                                <td>12/09/2012</td>
+                                <td class="col"><i class="sweet-gray sweet-paperclip"  title="This message has attached files"></i></td>
+                            </tr>
+                            <tr>
+                                <td class="col"><input name="chbox" type="checkbox" value=""></td>
+                                <td class="col"><i class="icon-gray icon-exclamation-sign" title="New message"></i></td>
+                                <td><a href="#">lorem@impsum.com</a></td>
+                                <td><a href="#">Lorem ipsum dolor sit amet, consectetur adipiscing elit</a></td>
+                                <td>11/09/2012</td>
+                                <td class="col"><i class="sweet-gray sweet-paperclip"  title="This message has attached files"></i></td>
+                            </tr>
+                            <tr>
+                                <td class="col"><input name="chbox" type="checkbox" value=""></td>
+                                <td class="col"><i class="sweet-gray sweet-bended-arrow-left" title="Replied"></i></td>
+                                <td><a href="#">nulla@sit.com</a></td>
+                                <td><a href="#">Cras adipiscing nulla non elit dignissim nec euismod eros tristique</a></td>
+                                <td>08/09/2012</td>
+                                <td class="col">&nbsp;</td>
+                            </tr>
+                            <tr>
+                                <td class="col"><input name="chbox" type="checkbox" value=""></td>
+                                <td class="col"></td>
+                                <td><a href="#">dolor@sit.com</a></td>
+                                <td><a href="#">Fusce sit amet dui at mauris cursus egestas sed at enim</a></td>
+                                <td>02/09/2012</td>
+                                <td class="col">&nbsp;</td>
+                            </tr>
+                            <tr>
+                                <td class="col"><input name="chbox" type="checkbox" value=""></td>
+                                <td class="col"><i class="sweet-gray sweet-bended-arrow-right" title="Forwarded"></i></td>
+                                <td><a href="#">lectus@nisi.com</a></td>
+                                <td><a href="#">In non nisi lectus, at molestie metus</a></td>
+                                <td>30/08/2012</td>
+                                <td class="col"><i class="sweet-gray sweet-paperclip" title="This message has attached files"></i></td>
+                            </tr>                            
+                            <tr>
+                                <td class="col"><input name="chbox" type="checkbox" value=""></td>
+                                <td class="col">&nbsp;</td>
+                                <td><a href="#">lectus@nisi.com</a></td>
+                                <td><a href="#">In ut neque a eros molestie feugiat ut sit amet ligula</a></td>
+                                <td>28/08/2012</td>
+                                <td class="col">&nbsp;</td>
+                            </tr>
+                            <tr>
+                                <td class="col"><input name="chbox" type="checkbox" value=""></td>
+                                <td class="col">&nbsp;</td>
+                                <td><a href="#">eros@vitae.com</a></td>
+                                <td><a href="#">Maecenas vitae velit tortor, nec semper nibh</a></td>
+                                <td>16/08/2012</td>
+                                <td class="col">&nbsp;</td>
+                            </tr>
+                            <tr>
+                                <td class="col"><input name="chbox" type="checkbox" value=""></td>
+                                <td class="col"><i class="sweet-gray sweet-bended-arrow-left" title="Replied"></i></td>
+                                <td><a href="#">risus@nisi.com</a></td>
+                                <td><a href="#">Sed ac ante risus, in bibendum est</a></td>
+                                <td>12/08/2012</td>
+                                <td class="col">&nbsp;</td>
+                            </tr>
+                            <tr>
+                                <td class="col"><input name="chbox" type="checkbox" value=""></td>
+                                <td class="col">&nbsp;</td>
+                                <td><a href="#">lectus@eget.com</a></td>
+                                <td><a href="#">Suspendisse sit amet mauris eget augue ornare egestas</a></td>
+                                <td>07/08/2012</td>
+                                <td class="col">&nbsp;</td>
+                            </tr>
+                            <tr>
+                                <td class="col"><input name="chbox" type="checkbox" value=""></td>
+                                <td class="col"><i class="sweet-gray sweet-bended-arrow-right" title="Forwarded"></i></td>
+                                <td><a href="#">orci@nisi.com</a></td>
+                                <td><a href="#">Nam adipiscing orci sit amet risus congue at auctor magna molestie</a></td>
+                                <td>05/08/2012</td>
+                                <td class="col"><i class="sweet-gray sweet-paperclip" title="This message has attached files"></i></td>
+                            </tr>
+                            <tr>
+                                <td class="col"><input name="chbox" type="checkbox" value=""></td>
+                                <td class="col"><i class="sweet-gray sweet-bended-arrow-left" title="Replied"></i></td>
+                                <td><a href="#">nulla@sit.com</a></td>
+                                <td><a href="#">Cras adipiscing nulla non elit dignissim nec euismod eros tristique</a></td>
+                                <td>05/08/2012</td>
+                                <td class="col">&nbsp;</td>
+                            </tr>
+                            <tr>
+                                <td class="col"><input name="chbox" type="checkbox" value=""></td>
+                                <td class="col"></td>
+                                <td><a href="#">dolor@sit.com</a></td>
+                                <td><a href="#">Fusce sit amet dui at mauris cursus egestas sed at enim</a></td>
+                                <td>01/08/2012</td>
+                                <td class="col">&nbsp;</td>
+                            </tr>
+                            <tr>
+                                <td class="col"><input name="chbox" type="checkbox" value=""></td>
+                                <td class="col"><i class="sweet-gray sweet-bended-arrow-right" title="Forwarded"></i></td>
+                                <td><a href="#">lectus@nisi.com</a></td>
+                                <td><a href="#">In non nisi lectus, at molestie metus</a></td>
+                                <td>24/07/2012</td>
+                                <td class="col"><i class="sweet-gray sweet-paperclip" title="This message has attached files"></i></td>
+                            </tr>
+                            <tr>
+                                <td class="col"><input name="chbox" type="checkbox" value=""></td>
+                                <td class="col"><i class="icon-gray icon-exclamation-sign" title="New message"></i></td>
+                                <td><a href="#">lorem@impsum.com</a></td>
+                                <td><a href="#">Lorem ipsum dolor sit amet, consectetur adipiscing elit</a></td>
+                                <td>21/07/2012</td>
+                                <td class="col"><i class="sweet-gray sweet-paperclip"  title="This message has attached files"></i></td>
+                            </tr>
+                            <tr>
+                                <td class="col"><input name="chbox" type="checkbox" value=""></td>
+                                <td class="col">&nbsp;</td>
+                                <td><a href="#">lectus@nisi.com</a></td>
+                                <td><a href="#">In ut neque a eros molestie feugiat ut sit amet ligula</a></td>
+                                <td>14/07/2012</td>
+                                <td class="col">&nbsp;</td>
+                            </tr>
+                            <tr>
+                                <td class="col"><input name="chbox" type="checkbox" value=""></td>
+                                <td class="col">&nbsp;</td>
+                                <td><a href="#">eros@vitae.com</a></td>
+                                <td><a href="#">Maecenas vitae velit tortor, nec semper nibh</a></td>
+                                <td>12/07/2012</td>
+                                <td class="col">&nbsp;</td>
+                            </tr>
+                            <tr>
+                                <td class="col"><input name="chbox" type="checkbox" value=""></td>
+                                <td class="col"><i class="sweet-gray sweet-bended-arrow-left" title="Replied"></i></td>
+                                <td><a href="#">risus@nisi.com</a></td>
+                                <td><a href="#">Sed ac ante risus, in bibendum est</a></td>
+                                <td>11/07/2012</td>
+                                <td class="col">&nbsp;</td>
+                            </tr>
+                            <tr>
+                                <td class="col"><input name="chbox" type="checkbox" value=""></td>
+                                <td class="col">&nbsp;</td>
+                                <td><a href="#">lectus@eget.com</a></td>
+                                <td><a href="#">Suspendisse sit amet mauris eget augue ornare egestas</a></td>
+                                <td>11/07/2012</td>
+                                <td class="col">&nbsp;</td>
+                            </tr>
+                            <tr>
+                                <td class="col"><input name="chbox" type="checkbox" value=""></td>
+                                <td class="col"><i class="sweet-gray sweet-bended-arrow-right" title="Forwarded"></i></td>
+                                <td><a href="#">orci@nisi.com</a></td>
+                                <td><a href="#">Nam adipiscing orci sit amet risus congue at auctor magna molestie</a></td>
+                                <td>10/07/2012</td>
+                                <td class="col"><i class="sweet-gray sweet-paperclip" title="This message has attached files"></i></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <div class="message_details">
+                      <ul class="pager first">
+                        <li class="previous">
+                          <a class="back" href="#"><i class="icon-gray icon-arrow-up" title="Back"></i> Back</a>
+                        </li>                        
+                      </ul>
+                      <ul class="info group">
+                        <li>
+                            <h2>Lorem ipsum dolor sit amet, consectetur adipiscing elit</h2>                             
+                            <div class="btn-group">
+                              <a class="btn btn-mini dropdown-toggle" data-toggle="dropdown" href="#">
+                                <i class="sweet-gray sweet-bended-arrow-left"></i>
+                                <span class="caret"></span>
+                              </a>  
+                              <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu">
+                                <li><a tabindex="1" href="#"><i class="sweet-gray sweet-bended-arrow-left"></i>Reply</a></li>
+                                <li><a tabindex="2" href="#"><i class="sweet-gray sweet-bended-arrow-right"></i>Forward</a></li>
+                                <li><a tabindex="3" href="#"><i class="sweet-gray sweet-trashcan"></i>Delete</a></li>    
+                              </ul>
+                            </div>
+                            <span class="date">Thursday, September 13, 2012 8:19 AM</span>
+                        </li>
+                        <li><strong>FROM</strong>lorem@impsum.com</li>
+                        <li><strong>TO</strong>lectus@eget.com</li>                        
+                        <li><strong><i class="sweet-gray sweet-paperclip" title="This message has attached files"></i></strong> <a href="#">image001.jpg</a>, <a href="#">excel.xlsx</a>, <a href="#">doc.pdf</a></li>
+                        
+                      </ul>
+                      <div class="message">
+                        <p>
+                          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean ut justo erat, id dignissim nunc. Aliquam id mauris ut libero scelerisque fringilla. Aliquam convallis lacinia porta. Praesent sit amet placerat nulla. Pellentesque a lobortis ipsum. Pellentesque porttitor scelerisque placerat. Cras posuere nisi vitae quam tristique interdum. 
+                        </p>
+                        <ul>
+                          <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
+                          <li>Cras adipiscing nulla non elit dignissim nec euismod eros tristique.</li>
+                          <li>Fusce sit amet dui at mauris cursus egestas sed at enim.</li>
+                          <li>In non nisi lectus, at molestie metus.</li>
+                          <li>In ut neque a eros molestie feugiat ut sit amet ligula.</li>
+                          <li>Maecenas vitae velit tortor, nec semper nibh.</li>
+                        </ul>
+                      </div>   
+                      <ul class="pager">
+                        <li class="previous">
+                          <a href="#"><i class="icon-gray icon-arrow-left" title="Previous"></i> Previous</a>
+                        </li>
+                        <li class="next">
+                          <a href="#">Next <i class="icon-gray icon-arrow-right" title="Next"></i></a>
+                        </li>
+                      </ul> 
+                    </div>
+                  </div>
+                  <div id="spam" class="tab-pane group">
+                    <table class="example display message_tbl">
+                        <thead>
+                            <tr>
+                                <th class="col"><input name="chbox" type="checkbox" value=""></th>
+                                <th class="col"><i class="icon-gray icon-exclamation-sign"></i></th>
+                                <th><strong>FROM</strong></th>
+                                <th><strong>SUBJECT</strong></th>
+                                <th><strong>DATE</strong></th>
+                                <th class="col"><i class="sweet-gray sweet-paperclip"></i></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="col"><input name="chbox" type="checkbox" value=""></td>
+                                <td class="col"><i class="icon-gray icon-exclamation-sign" title="New message"></i></td>
+                                <td><a href="#">lorem@impsum.com</a></td>
+                                <td><a href="#">Lorem ipsum dolor sit amet, consectetur adipiscing elit</a></td>
+                                <td>12/09/2012</td>
+                                <td class="col"><i class="sweet-gray sweet-paperclip"  title="This message has attached files"></i></td>
+                            </tr>
+                            <tr class="new">
+                                <td class="col"><input name="chbox" type="checkbox" value=""></td>
+                                <td class="col"><i class="icon-gray icon-exclamation-sign" title="New message"></i></td>
+                                <td><a href="#">lorem@impsum.com</a></td>
+                                <td><a href="#">Lorem ipsum dolor sit amet, consectetur adipiscing elit</a></td>
+                                <td>11/09/2012</td>
+                                <td class="col"><i class="sweet-gray sweet-paperclip"  title="This message has attached files"></i></td>
+                            </tr>
+                            <tr>
+                                <td class="col"><input name="chbox" type="checkbox" value=""></td>
+                                <td class="col"><i class="sweet-gray sweet-bended-arrow-left" title="Replied"></i></td>
+                                <td><a href="#">nulla@sit.com</a></td>
+                                <td><a href="#">Cras adipiscing nulla non elit dignissim nec euismod eros tristique</a></td>
+                                <td>08/09/2012</td>
+                                <td class="col">&nbsp;</td>
+                            </tr>
+                            <tr>
+                                <td class="col"><input name="chbox" type="checkbox" value=""></td>
+                                <td class="col"></td>
+                                <td><a href="#">dolor@sit.com</a></td>
+                                <td><a href="#">Fusce sit amet dui at mauris cursus egestas sed at enim</a></td>
+                                <td>02/09/2012</td>
+                                <td class="col">&nbsp;</td>
+                            </tr>
+                            <tr class="new">
+                                <td class="col"><input name="chbox" type="checkbox" value=""></td>
+                                <td class="col"><i class="sweet-gray sweet-bended-arrow-right" title="Forwarded"></i></td>
+                                <td><a href="#">lectus@nisi.com</a></td>
+                                <td><a href="#">In non nisi lectus, at molestie metus</a></td>
+                                <td>30/08/2012</td>
+                                <td class="col"><i class="sweet-gray sweet-paperclip" title="This message has attached files"></i></td>
+                            </tr>                            
+                            <tr>
+                                <td class="col"><input name="chbox" type="checkbox" value=""></td>
+                                <td class="col">&nbsp;</td>
+                                <td><a href="#">lectus@nisi.com</a></td>
+                                <td><a href="#">In ut neque a eros molestie feugiat ut sit amet ligula</a></td>
+                                <td>28/08/2012</td>
+                                <td class="col">&nbsp;</td>
+                            </tr>
+                            <tr>
+                                <td class="col"><input name="chbox" type="checkbox" value=""></td>
+                                <td class="col">&nbsp;</td>
+                                <td><a href="#">eros@vitae.com</a></td>
+                                <td><a href="#">Maecenas vitae velit tortor, nec semper nibh</a></td>
+                                <td>16/08/2012</td>
+                                <td class="col">&nbsp;</td>
+                            </tr>
+                            <tr>
+                                <td class="col"><input name="chbox" type="checkbox" value=""></td>
+                                <td class="col"><i class="sweet-gray sweet-bended-arrow-left" title="Replied"></i></td>
+                                <td><a href="#">risus@nisi.com</a></td>
+                                <td><a href="#">Sed ac ante risus, in bibendum est</a></td>
+                                <td>12/08/2012</td>
+                                <td class="col">&nbsp;</td>
+                            </tr>
+                            <tr class="new">
+                                <td class="col"><input name="chbox" type="checkbox" value=""></td>
+                                <td class="col">&nbsp;</td>
+                                <td><a href="#">lectus@eget.com</a></td>
+                                <td><a href="#">Suspendisse sit amet mauris eget augue ornare egestas</a></td>
+                                <td>07/08/2012</td>
+                                <td class="col">&nbsp;</td>
+                            </tr>
+                            <tr>
+                                <td class="col"><input name="chbox" type="checkbox" value=""></td>
+                                <td class="col"><i class="sweet-gray sweet-bended-arrow-right" title="Forwarded"></i></td>
+                                <td><a href="#">orci@nisi.com</a></td>
+                                <td><a href="#">Nam adipiscing orci sit amet risus congue at auctor magna molestie</a></td>
+                                <td>05/08/2012</td>
+                                <td class="col"><i class="sweet-gray sweet-paperclip" title="This message has attached files"></i></td>
+                            </tr>
+                            <tr>
+                                <td class="col"><input name="chbox" type="checkbox" value=""></td>
+                                <td class="col"><i class="sweet-gray sweet-bended-arrow-left" title="Replied"></i></td>
+                                <td><a href="#">nulla@sit.com</a></td>
+                                <td><a href="#">Cras adipiscing nulla non elit dignissim nec euismod eros tristique</a></td>
+                                <td>05/08/2012</td>
+                                <td class="col">&nbsp;</td>
+                            </tr>
+                            <tr>
+                                <td class="col"><input name="chbox" type="checkbox" value=""></td>
+                                <td class="col"></td>
+                                <td><a href="#">dolor@sit.com</a></td>
+                                <td><a href="#">Fusce sit amet dui at mauris cursus egestas sed at enim</a></td>
+                                <td>01/08/2012</td>
+                                <td class="col">&nbsp;</td>
+                            </tr>
+                            <tr>
+                                <td class="col"><input name="chbox" type="checkbox" value=""></td>
+                                <td class="col"><i class="sweet-gray sweet-bended-arrow-right" title="Forwarded"></i></td>
+                                <td><a href="#">lectus@nisi.com</a></td>
+                                <td><a href="#">In non nisi lectus, at molestie metus</a></td>
+                                <td>24/07/2012</td>
+                                <td class="col"><i class="sweet-gray sweet-paperclip" title="This message has attached files"></i></td>
+                            </tr>
+                            <tr>
+                                <td class="col"><input name="chbox" type="checkbox" value=""></td>
+                                <td class="col"><i class="icon-gray icon-exclamation-sign" title="New message"></i></td>
+                                <td><a href="#">lorem@impsum.com</a></td>
+                                <td><a href="#">Lorem ipsum dolor sit amet, consectetur adipiscing elit</a></td>
+                                <td>21/07/2012</td>
+                                <td class="col"><i class="sweet-gray sweet-paperclip"  title="This message has attached files"></i></td>
+                            </tr>
+                            <tr>
+                                <td class="col"><input name="chbox" type="checkbox" value=""></td>
+                                <td class="col">&nbsp;</td>
+                                <td><a href="#">lectus@nisi.com</a></td>
+                                <td><a href="#">In ut neque a eros molestie feugiat ut sit amet ligula</a></td>
+                                <td>14/07/2012</td>
+                                <td class="col">&nbsp;</td>
+                            </tr>
+                            <tr>
+                                <td class="col"><input name="chbox" type="checkbox" value=""></td>
+                                <td class="col">&nbsp;</td>
+                                <td><a href="#">eros@vitae.com</a></td>
+                                <td><a href="#">Maecenas vitae velit tortor, nec semper nibh</a></td>
+                                <td>12/07/2012</td>
+                                <td class="col">&nbsp;</td>
+                            </tr>
+                            <tr>
+                                <td class="col"><input name="chbox" type="checkbox" value=""></td>
+                                <td class="col"><i class="sweet-gray sweet-bended-arrow-left" title="Replied"></i></td>
+                                <td><a href="#">risus@nisi.com</a></td>
+                                <td><a href="#">Sed ac ante risus, in bibendum est</a></td>
+                                <td>11/07/2012</td>
+                                <td class="col">&nbsp;</td>
+                            </tr>
+                            <tr>
+                                <td class="col"><input name="chbox" type="checkbox" value=""></td>
+                                <td class="col">&nbsp;</td>
+                                <td><a href="#">lectus@eget.com</a></td>
+                                <td><a href="#">Suspendisse sit amet mauris eget augue ornare egestas</a></td>
+                                <td>11/07/2012</td>
+                                <td class="col">&nbsp;</td>
+                            </tr>
+                            <tr>
+                                <td class="col"><input name="chbox" type="checkbox" value=""></td>
+                                <td class="col"><i class="sweet-gray sweet-bended-arrow-right" title="Forwarded"></i></td>
+                                <td><a href="#">orci@nisi.com</a></td>
+                                <td><a href="#">Nam adipiscing orci sit amet risus congue at auctor magna molestie</a></td>
+                                <td>10/07/2012</td>
+                                <td class="col"><i class="sweet-gray sweet-paperclip" title="This message has attached files"></i></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <div class="message_details">
+                      <ul class="pager first">
+                        <li class="previous">
+                          <a class="back" href="#"><i class="icon-gray icon-arrow-up" title="Back"></i> Back</a>
+                        </li>                        
+                      </ul>
+                      <ul class="info group">
+                        <li>
+                            <h2>Lorem ipsum dolor sit amet, consectetur adipiscing elit</h2>                             
+                            <div class="btn-group">
+                              <a class="btn btn-mini dropdown-toggle" data-toggle="dropdown" href="#">
+                                <i class="sweet-gray sweet-bended-arrow-left"></i>
+                                <span class="caret"></span>
+                              </a>  
+                              <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu">
+                                <li><a tabindex="1" href="#"><i class="sweet-gray sweet-bended-arrow-left"></i>Reply</a></li>
+                                <li><a tabindex="2" href="#"><i class="sweet-gray sweet-bended-arrow-right"></i>Forward</a></li>
+                                <li><a tabindex="3" href="#"><i class="sweet-gray sweet-trashcan"></i>Delete</a></li>    
+                              </ul>
+                            </div>
+                            <span class="date">Thursday, September 13, 2012 8:19 AM</span>
+                        </li>
+                        <li><strong>FROM</strong>lorem@impsum.com</li>
+                        <li><strong>TO</strong>lectus@eget.com</li>                        
+                        <li><strong><i class="sweet-gray sweet-paperclip" title="This message has attached files"></i></strong> <a href="#">image001.jpg</a>, <a href="#">excel.xlsx</a>, <a href="#">doc.pdf</a></li>
+                        
+                      </ul>
+                      <div class="message">
+                        <p>
+                          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean ut justo erat, id dignissim nunc. Aliquam id mauris ut libero scelerisque fringilla. Aliquam convallis lacinia porta. Praesent sit amet placerat nulla. Pellentesque a lobortis ipsum. Pellentesque porttitor scelerisque placerat. Cras posuere nisi vitae quam tristique interdum. 
+                        </p>
+                        <ul>
+                          <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
+                          <li>Cras adipiscing nulla non elit dignissim nec euismod eros tristique.</li>
+                          <li>Fusce sit amet dui at mauris cursus egestas sed at enim.</li>
+                          <li>In non nisi lectus, at molestie metus.</li>
+                          <li>In ut neque a eros molestie feugiat ut sit amet ligula.</li>
+                          <li>Maecenas vitae velit tortor, nec semper nibh.</li>
+                        </ul>
+                      </div>   
+                      <ul class="pager">
+                        <li class="previous">
+                          <a href="#"><i class="icon-gray icon-arrow-left" title="Previous"></i> Previous</a>
+                        </li>
+                        <li class="next">
+                          <a href="#">Next <i class="icon-gray icon-arrow-right" title="Next"></i></a>
+                        </li>
+                      </ul> 
+                    </div>
+                  </div>           
+                  <div id="trash" class="tab-pane group">
+                    <table class="example display message_tbl">
+                        <thead>
+                            <tr>
+                                <th class="col"><input name="chbox" type="checkbox" value=""></th>
+                                <th class="col"><i class="icon-gray icon-exclamation-sign"></i></th>
+                                <th><strong>FROM</strong></th>
+                                <th><strong>SUBJECT</strong></th>
+                                <th><strong>DATE</strong></th>
+                                <th class="col"><i class="sweet-gray sweet-paperclip"></i></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="col"><input name="chbox" type="checkbox" value=""></td>
+                                <td class="col"><i class="icon-gray icon-exclamation-sign" title="New message"></i></td>
+                                <td><a href="#">lorem@impsum.com</a></td>
+                                <td><a href="#">Lorem ipsum dolor sit amet, consectetur adipiscing elit</a></td>
+                                <td>12/09/2012</td>
+                                <td class="col"><i class="sweet-gray sweet-paperclip"  title="This message has attached files"></i></td>
+                            </tr>
+                            <tr class="new">
+                                <td class="col"><input name="chbox" type="checkbox" value=""></td>
+                                <td class="col"><i class="icon-gray icon-exclamation-sign" title="New message"></i></td>
+                                <td><a href="#">lorem@impsum.com</a></td>
+                                <td><a href="#">Lorem ipsum dolor sit amet, consectetur adipiscing elit</a></td>
+                                <td>11/09/2012</td>
+                                <td class="col"><i class="sweet-gray sweet-paperclip"  title="This message has attached files"></i></td>
+                            </tr>
+                            <tr>
+                                <td class="col"><input name="chbox" type="checkbox" value=""></td>
+                                <td class="col"><i class="sweet-gray sweet-bended-arrow-left" title="Replied"></i></td>
+                                <td><a href="#">nulla@sit.com</a></td>
+                                <td><a href="#">Cras adipiscing nulla non elit dignissim nec euismod eros tristique</a></td>
+                                <td>08/09/2012</td>
+                                <td class="col">&nbsp;</td>
+                            </tr>
+                            <tr>
+                                <td class="col"><input name="chbox" type="checkbox" value=""></td>
+                                <td class="col"></td>
+                                <td><a href="#">dolor@sit.com</a></td>
+                                <td><a href="#">Fusce sit amet dui at mauris cursus egestas sed at enim</a></td>
+                                <td>02/09/2012</td>
+                                <td class="col">&nbsp;</td>
+                            </tr>
+                            <tr class="new">
+                                <td class="col"><input name="chbox" type="checkbox" value=""></td>
+                                <td class="col"><i class="sweet-gray sweet-bended-arrow-right" title="Forwarded"></i></td>
+                                <td><a href="#">lectus@nisi.com</a></td>
+                                <td><a href="#">In non nisi lectus, at molestie metus</a></td>
+                                <td>30/08/2012</td>
+                                <td class="col"><i class="sweet-gray sweet-paperclip" title="This message has attached files"></i></td>
+                            </tr>                            
+                            <tr class="new">
+                                <td class="col"><input name="chbox" type="checkbox" value=""></td>
+                                <td class="col">&nbsp;</td>
+                                <td><a href="#">lectus@nisi.com</a></td>
+                                <td><a href="#">In ut neque a eros molestie feugiat ut sit amet ligula</a></td>
+                                <td>28/08/2012</td>
+                                <td class="col">&nbsp;</td>
+                            </tr>
+                            <tr>
+                                <td class="col"><input name="chbox" type="checkbox" value=""></td>
+                                <td class="col">&nbsp;</td>
+                                <td><a href="#">eros@vitae.com</a></td>
+                                <td><a href="#">Maecenas vitae velit tortor, nec semper nibh</a></td>
+                                <td>16/08/2012</td>
+                                <td class="col">&nbsp;</td>
+                            </tr>
+                            <tr>
+                                <td class="col"><input name="chbox" type="checkbox" value=""></td>
+                                <td class="col"><i class="sweet-gray sweet-bended-arrow-left" title="Replied"></i></td>
+                                <td><a href="#">risus@nisi.com</a></td>
+                                <td><a href="#">Sed ac ante risus, in bibendum est</a></td>
+                                <td>12/08/2012</td>
+                                <td class="col">&nbsp;</td>
+                            </tr>
+                            <tr>
+                                <td class="col"><input name="chbox" type="checkbox" value=""></td>
+                                <td class="col">&nbsp;</td>
+                                <td><a href="#">lectus@eget.com</a></td>
+                                <td><a href="#">Suspendisse sit amet mauris eget augue ornare egestas</a></td>
+                                <td>07/08/2012</td>
+                                <td class="col">&nbsp;</td>
+                            </tr>
+                            <tr>
+                                <td class="col"><input name="chbox" type="checkbox" value=""></td>
+                                <td class="col"><i class="sweet-gray sweet-bended-arrow-right" title="Forwarded"></i></td>
+                                <td><a href="#">orci@nisi.com</a></td>
+                                <td><a href="#">Nam adipiscing orci sit amet risus congue at auctor magna molestie</a></td>
+                                <td>05/08/2012</td>
+                                <td class="col"><i class="sweet-gray sweet-paperclip" title="This message has attached files"></i></td>
+                            </tr>
+                            <tr>
+                                <td class="col"><input name="chbox" type="checkbox" value=""></td>
+                                <td class="col"><i class="sweet-gray sweet-bended-arrow-left" title="Replied"></i></td>
+                                <td><a href="#">nulla@sit.com</a></td>
+                                <td><a href="#">Cras adipiscing nulla non elit dignissim nec euismod eros tristique</a></td>
+                                <td>05/08/2012</td>
+                                <td class="col">&nbsp;</td>
+                            </tr>
+                            <tr>
+                                <td class="col"><input name="chbox" type="checkbox" value=""></td>
+                                <td class="col"></td>
+                                <td><a href="#">dolor@sit.com</a></td>
+                                <td><a href="#">Fusce sit amet dui at mauris cursus egestas sed at enim</a></td>
+                                <td>01/08/2012</td>
+                                <td class="col">&nbsp;</td>
+                            </tr>
+                            <tr>
+                                <td class="col"><input name="chbox" type="checkbox" value=""></td>
+                                <td class="col"><i class="sweet-gray sweet-bended-arrow-right" title="Forwarded"></i></td>
+                                <td><a href="#">lectus@nisi.com</a></td>
+                                <td><a href="#">In non nisi lectus, at molestie metus</a></td>
+                                <td>24/07/2012</td>
+                                <td class="col"><i class="sweet-gray sweet-paperclip" title="This message has attached files"></i></td>
+                            </tr>
+                            <tr>
+                                <td class="col"><input name="chbox" type="checkbox" value=""></td>
+                                <td class="col"><i class="icon-gray icon-exclamation-sign" title="New message"></i></td>
+                                <td><a href="#">lorem@impsum.com</a></td>
+                                <td><a href="#">Lorem ipsum dolor sit amet, consectetur adipiscing elit</a></td>
+                                <td>21/07/2012</td>
+                                <td class="col"><i class="sweet-gray sweet-paperclip"  title="This message has attached files"></i></td>
+                            </tr>
+                            <tr>
+                                <td class="col"><input name="chbox" type="checkbox" value=""></td>
+                                <td class="col">&nbsp;</td>
+                                <td><a href="#">lectus@nisi.com</a></td>
+                                <td><a href="#">In ut neque a eros molestie feugiat ut sit amet ligula</a></td>
+                                <td>14/07/2012</td>
+                                <td class="col">&nbsp;</td>
+                            </tr>
+                            <tr>
+                                <td class="col"><input name="chbox" type="checkbox" value=""></td>
+                                <td class="col">&nbsp;</td>
+                                <td><a href="#">eros@vitae.com</a></td>
+                                <td><a href="#">Maecenas vitae velit tortor, nec semper nibh</a></td>
+                                <td>12/07/2012</td>
+                                <td class="col">&nbsp;</td>
+                            </tr>
+                            <tr>
+                                <td class="col"><input name="chbox" type="checkbox" value=""></td>
+                                <td class="col"><i class="sweet-gray sweet-bended-arrow-left" title="Replied"></i></td>
+                                <td><a href="#">risus@nisi.com</a></td>
+                                <td><a href="#">Sed ac ante risus, in bibendum est</a></td>
+                                <td>11/07/2012</td>
+                                <td class="col">&nbsp;</td>
+                            </tr>
+                            <tr>
+                                <td class="col"><input name="chbox" type="checkbox" value=""></td>
+                                <td class="col">&nbsp;</td>
+                                <td><a href="#">lectus@eget.com</a></td>
+                                <td><a href="#">Suspendisse sit amet mauris eget augue ornare egestas</a></td>
+                                <td>11/07/2012</td>
+                                <td class="col">&nbsp;</td>
+                            </tr>
+                            <tr>
+                                <td class="col"><input name="chbox" type="checkbox" value=""></td>
+                                <td class="col"><i class="sweet-gray sweet-bended-arrow-right" title="Forwarded"></i></td>
+                                <td><a href="#">orci@nisi.com</a></td>
+                                <td><a href="#">Nam adipiscing orci sit amet risus congue at auctor magna molestie</a></td>
+                                <td>10/07/2012</td>
+                                <td class="col"><i class="sweet-gray sweet-paperclip" title="This message has attached files"></i></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <div class="message_details">
+                      <ul class="pager first">
+                        <li class="previous">
+                          <a class="back" href="#"><i class="icon-gray icon-arrow-up" title="Back"></i> Back</a>
+                        </li>                        
+                      </ul>
+                      <ul class="info group">
+                        <li>
+                            <h2>Lorem ipsum dolor sit amet, consectetur adipiscing elit</h2>                             
+                            <div class="btn-group">
+                              <a class="btn btn-mini dropdown-toggle" data-toggle="dropdown" href="#">
+                                <i class="sweet-gray sweet-bended-arrow-left"></i>
+                                <span class="caret"></span>
+                              </a>  
+                              <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu">
+                                <li><a tabindex="1" href="#"><i class="sweet-gray sweet-bended-arrow-left"></i>Reply</a></li>
+                                <li><a tabindex="2" href="#"><i class="sweet-gray sweet-bended-arrow-right"></i>Forward</a></li>
+                                <li><a tabindex="3" href="#"><i class="sweet-gray sweet-trashcan"></i>Delete</a></li>    
+                              </ul>
+                            </div>
+                            <span class="date">Thursday, September 13, 2012 8:19 AM</span>
+                        </li>
+                        <li><strong>FROM</strong>lorem@impsum.com</li>
+                        <li><strong>TO</strong>lectus@eget.com</li>                        
+                        <li><strong><i class="sweet-gray sweet-paperclip" title="This message has attached files"></i></strong> <a href="#">image001.jpg</a>, <a href="#">excel.xlsx</a>, <a href="#">doc.pdf</a></li>
+                        
+                      </ul>
+                      <div class="message">
+                        <p>
+                          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean ut justo erat, id dignissim nunc. Aliquam id mauris ut libero scelerisque fringilla. Aliquam convallis lacinia porta. Praesent sit amet placerat nulla. Pellentesque a lobortis ipsum. Pellentesque porttitor scelerisque placerat. Cras posuere nisi vitae quam tristique interdum. 
+                        </p>
+                        <ul>
+                          <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
+                          <li>Cras adipiscing nulla non elit dignissim nec euismod eros tristique.</li>
+                          <li>Fusce sit amet dui at mauris cursus egestas sed at enim.</li>
+                          <li>In non nisi lectus, at molestie metus.</li>
+                          <li>In ut neque a eros molestie feugiat ut sit amet ligula.</li>
+                          <li>Maecenas vitae velit tortor, nec semper nibh.</li>
+                        </ul>
+                      </div>   
+                      <ul class="pager">
+                        <li class="previous">
+                          <a href="#"><i class="icon-gray icon-arrow-left" title="Previous"></i> Previous</a>
+                        </li>
+                        <li class="next">
+                          <a href="#">Next <i class="icon-gray icon-arrow-right" title="Next"></i></a>
+                        </li>
+                      </ul> 
+                    </div>
+                  </div>                       
+                </div>
+              </div>
+
+              
+
+            </div>                  
+          </div><!--/row-->
+           
+          
+        </div><!--/span-->
+      </div><!--/row-->      
+      <hr>
+
+      <footer>
+        <p>&copy; LoxDesign.net - Phoenix 2012</p>
+      </footer>
+
+    </div><!--/.fluid-container-->
+
+    <!-- ===================== CHAT - Modal ===================== -->
+    <div id="chat_modal" class="chat_modal modal fade hide">
+      <div class="modal-header">
+        <ul>
+          <li class="toggle_users"><a href="#">Show Users</a></li>
+          <li class="status">
+            <a class="online" href="#"><span>Status</span></a>  
+            <ul>
+               <li><a class="online" href="#" title="Online"><span>Online</span></a></li>
+               <li><a class="away" href="#" title="Away"><span>Away</span></a></li>
+               <li><a class="busy" href="#" title="Busy"><span>Busy</span></a></li>
+               <li><a class="invisiblee" href="#" title="Invisible"><span>Invisible</span></a></li>
+               <li><a class="offline" href="#" title="Offline"><span>Offline</span></a></li>
+             </ul> 
+          </li>
+          <li class="chat_name">John Doe</li>
+        </ul>       
+        <button type="button" class="close" data-dismiss="modal">x</button>        
+      </div>
+      <div class="modal-body">
+        <div class="msg_cont left">
+          <img src="img/general/user_1.jpg" width="50" height="50" alt="User">
+          <ul>
+            <li>
+              <h3>John Doe:</h3> 
+              <span>16 minutes ago</span>
+            </li>
+            <li>Aliquam iaculis volutpat ipsum ullamcorper tempus. In in dui tortor. Mauris sed volutpat
+metus. Duis ut sapien sapien, id pellentesque orci. Nullam nisl metus, sodales ut laoreet 
+eget, pretium porttitor quam. Sed varius vulputate lacinia. </li>
+          </ul>    
+        </div>
+        <div class="msg_cont right">
+          <img src="img/general/user_2.jpg" width="50" height="50" alt="User">
+          <ul>
+            <li>
+              <h3>Jessie Doe:</h3> 
+              <span>16 minutes ago</span>
+            </li>
+            <li>Aliquam iaculis volutpat ipsum ullamcorper tempus. In in dui tortor. Mauris sed volutpat
+metus. Duis ut sapien sapien, id pellentesque orci. Nullam nisl metus, sodales ut laoreet 
+eget, pretium porttitor quam. Sed varius vulputate lacinia. </li>
+          </ul>    
+        </div>
+        <div class="msg_cont left">
+          <img src="img/general/user_1.jpg" width="50" height="50" alt="User">
+          <ul>
+            <li>
+              <h3>John Doe:</h3> 
+              <span>16 minutes ago</span>
+            </li>
+            <li>Aliquam iaculis volutpat ipsum ullamcorper tempus. In in dui tortor. Mauris sed volutpat
+metus. Duis ut sapien sapien, id pellentesque orci. Nullam nisl metus, sodales ut laoreet 
+eget, pretium porttitor quam. Sed varius vulputate lacinia. </li>
+          </ul>    
+        </div>        
+      </div>
+      <div class="modal-footer">        
+        <textarea></textarea>
+        <a href="#" class="btn btn-inverse">Send</a>
+      </div>
+    </div>
+
+    <!-- ===================== JS ===================== -->
+    <script src="js/libs/jquery-1.7.2.min.js"></script>    
+    <script src="js/libs/bootstrap.min.js"></script>   
+    <script src="js/libs/ios-orientationchange-fix.js"></script>      
+    <script src="js/libs/jquery-ui-1.8.20.custom.min.js"></script>        
+
+    <script src="js/common.js"></script>  
+
+    <!-- Site specific - JS -->  
+    <script src="js/libs/prettify.js"></script>         
+    <script src="js/plugins/tables/jquery.dataTables.min.js"></script>
+    <script src="js/plugins/tagedit/jquery.autoGrowInput.js"></script>
+    <script src="js/plugins/tagedit/jquery.tagedit.js"></script>
+
+    <!-- Fileupload specific --> 
+    <!-- The Templates plugin is included to render the upload/download listings -->
+    <script src="../../blueimp.github.com/JavaScript-Templates/tmpl.min.js"></script>
+    <!-- The Load Image plugin is included for the preview images and image resizing functionality -->
+    <script src="../../blueimp.github.com/JavaScript-Load-Image/load-image.min.js"></script>
+    <!-- The Canvas to Blob plugin is included for image resizing functionality -->
+    <script src="../../blueimp.github.com/JavaScript-Canvas-to-Blob/canvas-to-blob.min.js"></script>
+    <!-- Bootstrap Image Gallery -->    
+    <script src="../../blueimp.github.com/Bootstrap-Image-Gallery/js/bootstrap-image-gallery.min.js"></script>
+    <!-- The Iframe Transport is required for browsers without support for XHR file uploads -->
+    <script src="js/plugins/fileupload/jquery.iframe-transport.js"></script>
+    <!-- The basic File Upload plugin -->
+    <script src="js/plugins/fileupload/jquery.fileupload.js"></script>
+    <!-- The File Upload file processing plugin -->
+    <script src="js/plugins/fileupload/jquery.fileupload-fp.js"></script>
+    <!-- The File Upload user interface plugin -->
+    <script src="js/plugins/fileupload/jquery.fileupload-ui.js"></script>
+    <!-- The localization script -->
+    <script src="js/plugins/fileupload/locale.js"></script>
+    <!-- The main application script -->
+    <script src="js/plugins/fileupload/main.js"></script>
+    
+    <!-- modal-gallery is the modal dialog used for the image gallery -->
+    <div id="modal-gallery" class="modal modal-gallery hide fade" data-filter=":odd">
+        <div class="modal-header">
+            <a class="close" data-dismiss="modal">&times;</a>
+            <h3 class="modal-title"></h3>
+        </div>
+        <div class="modal-body"><div class="modal-image"></div></div>
+        <div class="modal-footer">
+            <a class="btn btn-small modal-download" target="_blank">
+                <i class="icon-download"></i>
+                <span>Download</span>
+            </a>
+            <a class="btn btn-small btn-success modal-play modal-slideshow" data-slideshow="5000">
+                <i class="icon-play icon-white"></i>
+                <span>Slideshow</span>
+            </a>
+            <a class="btn btn-small btn-info modal-prev">
+                <i class="icon-arrow-left icon-white"></i>
+                <span>Previous</span>
+            </a>
+            <a class="btn btn-small btn-primary modal-next">
+                <span>Next</span>
+                <i class="icon-arrow-right icon-white"></i>
+            </a>
+        </div>
+    </div>
+    <!-- The template to display files available for upload -->
+    <script id="template-upload" type="text/x-tmpl">
+    {% for (var i=0, file; file=o.files[i]; i++) { %}
+        <tr class="template-upload fade">
+            <td class="preview"><span class="fade"></span></td>
+            <td class="name"><span>{%=file.name%}</span></td>
+            <td class="size"><span>{%=o.formatFileSize(file.size)%}</span></td>
+            {% if (file.error) { %}
+                <td class="error" colspan="2"><span class="label label-important">{%=locale.fileupload.error%}</span> {%=locale.fileupload.errors[file.error] || file.error%}</td>
+            {% } else if (o.files.valid && !i) { %}
+                <td>
+                    <div class="progress progress-success progress-striped active" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0"><div class="bar" style="width:0%;"></div></div>
+                </td>
+                <td class="start">{% if (!o.options.autoUpload) { %}
+                    <button class="btn btn-small btn-primary">
+                        <i class="icon-upload icon-white"></i>
+                        <span>{%=locale.fileupload.start%}</span>
+                    </button>
+                {% } %}</td>
+            {% } else { %}
+                <td colspan="2"></td>
+            {% } %}
+            <td class="cancel">{% if (!i) { %}
+                <button class="btn btn-small btn-warning">
+                    <i class="icon-ban-circle icon-white"></i>
+                    <span>{%=locale.fileupload.cancel%}</span>
+                </button>
+            {% } %}</td>
+        </tr>
+    {% } %}
+    </script>
+    <!-- The template to display files available for download -->
+    <script id="template-download" type="text/x-tmpl">
+    {% for (var i=0, file; file=o.files[i]; i++) { %}
+        <tr class="template-download fade">
+            {% if (file.error) { %}
+                <td></td>
+                <td class="name"><span>{%=file.name%}</span></td>
+                <td class="size"><span>{%=o.formatFileSize(file.size)%}</span></td>
+                <td class="error" colspan="2"><span class="label label-important">{%=locale.fileupload.error%}</span> {%=locale.fileupload.errors[file.error] || file.error%}</td>
+            {% } else { %}
+                <td class="preview">{% if (file.thumbnail_url) { %}
+                    <a href="{%=file.url%}" title="{%=file.name%}" rel="gallery" download="{%=file.name%}"><img src="{%=file.thumbnail_url%}"></a>
+                {% } %}</td>
+                <td class="name">
+                    <a href="{%=file.url%}" title="{%=file.name%}" rel="{%=file.thumbnail_url&&'gallery'%}" download="{%=file.name%}">{%=file.name%}</a>
+                </td>
+                <td class="size"><span>{%=o.formatFileSize(file.size)%}</span></td>
+                <td colspan="2"></td>
+            {% } %}
+            <td class="delete">
+                <button class="btn btn-small btn-danger" data-type="{%=file.delete_type%}" data-url="{%=file.delete_url%}">
+                    <i class="icon-trash icon-white"></i>
+                    <span>{%=locale.fileupload.destroy%}</span>
+                </button>
+                <input type="checkbox" name="delete" value="1" class="delete_all">
+            </td>
+        </tr>
+    {% } %}
+    </script>
+
+    <script src="js/plugins/forms/jquery.cleditor.min.js"></script>
+    <script src="js/plugins/tables/jquery.dataTables.min.js"></script>
+
+    <!-- General scripts --> 
+    <script src="js/script.js"></script>
+    <script src="js/specific/mail.js"></script>
+
+    <script type="text/javascript">
+
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-31818910-2']);
+      _gaq.push(['_setDomainName', 'loxdesign.net']);
+      _gaq.push(['_trackPageview']);
+
+      (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+
+    </script>
+  </body>
+</html>

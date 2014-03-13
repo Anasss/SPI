@@ -1,0 +1,56 @@
+--
+-- Contenu de la table `cg_ref_codes`
+--
+
+INSERT INTO `cg_ref_codes` (`RV_DOMAIN`, `RV_LOW_VALUE`, `RV_HIGH_VALUE`, `RV_ABBREVIATION`, `RV_MEANING`) VALUES
+('TYPE_EMPLOI', 'CDI', NULL, 'CDI', 'Contrat à durée indéterminée'),
+('TYPE_EMPLOI', 'CDD', NULL, 'CDD', 'Contrat à durée déterminée'),
+('TYPE_EMPLOI', 'SE', NULL, 'SE', 'Sans emploi'),
+('TYPE_EMPLOI', 'CNE', NULL, 'CNE', 'Contrat Nouvelle Embauche'),
+('MOYEN_OBTENTION_EMPLOI', 'STA', NULL, 'STA', 'Suite au stage'),
+('MOYEN_OBTENTION_EMPLOI', 'SPO', NULL, 'SPO', 'Candidature Spontanée'),
+('SEMESTRE', 'S1', NULL, 'S1', 'Semestre 1'),
+('SEMESTRE', 'S2', NULL, 'S2', 'Semestre 2'),
+('SEMESTRE', 'S3', NULL, 'S3', 'Semestre 3'),
+('SEMESTRE', 'S4', NULL, 'S4', 'Semestre 4'),
+('SEMESTRE', 'S5', NULL, 'S5', 'Semestre 5'),
+('SEMESTRE', 'S6', NULL, 'S6', 'Semestre 6'),
+('SEMESTRE', 'S7', NULL, 'S7', 'Semestre 7'),
+('SEMESTRE', 'S8', NULL, 'S8', 'Semestre 8'),
+('SEMESTRE', 'S9', NULL, 'S9', 'Semestre 9'),
+('SEMESTRE', 'S10', NULL, 'S10', 'Semestre 10'),
+('PROCESSUS_STAGE', 'RECH', NULL, 'RECH', 'Recherche en cours'),
+('PROCESSUS_STAGE', 'EC', NULL, 'EC', 'Stage en cours'),
+('PROCESSUS_STAGE', 'TUT', NULL, 'TUT', 'Tuteurs attribués'),
+('PROCESSUS_STAGE', 'SOUT', NULL, 'SOUT', 'Sessions de soutenance définies'),
+('PROCESSUS_STAGE', 'EVAL', NULL, 'EVAL', 'Stage evalué'),
+('ETAT-EVALUATION', 'DIS', NULL, 'DIS', 'Mise à disposition'),
+('ETAT-EVALUATION', 'CLO', NULL, 'CLO', 'Clôturé'),
+('SERVICE', 'EP', NULL, 'EP', 'Equipe Projet'),
+('SERVICE', 'RetD', NULL, 'RetD', 'Recherche et Développement'),
+('SERVICE', 'QUA', NULL, 'QUA', 'Qualité'),
+('DOMAINE_ACTIVITE', 'BANQ', NULL, 'BANQ', 'Domaine bancaire'),
+('DOMAINE_ACTIVITE', 'SSII', NULL, 'SSII', 'Société de services en ingénierie informatique'),
+('DOMAINE_ACTIVITE', 'TEL', NULL, 'TEL', 'Domaine de la téléphonie'),
+('FONCTION', 'GER', NULL, 'GER', 'Gérant'),
+('FONCTION', 'DACH', NULL, 'DACH', 'Directeur des Achats'),
+('FONCTION', 'IE', NULL, 'IE', 'Ingénieur d''Etudes'),
+('FONCTION', 'ING', NULL, 'ING', 'Ingénieur'),
+('FONCTION', 'DIR', NULL, 'DIR', 'Directeur'),
+('FONCTION', 'DT', NULL, 'DT', 'Directeur Technique'),
+('FONCTION', 'RREC', NULL, 'RREC', 'Responsable Recrutement'),
+('FONCTION', 'RAG', NULL, 'RAG', 'Responsable d''Agence'),
+('FONCTION', 'CDP', NULL, 'CDP', 'Chef de Projet'),
+('FONCTION', 'RQ', NULL, 'RQ', 'Responsable Qualité'),
+('FONCTION', 'DRH', NULL, 'DRH', 'Directeur des Ressources Humaines'),
+('FONCTION', 'COMM', NULL, 'COMM', 'Commercial'),
+('DIPLOME', 'L', NULL, 'L', 'Licence'),
+('DIPLOME', 'M', NULL, 'M', 'Master'),
+('DIPLOME', 'D', NULL, 'D', 'Doctorat'),
+('OUI_NON', 'O', NULL, 'O', 'Oui'),
+('OUI_NON', 'N', NULL, 'N', 'Non'),
+('ETAT-EVALUATION', 'ELA', NULL, 'ELA', 'En cours d''élaboration');
+
+
+
+

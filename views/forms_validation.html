@@ -1,0 +1,740 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Phoenix - Forms - Validation</title>
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!-- ===================== Touch Icons ===================== -->
+    <link rel="shortcut icon" href="favicon.ico">
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="apple-touch-icon-144-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="apple-touch-icon-114-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="apple-touch-icon-72-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" href="apple-touch-icon-57-precomposed.png">
+
+    <!-- ===================== CSS ===================== -->    
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>  
+    <link rel="stylesheet" href="css/bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="css/bootstrap/bootstrap-responsive.min.css">    
+
+    <!-- Site specific - CSS --> 
+    <link rel="stylesheet" href="css/theme_light/filevalidation/validationEngine.jquery.css">
+
+    <!-- Common - CSS -->     
+    <link rel="stylesheet" href="css/theme_light/common.css">  
+    <link rel="stylesheet" href="css/theme_light.css" class="style_set">
+    
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+  <body> 
+    <div id="loader_cont"><img src="img/loaders/page_loader.gif"></div> 
+    <div class="options_cont">
+      <form name="myForm">
+        <a class="options_btn" href="#">OPTIONS</a> 
+        <div class="options group">
+          <div>
+            <p>Background image:</p>
+            <ul class="background_list">
+              <li><a class="current" id='bg_1' href="#">bg_1</a></li>
+              <li><a id='bg_2' href="#">bg_2</a></li>
+              <li><a id='bg_3' href="#">bg_3</a></li>
+              <li><a id='bg_4' href="#">bg_4</a></li>
+              <li><a id='bg_5' href="#">bg_5</a></li>
+              <li><a id='bg_6' href="#">bg_6</a></li>
+              <li><a id='bg_7' href="#">bg_7</a></li>
+              <li><a id='bg_8' href="#">bg_8</a></li>
+              <li><a id='bg_9' href="#">bg_9</a></li>
+              <li><a id='bg_10' href="#">bg_10</a></li>
+            </ul>
+          </div>
+          <div>
+            <p>Color styling:</p>
+            <ul class="color_list">
+              <li><a class="current" id='c_1' href="#" title="Rose">rose</a></li>
+              <li><a id='c_2' href="#" title="Orange">orange</a></li>
+              <li><a id='c_3' href="#" title="Apple Green">apple_green</a></li>
+              <li><a id='c_4' href="#" title="Sky Blue">sky_blue</a></li>
+              <li><a id='c_5' href="#" title="Purple">purple</a></li>
+            </ul>            
+          </div>
+          <div class="top_mn_setup">
+            <p>Display top menu on:</p>
+            <div>
+              <input id="top_menu_click" checked="checked" type="radio" value="1" class="menu_show" name="top_menu_show"><label for="top_menu_click">Click</label>
+              <input id="top_menu_hover" type="radio" value="0" class="menu_show" name="top_menu_show"><label for="top_menu_hover">Hover</label>
+            </div>            
+          </div>  
+          <div class="clear_cache_cont"><a class="btn btn-mini" href="#">Clear Cache</a></div>              
+        </div> 
+      </form> 
+    </div>    
+    <div class="navbar navbar-fixed-top">
+      <div class="navbar-inner">
+        <div class="container">
+          <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+            <span class="sweet-gray sweet-go-back-from-screen">&nbsp;</span>
+          </a>
+          <div class="nav-collapse">            
+            <ul class="nav main_nav" role="navigation">                
+                <li id="mail" class="styled dropdown mail">
+                  <a class="dropdown-toggle" data-toggle="dropdown" href="#">Mail<span class="info">2</span></a>
+                  <ul class="dropdown-menu top_menu">
+                      <li><a class="mn_new_msg" href="mail.html"><span>New Message</span></a></li>
+                      <li><a class="mn_inbox" href="mail.html"><span>Inbox</span></a></li>
+                      <li><a class="mn_outbox" href="mail.html"><span>OutBox</span></a></li>
+                      <li><a class="mn_spam" href="mail.html"><span>Spam</span></a></li>
+                      <li><a class="mn_trash" href="mail.html"><span>Trash</span></a></li>
+                  </ul>
+                </li>
+                <li id="chat" class="styled chat">
+                  <a data-toggle="modal" href="#chat_modal">Chat<span class="info">5</span></a>     
+                </li>
+                <li id="notification" class="styled dropdown notification">
+                  <a class="dropdown-toggle" data-toggle="dropdown" href="#">Notification<span class="info">4</span></a>
+                  <ul class="dropdown-menu">
+                    <li>
+                        <a href="#">                          
+                          Lorem ipsum dolor sit amet, consectetur adipiscing elit...
+                            <span>07/19/2012</span>                       
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                          Vivamus ut enim vitae nibh aliquet pre-tium lobortis sit amet tortor...
+                            <span>07/19/2012</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                          Ut id dui arcu, non tempus nunc...
+                            <span>07/19/2012</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                          Morbi faucibus suscipit nibh, ut pellen-tesque lectus pellentesque non....
+                            <span>07/19/2012</span>
+                        </a>
+                    </li>                        
+                    <li class="show_all"><a href="#">Show all notifications</a></li> 
+                  </ul>
+                </li>                          
+            </ul> 
+            <ul class="main_nav nav pull-right">                
+                <li id="search" class="search"> 
+                  <a href="#">Search</a> 
+                  <div class="search_cont">
+                      <form class="navbar-search form-search">                          
+                          <input type="text" class="input-medium search-query" placeholder="Search">
+                          <button type="submit">Search</button>
+                      </form> 
+                  </div>              
+                </li> 
+                <li id="settings" class="styled dropdown settings">
+                  <a class="dropdown-toggle" data-toggle="dropdown" href="#">Settings</a>
+                    <ul class="dropdown-menu top_menu">
+                        <li class="show_all">Settings</li>
+                        <li><a class="mn_site" href="#"><span>Site</span></a></li>
+                        <li><a class="mn_admin" href="#"><span>Admin</span></a></li>
+                        <li><a class="mn_mail" href="#"><span>Mail</span></a></li>
+                        <li><a class="mn_user" href="#"><span>User</span></a></li>
+                    </ul>
+                </li>
+                <li id="profile" class="styled dropdown profile">
+                  <a class="dropdown-toggle" data-toggle="dropdown" href="#">Profile</a>
+                    <ul class="dropdown-menu top_menu">                        
+                        <li class="profile group">
+                          <img src="img/general/user_1.jpg" width="50" height="50" alt="User">
+                          <ul>
+                            <li><strong>John Doe</strong></li>
+                            <li>@johndoe</li>
+                            <li><span>Administrator</span></li>
+                          </ul>
+                        </li>
+                        <li><a class="mn_settings" href="#"><span>My Settings</span></a></li>
+                        <li><a class="mn_profile" href="#"><span>My Profile</span></a></li>
+                        <li><a class="mn_logout" href="login.html"><span>Logout</span></a></li>
+                    </ul>
+                </li>                          
+            </ul>           
+          </div>
+          <h1 class="brand"><a href="index-2.html">PHOENIX</a></h1>                                       
+        </div>
+      </div>
+    </div>
+            
+    <div class="container">              
+      <div class="main_content row-fluid">
+
+        <div class="span3">
+
+          <div class="side_nav sidebar-nav" data-spy="affix" data-offset-top="150">
+			<h3 class="main_menu group">
+                <span class="title">Main Menu</span>
+                <a id="nav_list_btn" class="btn-collapse btn btn-inverse">
+                  <span class="sweet-gray sweet-go-back-from-screen">&nbsp;</span>              
+                </a>
+            </h3>
+            <ul class="nav nav-list">                          
+              <li><a class="home" href="index-2.html">Dashboard</a></li>
+              <li class="sub active open">
+                <a class="forms" href="#">Forms<span>4</span></a>
+                <ul>
+                  <li><a href="forms_layout.html">Layout</a></li>
+                  <li><a href="forms_elements.html">Elements</a></li>
+                  <li class="active"><a href="forms_validation.html">Validation</a></li>
+                  <li><a href="forms_uploader.html">File uploader &amp; WYSIWYG</a></li>                  
+                </ul>
+              </li>
+              <li><a class="charts" href="charts.html">Charts</a></li>
+              <li class="sub">
+                <a class="tables" href="#">Tables<span>2</span></a>
+                <ul>
+                  <li><a href="tables_basic.html">Basic</a></li>
+                  <li><a href="tables_advanced.html">Advanced</a></li>
+                </ul>
+              </li>
+              <li><a class="calendar" href="calendar.html">Calendar</a></li>
+              <li><a class="gallery" href="gallery.html">Gallery</a></li>
+              <li class="sub">
+                <a class="uielements" href="#">UI Elements<span>8</span></a>
+                <ul>
+                  <li><a href="accordions.html">Accordions</a></li>                  
+                  <li><a href="buttons_icons.html">Buttons and Icons</a></li>
+                  <li><a href="breadcrumbs.html">Breadcrumbs</a></li>
+                  <li><a href="progressbars.html">Progressbars</a></li>                  
+                  <li><a href="sliders.html">Sliders</a></li>                                    
+                  <li><a href="tabs.html">Tabs</a></li>        
+                  <li><a href="tooltips_popovers.html">Tooltips and Popovers</a></li>                                    
+                  <li><a href="miscellaneous.html">Misc</a></li>
+                </ul>
+              </li>              
+              <li><a class="filemanager" href="file_manager.html">File Manager</a></li>
+              <li><a class="typography" href="typography.html">Typography</a></li>
+              <li><a class="gridsystem" href="grid_system.html">Grid System</a></li>
+              <li><a class="widgets" href="widgets.html">Widgets</a></li>
+              <li class="sub">
+                <a class="pages" href="#">Pages<span>4</span></a>
+                <ul>
+                  <li><a href="login.html">Login</a></li>                  
+                  <li><a href="search.html">Search</a></li>
+                  <li><a href="mail.html">Mail</a></li>
+                  <li class="sub"> 
+                    <a href="#">Error<span>6</span></a>
+                    <ul>
+                      <li><a href="error_403.html">403</a></li>
+                      <li><a href="error_404.html">404</a></li>
+                      <li><a href="error_405.html">405</a></li>
+                      <li><a href="error_500.html">500</a></li>
+                      <li><a href="error_503.html">503</a></li>
+                      <li><a href="offline.html">Offline</a></li>
+                    </ul>
+                  </li>                  
+                </ul>
+              </li>                        
+            </ul>
+          </div><!--/.well -->
+        </div><!--/span-->
+        <div class="span9">
+          <div class="row-fluid">
+            <div class="span12">
+
+              <ul class="breadcrumb br_styled no_space">
+                <li>
+                  <a href="index-2.html">Dashboard</a> <span class="divider">/</span>
+                </li>                
+                <li class="active">Forms - validation</li>
+              </ul> 
+              <ul class="page_info">
+                  <li><h2>Forms - validation</h2></li>
+                  <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
+              </ul>
+
+              <div class="widget chart">
+                <header>
+                    <h3>Validation examples</h3>
+                    <ul class="toggle_content">                          
+                        <li class="arrow"><a href="#">Toggle Content</a></li>
+                    </ul>
+                </header>
+                <section class="welly form_align">
+                  <form class="formClass" method="post">
+                    <h5 class="titlee">Required! <span>- class="validate[required]"</span></h5> 
+                    <div class="row-fluid">
+                      <div class="span4">Field is required :</div>
+                      <div class="span8"><input value="" class="validate[required] text-input" type="text" name="req" id="req" /></div>
+                    </div> 
+                    <hr>
+                    <div class="row-fluid">
+                      <div class="span4">Field is required and it has placeholder :</div>
+                      <div class="span8"><input value="This is a placeholder" data-validation-placeholder="This is a placeholder" class="validate[required] text-input" type="text" name="reqplaceholder" id="reqplaceholder" /></div>
+                    </div>
+                    <hr>
+                    <div class="row-fluid">
+                      <div class="span4">Favorite sport 1:</div>
+                      <div class="span8">
+                        <select name="sport" id="sport" class="validate[required]">
+                          <option value="">Choose a sport</option>
+                          <option value="option1">Tennis</option>
+                          <option value="option2">Football</option>
+                          <option value="option3">Golf</option>
+                        </select>
+                      </div>
+                    </div>
+                    <hr>
+                    <div class="row-fluid">
+                      <div class="span4">Favorite sport 2:</div>
+                      <div class="span8">
+                        <select name="sport2" id="sport2" multiple class="validate[required]">
+                          <option value="">Choose a sport</option>
+                          <option value="option1">Tennis</option>
+                          <option value="option2">Football</option>
+                          <option value="option3">Golf</option>
+                        </select>
+                      </div>
+                    </div>                    
+                    <hr class="big_space">
+                    <h5 class="titlee">Equals <span>- class="validate[required,equals[password]]"</span></h5> 
+                    <div class="row-fluid">
+                      <div class="span4">Password :</div>
+                      <div class="span8">
+                        <input value="karnius" class="validate[required] text-input" type="password" name="password" id="password" />
+                      </div>
+                    </div>
+                    <hr>
+                    <div class="row-fluid">
+                      <div class="span4">Confirm password :</div>
+                      <div class="span8">
+                        <input value="kaniusBAD" class="validate[required,equals[password]] text-input" type="password" name="password2" id="password2" />
+                      </div>
+                    </div>
+                    <hr class="big_space">
+                    <h5 class="titlee">Function <span>- class="validate[required,funcCall[checkHELLO]]"</span></h5> 
+                    <div class="row-fluid">
+                      <div class="span4">Write 'HELLO':</div>
+                      <div class="span8">
+                        <input value="" class="validate[required,funcCall[checkHELLO]] text-input" type="text" id="lastname" name="lastname" />
+                      </div>
+                    </div>
+                    <hr class="big_space">
+                    <h5 class="titlee">Conditional required - 1 dependency <span>- class="validate[condRequired[dep1]]"</span></h5> 
+                    <div class="row-fluid">
+                      <div class="span4">Depending field (1):</div>
+                      <div class="span8">
+                        <input value="" class="text-input" type="text" name="dep1" id="dep1" />
+                      </div>
+                    </div>
+                    <hr>
+                    <div class="row-fluid">
+                      <div class="span4">This field is required if above field has a value :</div>
+                      <div class="span8">
+                        <input class="validate[condRequired[dep1]] text-input" type="text" name="conditionalrequired1" id="conditionalrequired1" />
+                      </div>
+                    </div>
+                    <hr class="big_space">
+                    <h5 class="titlee">Conditional required - 2 dependencies <span>- class="validate[condRequired[dep2a,dep2b]]"</span></h5> 
+                    <div class="row-fluid">
+                      <div class="span4">Depending field (2a) :</div>
+                      <div class="span8">
+                        <input value="" class="text-input" type="text" name="dep2a" id="dep2a" />
+                      </div>
+                    </div>
+                    <hr>
+                    <div class="row-fluid">
+                      <div class="span4">Depending field (2b) :</div>
+                      <div class="span8">
+                        <input value="" class="text-input" type="text" name="dep2b" id="dep2b" />
+                      </div>
+                    </div>
+                    <hr>
+                    <div class="row-fluid">
+                      <div class="span4">This field is required if any of above fields has a value :</div>
+                      <div class="span8">
+                        <input class="validate[condRequired[dep2a,dep2b]] text-input" type="text" name="conditionalrequired2" id="conditionalrequired2" />
+                      </div>
+                    </div>
+                    <hr class="big_space">
+                    <h5 class="titlee">MinSize <span>- class="validate[required,minSize[6]]"</span></h5> 
+                    <div class="row-fluid">
+                      <div class="span4">Minimum field size</div>
+                      <div class="span8">
+                        <input value="" class="validate[required,minSize[6]] text-input" type="text" name="minsize" id="minsize" />
+                      </div>
+                    </div>
+                    <hr class="big_space">
+                    <h5 class="titlee">MaxSize <span>- class="validate[maxSize[6]]"</span></h5> 
+                    <div class="row-fluid">
+                      <div class="span4">Maximum field size, optional</div>
+                      <div class="span8">
+                        <input value="0123456789" class="validate[optional,maxSize[6]] text-input" type="text" name="maxsize" id="maxsize" />
+                        <span class="help-block">Note that the field is optional - it won't fail if it has no value</span>
+                      </div>
+                    </div>
+                    <hr class="big_space">
+                    <h5 class="titlee">Min <span>- class="validate[required,custom[integer],min[-5]]"</span></h5> 
+                    <div class="row-fluid">
+                      <div class="span4">integer >= -5</div>
+                      <div class="span8">
+                        <input value="-7" class="validate[required,custom[integer],min[-5]] text-input" type="text" name="min" id="min" />
+                      </div>
+                    </div>
+                    <hr class="big_space">
+                    <h5 class="titlee">Max <span>- class="validate[required,custom[integer],min[-5]]"</span></h5> 
+                    <div class="row-fluid">
+                      <div class="span4">integer, 50</div>
+                      <div class="span8">
+                        <input value="55" class="validate[required,custom[integer],max[50]] text-input" type="text" name="max" id="max" />
+                      </div>
+                    </div>
+                    <hr class="big_space">
+                    <h5 class="titlee">Group required - Checks if at least one of the input is not empty.</h5> 
+                    <div class="row-fluid">
+                      <div class="span4">Please enter a credit card</div>
+                      <div class="span8">
+                        <input value="" class="validate[groupRequired[payments]] text-input" type="text" name="creditcard1" id="creditcard1" />
+                      </div>
+                    </div>
+                    <hr>                    
+                    <div class="row-fluid">
+                      <div class="span4"><strong>OR</strong> Please enter a paypal acccount</div>
+                      <div class="span8">
+                        <input value="" class="validate[groupRequired[payments],custom[email]] text-input" type="text" name="paypal" id="paypal" />
+                      </div>
+                    </div>
+                    <hr>
+                    <div class="row-fluid">
+                      <div class="span4"><strong>OR</strong> Please enter a bank account</div>
+                      <div class="span8">
+                        <input value="" class="validate[groupRequired[payments],custom[integer]] text-input" type="text" name="bank" id="bank" />
+                      </div>
+                    </div>
+                    <hr>
+                    <div class="row-fluid">
+                      <div class="span4"><strong>OR</strong> Please  choose from select</div>
+                      <div class="span8">
+                        <select class="validate[groupRequired[payments]] text-input" type="text" name="bank2" id="bank2">
+                          <option value="">Choose a payment option</option>
+                          <option value="Paypal">Paypal</option>
+                          <option value="Bank">Bank account</option>
+                        </select>
+                      </div>
+                    </div>
+                    <hr class="big_space">
+                    <h5 class="titlee">Date Range - Checks that the start date is before the end date.
+                      Please enter an end date ealier than the start date<span>- class="validate[dateRange[grp1]]"</span></h5> 
+                    <div class="row-fluid">
+                      <div class="span4">Start Date :</div>
+                      <div class="span8">
+                        <input value="9/1/2009"  class="validate[dateRange[grp1]]" type="text" id="date1" />
+                      </div>
+                    </div>
+                    <hr>
+                    <div class="row-fluid">
+                      <div class="span4">End Date :</div>
+                      <div class="span8">
+                        <input value="3/18/1985" class="validate[dateRange[grp1]]" type="text" id="date2" />
+                        <span class="help-block">Note* Both fields must have the same name</span>                        
+                      </div>
+                    </div>
+                    <hr class="big_space">
+                    <h5 class="titlee">Date Time Range - Checks that the start date and time are before the end date and time.
+                      Please enter an end date ealier than the start date<span>- class="validate[dateTimeRange[grp2]"</span></h5> 
+                    <div class="row-fluid">
+                      <div class="span4">Start Date Time :</div>
+                      <div class="span8">
+                        <input value="9/1/2009 9:30:00 PM"  class="validate[dateTimeRange[grp2]]" type="text" id="datetime1" />
+                      </div>
+                    </div>
+                    <hr>
+                    <div class="row-fluid">
+                      <div class="span4">End Date Time :</div>
+                      <div class="span8">
+                        <input value="9/1/2009 2:30:00 AM" class="validate[dateTimeRange[grp2]]" type="text" id="datetime2" />
+                        <span class="help-block">Note* Both fields must have the same name</span>                        
+                      </div>
+                    </div>
+                    <hr class="big_space">
+                    <h5 class="titlee">Credit Card - Checks that the start date and time are before the end date and time.
+                      Please enter an end date ealier than the start date<span>- class="validate[dateTimeRange[grp2]"</span></h5> 
+                    <div class="row-fluid">
+                      <div class="span4">Start Date Time :</div>
+                      <div class="span8">
+                        <input value="9/1/2009 9:30:00 PM"  class="validate[dateTimeRange[grp2]]" type="text" id="datetime1" />
+                      </div>
+                    </div>                    
+                    <hr class="big_space">
+                    <h5 class="titlee">Radio Button Group</h5> 
+                    <div class="row-fluid">
+                      <div class="span4">Radio Buttons :</div>                      
+                      <div class="span8 radio_btn_cont">
+                        <div>
+                          <label for="radio1">Option 1</label>
+                          <input class="validate[required] radio" type="radio" name="group0" id="radio1" value="5"/>
+                        </div>
+                        <div>
+                          <label for="radio2">Option 2</label>
+                          <input class="validate[required] radio" type="radio" name="group0" id="radio2" value="3"/>
+                        </div>
+                        <div>
+                          <label for="radio3">Option 3</label>
+                          <input class="validate[required] radio" type="radio" name="group0" id="radio3" value="9"/>
+                        </div>
+                      </div>
+                    </div>                    
+                    <hr class="big_space">
+                    <h5 class="titlee">Minimum 2 checkbox <span>- class="validate[minCheckbox[2]]"</span></h5> 
+                    <div class="row-fluid">
+                      <div class="span4">Checkboxes :</div>                      
+                      <div class="span8 radio_btn_cont">
+                        <div>                          
+                          <input class="validate[minCheckbox[2]] checkbox" type="checkbox" name="group[group]" id="maxcheck1" value="5"/>
+                        </div>
+                        <div>                          
+                          <input class="validate[minCheckbox[2]] checkbox" type="checkbox" name="group[group]" id="maxcheck2" value="3"/>
+                        </div>
+                        <div>                          
+                          <input class="validate[minCheckbox[2]] checkbox" type="checkbox" name="group[group]" id="maxcheck3" value="9"/>
+                        </div>
+                      </div>
+                    </div>                    
+                    <hr class="big_space">
+                    <h5 class="titlee">Maximum 2 checkbox <span>- class="validate[maxCheckbox[2]]"</span></h5> 
+                    <div class="row-fluid">
+                      <div class="span4">Checkboxes :</div>                      
+                      <div class="span8 radio_btn_cont">
+                        <div>                          
+                          <input class="validate[maxCheckbox[2]] checkbox" type="checkbox" name="group2" id="maxcheck4" value="5"/>
+                        </div>
+                        <div>                          
+                          <input class="validate[maxCheckbox[2]] checkbox" type="checkbox" name="group2" id="maxcheck5" value="3"/>
+                        </div>
+                        <div>                          
+                          <input class="validate[maxCheckbox[2]] checkbox" type="checkbox" name="group2" id="maxcheck6" value="9"/>
+                        </div>
+                      </div>
+                    </div>                    
+                    <hr class="big_space">
+                    <h5 class="titlee">Conditions - Checking this box indicates that you accept terms of use. If you do not accept these terms, do not use this website :</h5> 
+                    <div class="row-fluid">
+                      <div class="span4">I accept terms of use :</div>                      
+                      <div class="span8">
+                        <input class="validate[required] checkbox" type="checkbox" id="agree" name="agree"/>
+                      </div>
+                    </div>                    
+                    <hr class="big_space">
+                    <h5 class="titlee">Phone</h5> 
+                    <div class="row-fluid">
+                      <div class="span4">
+                        +103-304-340-4300-043
+                        <br/>
+                        +1 305 768 23 34 ext 23
+                        <br/>
+                        +1 (305) 768-2334 extension 703
+                        <br/>
+                        +1 (305) 768-2334 x703
+                        <br/>
+                        04312 / 777 777
+                        <br/>
+                        01-47.34/32 56
+                        <br/>
+                        (01865)  123456
+                        <br/>
+                        Phone : (optional)
+                      </div>                      
+                      <div class="span8">
+                        <input value="+1 305 768 23 34 ext 23 BUG" class="validate[custom[phone]] text-input" type="text" name="telephone" id="telephone" />
+                      </div>
+                    </div>                    
+                    <hr class="big_space">
+                    <h5 class="titlee">URL - begin with http:// https:// or ftp://</h5> 
+                    <div class="row-fluid">
+                      <div class="span4">Enter a URL :</div>                      
+                      <div class="span8">
+                        <input value="http://" class="validate[required,custom[url]] text-input" type="text" name="url" id="url" />
+                      </div>
+                    </div>                    
+                    <hr class="big_space">
+                    <h5 class="titlee">Email</h5> 
+                    <div class="row-fluid">
+                      <div class="span4">Email address :</div>                      
+                      <div class="span8">
+                        <input value="forced_error" class="validate[required,custom[email]] text-input" type="text" name="email" id="email" />
+                      </div>
+                    </div>                    
+                    <hr class="big_space">
+                    <h5 class="titlee">IP Address</h5> 
+                    <div class="row-fluid">
+                      <div class="span4">IP: </div>                      
+                      <div class="span8">
+                        <input value="192.168.3." class="validate[required,custom[ipv4]] text-input" type="text" name="ip" id="ip" />
+                      </div>
+                    </div>                    
+                    <hr class="big_space">
+                    <h5 class="titlee">Date - ISO 8601 dates only YYYY-mm-dd</h5> 
+                    <div class="row-fluid">
+                      <div class="span4">Date: </div>                      
+                      <div class="span8">
+                        <input value="201-12-01" class="validate[required,custom[date]] text-input" type="text" name="date" id="date" />
+                      </div>
+                    </div>                    
+                    <hr class="big_space">
+                    <h5 class="titlee">Number - a signed floating number, ie: -3849.354, 38.00, 38, .77</h5> 
+                    <div class="row-fluid">
+                      <div class="span4">Number: </div>                      
+                      <div class="span8">
+                        <input value="-33.87a" class="validate[required,custom[number]] text-input" type="text" name="number" id="number" />
+                      </div>
+                    </div>                    
+                    <hr class="big_space">
+                    <h5 class="titlee">Integer - an signed integer: ie +34, 34 or -1</h5> 
+                    <div class="row-fluid">
+                      <div class="span4">Number: </div>                      
+                      <div class="span8">
+                        <input value="10.1" class="validate[required,custom[integer]] text-input" type="text" name="integer" id="integer" />
+                      </div>
+                    </div>                    
+                    <hr class="big_space">
+                    <h5 class="titlee">onlyLetterNumber</h5> 
+                    <div class="row-fluid">
+                      <div class="span4">only [0-9a-zA-Z]: </div>                      
+                      <div class="span8">
+                        <input value="too many spaces obviously" class="validate[required,custom[onlyLetterNumber]] text-input" type="text" name="special" id="special" />
+                      </div>
+                    </div>                    
+                    <hr class="big_space">
+                    <h5 class="titlee">Only Numbers (char)</h5> 
+                    <div class="row-fluid">
+                      <div class="span4">only [0-9] and space: </div>                      
+                      <div class="span8">
+                        <input value="10.1" class="validate[required,custom[onlyNumberSp]] text-input" type="text" name="onlynumber" id="onlynumber" />
+                      </div>
+                    </div>                    
+                    <hr class="big_space">
+                    <h5 class="titlee">OnlyLetter</h5> 
+                    <div class="row-fluid">
+                      <div class="span4">only ascii letters, space and '</div>                      
+                      <div class="span8">
+                        <input value="this is an invalid char '.'" class="validate[required,custom[onlyLetterSp]] text-input" type="text" name="onlyascii" id="onlyascii" />
+                      </div>
+                    </div>                    
+                    <hr class="big_space">
+
+                    <input class="btn btn-inverse" type="submit" value="Validate &amp; Send the form!"/><hr/>
+                  </form>  
+                </section>
+              </div>
+
+            </div>                  
+          </div><!--/row-->
+           
+          
+        </div><!--/span-->
+      </div><!--/row-->      
+      <hr>
+
+      <footer>
+        <p>&copy; LoxDesign.net - Phoenix 2012</p>
+      </footer>
+
+    </div><!--/.fluid-container-->
+
+    <!-- ===================== CHAT - Modal ===================== -->
+    <div id="chat_modal" class="chat_modal modal fade hide">
+      <div class="modal-header">
+        <ul>
+          <li class="toggle_users"><a href="#">Show Users</a></li>
+          <li class="status">
+            <a class="online" href="#"><span>Status</span></a>  
+            <ul>
+               <li><a class="online" href="#" title="Online"><span>Online</span></a></li>
+               <li><a class="away" href="#" title="Away"><span>Away</span></a></li>
+               <li><a class="busy" href="#" title="Busy"><span>Busy</span></a></li>
+               <li><a class="invisiblee" href="#" title="Invisible"><span>Invisible</span></a></li>
+               <li><a class="offline" href="#" title="Offline"><span>Offline</span></a></li>
+             </ul> 
+          </li>
+          <li class="chat_name">John Doe</li>
+        </ul>       
+        <button type="button" class="close" data-dismiss="modal">x</button>        
+      </div>
+      <div class="modal-body">
+        <div class="msg_cont left">
+          <img src="img/general/user_1.jpg" width="50" height="50" alt="User">
+          <ul>
+            <li>
+              <h3>John Doe:</h3> 
+              <span>16 minutes ago</span>
+            </li>
+            <li>Aliquam iaculis volutpat ipsum ullamcorper tempus. In in dui tortor. Mauris sed volutpat
+metus. Duis ut sapien sapien, id pellentesque orci. Nullam nisl metus, sodales ut laoreet 
+eget, pretium porttitor quam. Sed varius vulputate lacinia. </li>
+          </ul>    
+        </div>
+        <div class="msg_cont right">
+          <img src="img/general/user_2.jpg" width="50" height="50" alt="User">
+          <ul>
+            <li>
+              <h3>Jessie Doe:</h3> 
+              <span>16 minutes ago</span>
+            </li>
+            <li>Aliquam iaculis volutpat ipsum ullamcorper tempus. In in dui tortor. Mauris sed volutpat
+metus. Duis ut sapien sapien, id pellentesque orci. Nullam nisl metus, sodales ut laoreet 
+eget, pretium porttitor quam. Sed varius vulputate lacinia. </li>
+          </ul>    
+        </div>
+        <div class="msg_cont left">
+          <img src="img/general/user_1.jpg" width="50" height="50" alt="User">
+          <ul>
+            <li>
+              <h3>John Doe:</h3> 
+              <span>16 minutes ago</span>
+            </li>
+            <li>Aliquam iaculis volutpat ipsum ullamcorper tempus. In in dui tortor. Mauris sed volutpat
+metus. Duis ut sapien sapien, id pellentesque orci. Nullam nisl metus, sodales ut laoreet 
+eget, pretium porttitor quam. Sed varius vulputate lacinia. </li>
+          </ul>    
+        </div>        
+      </div>
+      <div class="modal-footer">        
+        <textarea></textarea>
+        <a href="#" class="btn btn-inverse">Send</a>
+      </div>
+    </div>
+
+    <!-- ===================== JS ===================== -->
+    <script src="js/libs/jquery-1.7.2.min.js"></script>    
+    <script src="js/libs/bootstrap.min.js"></script>   
+    <script src="js/libs/ios-orientationchange-fix.js"></script>      
+    <script src="js/libs/jquery-ui-1.8.20.custom.min.js"></script>
+    <script src="js/common.js"></script>  
+
+    <!-- Site specific --> 
+    <script src="js/plugins/filevalidation/languages/jquery.validationEngine-en.js"></script>  
+    <script src="js/plugins/filevalidation/jquery.validationEngine.js"></script>  
+
+
+    <script src="js/script.js"></script>
+    <script src="js/specific/file_validation.js"></script>
+
+    <script type="text/javascript">
+
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-31818910-2']);
+      _gaq.push(['_setDomainName', 'loxdesign.net']);
+      _gaq.push(['_trackPageview']);
+
+      (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+
+    </script>
+  </body>
+</html>

@@ -1,0 +1,2137 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Phoenix - Buttons and Icons</title>
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!-- ===================== Touch Icons ===================== -->
+    <link rel="shortcut icon" href="favicon.ico">
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="apple-touch-icon-144-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="apple-touch-icon-114-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="apple-touch-icon-72-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" href="apple-touch-icon-57-precomposed.png">
+
+    <!-- ===================== CSS ===================== -->    
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>  
+    <link rel="stylesheet" href="css/bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="css/bootstrap/bootstrap-responsive.min.css">
+
+    <!-- Site specific - CSS -->   
+    <link rel="stylesheet" href="css/theme_light/prettify.css">
+    <link rel="stylesheet" href="css/theme_light/icons/font-awesome.css">
+    
+    <!-- Common - CSS -->  
+    <link rel="stylesheet" href="css/theme_light/common.css">
+    <link rel="stylesheet" href="css/theme_light.css" class="style_set">
+    
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+  </head>
+  <body> 
+    <div id="loader_cont"><img src="img/loaders/page_loader.gif"></div> 
+    <div class="options_cont">
+      <form name="myForm">
+        <a class="options_btn" href="#">OPTIONS</a> 
+        <div class="options group">
+          <div>
+            <p>Background image:</p>
+            <ul class="background_list">
+              <li><a class="current" id='bg_1' href="#">bg_1</a></li>
+              <li><a id='bg_2' href="#">bg_2</a></li>
+              <li><a id='bg_3' href="#">bg_3</a></li>
+              <li><a id='bg_4' href="#">bg_4</a></li>
+              <li><a id='bg_5' href="#">bg_5</a></li>
+              <li><a id='bg_6' href="#">bg_6</a></li>
+              <li><a id='bg_7' href="#">bg_7</a></li>
+              <li><a id='bg_8' href="#">bg_8</a></li>
+              <li><a id='bg_9' href="#">bg_9</a></li>
+              <li><a id='bg_10' href="#">bg_10</a></li>
+            </ul>
+          </div>
+          <div>
+            <p>Color styling:</p>
+            <ul class="color_list">
+              <li><a class="current" id='c_1' href="#" title="Rose">rose</a></li>
+              <li><a id='c_2' href="#" title="Orange">orange</a></li>
+              <li><a id='c_3' href="#" title="Apple Green">apple_green</a></li>
+              <li><a id='c_4' href="#" title="Sky Blue">sky_blue</a></li>
+              <li><a id='c_5' href="#" title="Purple">purple</a></li>
+            </ul>            
+          </div>
+          <div class="top_mn_setup">
+            <p>Display top menu on:</p>
+            <div>
+              <input id="top_menu_click" checked="checked" type="radio" value="1" class="menu_show" name="top_menu_show"><label for="top_menu_click">Click</label>
+              <input id="top_menu_hover" type="radio" value="0" class="menu_show" name="top_menu_show"><label for="top_menu_hover">Hover</label>
+            </div>            
+          </div>  
+          <div class="clear_cache_cont"><a class="btn btn-mini" href="#">Clear Cache</a></div>              
+        </div> 
+      </form> 
+    </div>    
+    <div class="navbar navbar-fixed-top">
+      <div class="navbar-inner">
+        <div class="container">
+          <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+            <span class="sweet-gray sweet-go-back-from-screen">&nbsp;</span>
+          </a>
+          <div class="nav-collapse">            
+            <ul class="nav main_nav" role="navigation">                
+                <li id="mail" class="styled dropdown mail">
+                  <a class="dropdown-toggle" data-toggle="dropdown" href="#">Mail<span class="info">2</span></a>
+                  <ul class="dropdown-menu top_menu">
+                      <li><a class="mn_new_msg" href="mail.html"><span>New Message</span></a></li>
+                      <li><a class="mn_inbox" href="mail.html"><span>Inbox</span></a></li>
+                      <li><a class="mn_outbox" href="mail.html"><span>OutBox</span></a></li>
+                      <li><a class="mn_spam" href="mail.html"><span>Spam</span></a></li>
+                      <li><a class="mn_trash" href="mail.html"><span>Trash</span></a></li>
+                  </ul>
+                </li>
+                <li id="chat" class="styled chat">
+                  <a data-toggle="modal" href="#chat_modal">Chat<span class="info">5</span></a>     
+                </li>
+                <li id="notification" class="styled dropdown notification">
+                  <a class="dropdown-toggle" data-toggle="dropdown" href="#">Notification<span class="info">4</span></a>
+                  <ul class="dropdown-menu">
+                    <li>
+                        <a href="#">                          
+                          Lorem ipsum dolor sit amet, consectetur adipiscing elit...
+                            <span>07/19/2012</span>                       
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                          Vivamus ut enim vitae nibh aliquet pre-tium lobortis sit amet tortor...
+                            <span>07/19/2012</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                          Ut id dui arcu, non tempus nunc...
+                            <span>07/19/2012</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                          Morbi faucibus suscipit nibh, ut pellen-tesque lectus pellentesque non....
+                            <span>07/19/2012</span>
+                        </a>
+                    </li>                        
+                    <li class="show_all"><a href="#">Show all notifications</a></li> 
+                  </ul>
+                </li>                          
+            </ul> 
+            <ul class="main_nav nav pull-right">                
+                <li id="search" class="search"> 
+                  <a href="#">Search</a> 
+                  <div class="search_cont">
+                      <form class="navbar-search form-search">                          
+                          <input type="text" class="input-medium search-query" placeholder="Search">
+                          <button type="submit">Search</button>
+                      </form> 
+                  </div>              
+                </li> 
+                <li id="settings" class="styled dropdown settings">
+                  <a class="dropdown-toggle" data-toggle="dropdown" href="#">Settings</a>
+                    <ul class="dropdown-menu top_menu">
+                        <li class="show_all">Settings</li>
+                        <li><a class="mn_site" href="#"><span>Site</span></a></li>
+                        <li><a class="mn_admin" href="#"><span>Admin</span></a></li>
+                        <li><a class="mn_mail" href="#"><span>Mail</span></a></li>
+                        <li><a class="mn_user" href="#"><span>User</span></a></li>
+                    </ul>
+                </li>
+                <li id="profile" class="styled dropdown profile">
+                  <a class="dropdown-toggle" data-toggle="dropdown" href="#">Profile</a>
+                    <ul class="dropdown-menu top_menu">                        
+                        <li class="profile group">
+                          <img src="img/general/user_1.jpg" width="50" height="50" alt="User">
+                          <ul>
+                            <li><strong>John Doe</strong></li>
+                            <li>@johndoe</li>
+                            <li><span>Administrator</span></li>
+                          </ul>
+                        </li>
+                        <li><a class="mn_settings" href="#"><span>My Settings</span></a></li>
+                        <li><a class="mn_profile" href="#"><span>My Profile</span></a></li>
+                        <li><a class="mn_logout" href="login.html"><span>Logout</span></a></li>
+                    </ul>
+                </li>                          
+            </ul>           
+          </div>
+          <h1 class="brand"><a href="index-2.html">PHOENIX</a></h1>                                       
+        </div>
+      </div>
+    </div>
+            
+    <div class="container">              
+      <div class="main_content row-fluid">
+
+        <div class="span3">
+
+          <div class="side_nav sidebar-nav" data-spy="affix" data-offset-top="150">
+			<h3 class="main_menu group">
+                <span class="title">Main Menu</span>
+                <a id="nav_list_btn" class="btn-collapse btn btn-inverse">
+                  <span class="sweet-gray sweet-go-back-from-screen">&nbsp;</span>              
+                </a>
+            </h3>
+            <ul class="nav nav-list">                          
+              <li><a class="home" href="index-2.html">Dashboard</a></li>
+              <li class="sub">
+                <a class="forms" href="#">Forms<span>4</span></a>
+                <ul>
+                  <li><a href="forms_layout.html">Layout</a></li>
+                  <li><a href="forms_elements.html">Elements</a></li>
+                  <li><a href="forms_validation.html">Validation</a></li>
+                  <li><a href="forms_uploader.html">File uploader &amp; WYSIWYG</a></li>                  
+                </ul>
+              </li>
+              <li><a class="charts" href="charts.html">Charts</a></li>
+              <li class="sub">
+                <a class="tables" href="#">Tables<span>2</span></a>
+                <ul>
+                  <li><a href="tables_basic.html">Basic</a></li>
+                  <li><a href="tables_advanced.html">Advanced</a></li>
+                </ul>
+              </li>
+              <li><a class="calendar" href="calendar.html">Calendar</a></li>
+              <li><a class="gallery" href="gallery.html">Gallery</a></li>
+              <li class="sub active open">
+                <a class="uielements" href="#">UI Elements<span>8</span></a>
+                <ul>
+                  <li><a href="accordions.html">Accordions</a></li>                  
+                  <li class="active"><a href="buttons_icons.html">Buttons and Icons</a></li>
+                  <li><a href="breadcrumbs.html">Breadcrumbs</a></li>
+                  <li><a href="progressbars.html">Progressbars</a></li>                  
+                  <li><a href="sliders.html">Sliders</a></li>                                    
+                  <li><a href="tabs.html">Tabs</a></li>        
+                  <li><a href="tooltips_popovers.html">Tooltips and Popovers</a></li>                                    
+                  <li><a href="miscellaneous.html">Misc</a></li>
+                </ul>
+              </li>              
+              <li><a class="filemanager" href="file_manager.html">File Manager</a></li>
+              <li><a class="typography" href="typography.html">Typography</a></li>
+              <li><a class="gridsystem" href="grid_system.html">Grid System</a></li>
+              <li><a class="widgets" href="widgets.html">Widgets</a></li>
+              <li class="sub">
+                <a class="pages" href="#">Pages<span>4</span></a>
+                <ul>
+                  <li><a href="login.html">Login</a></li>                  
+                  <li><a href="search.html">Search</a></li>
+                  <li><a href="mail.html">Mail</a></li>
+                  <li class="sub"> 
+                    <a href="#">Error<span>6</span></a>
+                    <ul>
+                      <li><a href="error_403.html">403</a></li>
+                      <li><a href="error_404.html">404</a></li>
+                      <li><a href="error_405.html">405</a></li>
+                      <li><a href="error_500.html">500</a></li>
+                      <li><a href="error_503.html">503</a></li>
+                      <li><a href="offline.html">Offline</a></li>
+                    </ul>
+                  </li>                  
+                </ul>
+              </li>                        
+            </ul>
+          </div><!--/.well -->
+        </div><!--/span-->
+        <div class="span9">
+          <div class="row-fluid">
+            <div class="span12">
+
+              <ul class="breadcrumb br_styled no_space">
+                <li>
+                  <a href="index-2.html">Dashboard</a> <span class="divider">/</span>
+                </li>                
+                <li class="active">Buttons and Icons</li>
+              </ul> 
+              <ul class="page_info">
+                <li><h2>Buttons and Icons</h2></li>
+                <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
+              </ul>     
+
+              <div class="span12 no_space">                
+                <ul id="myTab" class="nav nav-tabs tab_styled_dark">
+                  <li class="active"><a href="#buttons">Buttons</a></li>
+                  <li><a href="#icons">Icons</a></li>                  
+                </ul>
+                 
+                <div class="tab-content tab_content_styled group">
+                  <div id="buttons" class="tab-pane active">
+
+                    <div class="span12 no_space">
+                      <div class="span6">
+                        <div class="widget widget_2">
+                          <header>
+                            <h3>Buttons</h3>
+                            <ul class="toggle_content">                         
+                                <li class="arrow"><a href="#">Toggle Content</a></li>
+                            </ul>
+                          </header>
+                          <section class="welly">                         
+                            <table class="table table-striped">
+                              <thead>
+                                <tr>
+                                  <th>Button</th>
+                                  <th>class=""</th>                            
+                                </tr>
+                              </thead>
+                              <tbody>
+                                <tr>
+                                  <td><button class="btn">Default</button></td>
+                                  <td><code>btn</code></td>                            
+                                </tr>
+                                <tr>
+                                  <td><button class="btn btn-primary">Primary</button></td>
+                                  <td><code>btn btn-primary</code></td>                            
+                                </tr>
+                                <tr>
+                                  <td><button class="btn btn-info">Info</button></td>
+                                  <td><code>btn btn-info</code></td>                            
+                                </tr>
+                                <tr>
+                                  <td><button class="btn btn-success">Success</button></td>
+                                  <td><code>btn btn-success</code></td>                            
+                                </tr>
+                                <tr>
+                                  <td><button class="btn btn-warning">Warning</button></td>
+                                  <td><code>btn btn-warning</code></td>                          
+                                </tr>
+                                <tr>
+                                  <td><button class="btn btn-danger">Danger</button></td>
+                                  <td><code>btn btn-danger</code></td>                            
+                                </tr>
+                                <tr>
+                                  <td><button class="btn btn-inverse">Inverse</button></td>
+                                  <td><code>btn btn-inverse</code></td>                            
+                                </tr>
+                              </tbody>
+                            </table>              
+                          </section>
+                        </div>
+                      </div>
+                      <div class="span6">
+                        <div class="widget widget_2">
+                          <header>
+                            <h3>Button options</h3>
+                            <ul class="toggle_content">                         
+                                <li class="arrow"><a href="#">Toggle Content</a></li>
+                            </ul>
+                          </header>
+                          <section class="welly group">                         
+                            <h3 class="fs_16">Multiple sizes</h3>
+                            <p><code>.btn-large, .btn-small, .btn-mini</code></p>   
+                            <p>
+                              <button class="btn btn-large btn-primary">Large Styled Button</button>
+                              <button class="btn btn-large">Large Button</button>                              
+                            </p>
+                            <p>
+                              <button class="btn btn-small btn-primary">Small Styled Button</button>
+                              <button class="btn btn-small">Small Button</button>                              
+                            </p>
+                            <p>
+                              <button class="btn btn-mini btn-primary">Mini Styled Button</button>
+                              <button class="btn btn-mini">Mini Button</button>                              
+                            </p>
+                            <hr> 
+                            <h3 class="fs_16">Disabled state</h3>
+                            <p><code>.disabled</code></p>   
+                            <p>
+                              <a class="btn btn-large btn-primary disabled" href="#">Disabled Link</a>
+                              <a class="btn btn-large disabled" href="#">Disabled Link</a>
+                            </p>
+                            <p>
+                              <button disabled="disabled" class="btn btn-large btn-primary disabled">Disabled Button</button>
+                              <button disabled="" class="btn btn-large">Disabled Button</button>
+                            </p>
+                            <hr>         
+                          </section>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="span12 no_space">
+                      <div class="span6">
+                        <div class="widget widget_2">
+                          <header>
+                            <h3>Button dropdowns</h3>
+                            <ul class="toggle_content">                         
+                                <li class="arrow"><a href="#">Toggle Content</a></li>
+                            </ul>
+                          </header>
+                          <section class="welly">  
+<pre class="prettyprint linenums">
+&lt;div class="btn-group"&gt;
+  &lt;a class="btn dropdown-toggle" data-toggle="dropdown" href="#"&gt;
+    Action
+    &lt;span class="caret"&gt;&lt;/span&gt;
+  &lt;/a&gt;
+  &lt;ul class="dropdown-menu"&gt;
+    &lt;!-- dropdown menu links --&gt;
+  &lt;/ul&gt;
+&lt;/div&gt;
+</pre>                       
+                            <table class="table table-striped">
+                              <thead>
+                                <tr>
+                                  <th colspan="2">Examples</th>                                                           
+                                </tr>
+                              </thead>
+                              <tbody>
+                                <tr>
+                                  <td>
+                                    <div class="btn-group">
+                                      <button class="btn dropdown-toggle" data-toggle="dropdown">Action <span class="caret"></span></button>
+                                      <ul class="dropdown-menu">
+                                        <li><a href="#">Action</a></li>
+                                        <li><a href="#">Another action</a></li>
+                                        <li><a href="#">Something else here</a></li>
+                                        <li class="divider"></li>
+                                        <li><a href="#">Separated link</a></li>
+                                      </ul>
+                                    </div><!-- /btn-group -->
+                                  </td>
+                                  <td>
+                                    <div class="btn-group">
+                                      <button class="btn btn-primary dropdown-toggle" data-toggle="dropdown">Action <span class="caret"></span></button>
+                                      <ul class="dropdown-menu">
+                                        <li><a href="#">Action</a></li>
+                                        <li><a href="#">Another action</a></li>
+                                        <li><a href="#">Something else here</a></li>
+                                        <li class="divider"></li>
+                                        <li><a href="#">Separated link</a></li>
+                                      </ul>
+                                    </div><!-- /btn-group -->
+                                  </td>                            
+                                </tr>
+                                <tr>
+                                  <td>
+                                    <div class="btn-group">
+                                      <button class="btn btn-danger dropdown-toggle" data-toggle="dropdown">Danger <span class="caret"></span></button>
+                                      <ul class="dropdown-menu">
+                                        <li><a href="#">Action</a></li>
+                                        <li><a href="#">Another action</a></li>
+                                        <li><a href="#">Something else here</a></li>
+                                        <li class="divider"></li>
+                                        <li><a href="#">Separated link</a></li>
+                                      </ul>
+                                    </div><!-- /btn-group -->
+                                  </td>
+                                  <td>
+                                    <div class="btn-group">
+                                      <button class="btn btn-warning dropdown-toggle" data-toggle="dropdown">Warning <span class="caret"></span></button>
+                                      <ul class="dropdown-menu">
+                                        <li><a href="#">Action</a></li>
+                                        <li><a href="#">Another action</a></li>
+                                        <li><a href="#">Something else here</a></li>
+                                        <li class="divider"></li>
+                                        <li><a href="#">Separated link</a></li>
+                                      </ul>
+                                    </div><!-- /btn-group -->                                                                        
+                                  </td>                            
+                                </tr>
+                                <tr>
+                                  <td>
+                                    <div class="btn-group">
+                                      <button class="btn btn-success dropdown-toggle" data-toggle="dropdown">Success <span class="caret"></span></button>
+                                      <ul class="dropdown-menu">
+                                        <li><a href="#">Action</a></li>
+                                        <li><a href="#">Another action</a></li>
+                                        <li><a href="#">Something else here</a></li>
+                                        <li class="divider"></li>
+                                        <li><a href="#">Separated link</a></li>
+                                      </ul>
+                                    </div><!-- /btn-group -->
+                                  </td>
+                                  <td>
+                                    <div class="btn-group">
+                                      <button class="btn btn-info dropdown-toggle" data-toggle="dropdown">Info <span class="caret"></span></button>
+                                      <ul class="dropdown-menu">
+                                        <li><a href="#">Action</a></li>
+                                        <li><a href="#">Another action</a></li>
+                                        <li><a href="#">Something else here</a></li>
+                                        <li class="divider"></li>
+                                        <li><a href="#">Separated link</a></li>
+                                      </ul>
+                                    </div><!-- /btn-group -->
+                                  </td>                            
+                                </tr>
+                                <tr>
+                                  <td colspan="2">
+                                    <div class="btn-group">
+                                      <button class="btn btn-inverse dropdown-toggle" data-toggle="dropdown">Inverse <span class="caret"></span></button>
+                                      <ul class="dropdown-menu">
+                                        <li><a href="#">Action</a></li>
+                                        <li><a href="#">Another action</a></li>
+                                        <li><a href="#">Something else here</a></li>
+                                        <li class="divider"></li>
+                                        <li><a href="#">Separated link</a></li>
+                                      </ul>
+                                    </div><!-- /btn-group -->
+                                  </td>                                                            
+                                </tr>                                
+                              </tbody>
+                            </table> 
+                            <hr>
+                            <h3 class="fs_16">Works with all button sizes</h3>
+                            <p><code>.btn-large, .btn-small, .btn-mini</code></p>   
+                            <div class="btn-toolbar">
+                              <div class="btn-group">
+                                <button data-toggle="dropdown" class="btn btn-large dropdown-toggle">Large button <span class="caret"></span></button>
+                                <ul class="dropdown-menu">
+                                  <li><a href="#">Action</a></li>
+                                  <li><a href="#">Another action</a></li>
+                                  <li><a href="#">Something else here</a></li>
+                                  <li class="divider"></li>
+                                  <li><a href="#">Separated link</a></li>
+                                </ul>
+                              </div><!-- /btn-group -->
+                              <div class="btn-group">
+                                <button data-toggle="dropdown" class="btn btn-small dropdown-toggle">Small button <span class="caret"></span></button>
+                                <ul class="dropdown-menu">
+                                  <li><a href="#">Action</a></li>
+                                  <li><a href="#">Another action</a></li>
+                                  <li><a href="#">Something else here</a></li>
+                                  <li class="divider"></li>
+                                  <li><a href="#">Separated link</a></li>
+                                </ul>
+                              </div><!-- /btn-group -->
+                              <div class="btn-group">
+                                <button data-toggle="dropdown" class="btn btn-mini dropdown-toggle">Mini button <span class="caret"></span></button>
+                                <ul class="dropdown-menu">
+                                  <li><a href="#">Action</a></li>
+                                  <li><a href="#">Another action</a></li>
+                                  <li><a href="#">Something else here</a></li>
+                                  <li class="divider"></li>
+                                  <li><a href="#">Separated link</a></li>
+                                </ul>
+                              </div><!-- /btn-group -->
+                            </div>             
+                          </section>
+                        </div>
+                      </div>
+                      <div class="span6">
+                        <div class="widget widget_2">
+                          <header>
+                            <h3>Split button dropdowns</h3>
+                            <ul class="toggle_content">                         
+                                <li class="arrow"><a href="#">Toggle Content</a></li>
+                            </ul>
+                          </header>
+                          <section class="welly group">  
+<pre class="prettyprint linenums">
+&lt;div class="btn-group"&gt;
+  &lt;button class="btn"&gt;Action&lt;/button&gt;
+  &lt;button class="btn dropdown-toggle" data-toggle="dropdown"&gt;
+    &lt;span class="caret"&gt;&lt;/span&gt;
+  &lt;/button&gt;
+  &lt;ul class="dropdown-menu"&gt;
+    &lt;!-- dropdown menu links --&gt;
+  &lt;/ul&gt;
+&lt;/div&gt;
+</pre>                      
+                            <table class="table table-striped">
+                              <thead>
+                                <tr>
+                                  <th colspan="2">Examples</th>                                                           
+                                </tr>
+                              </thead>
+                              <tbody>
+                                <tr>
+                                  <td>
+                                    <div class="btn-group">
+                                      <button class="btn">Action</button>
+                                      <button class="btn dropdown-toggle" data-toggle="dropdown"><span class="caret"></span></button>
+                                      <ul class="dropdown-menu">
+                                        <li><a href="#">Action</a></li>
+                                        <li><a href="#">Another action</a></li>
+                                        <li><a href="#">Something else here</a></li>
+                                        <li class="divider"></li>
+                                        <li><a href="#">Separated link</a></li>
+                                      </ul>
+                                    </div><!-- /btn-group -->
+                                  </td>
+                                  <td>
+                                    <div class="btn-group">
+                                      <button class="btn btn-primary">Action</button>
+                                      <button class="btn btn-primary dropdown-toggle" data-toggle="dropdown"><span class="caret"></span></button>
+                                      <ul class="dropdown-menu">
+                                        <li><a href="#">Action</a></li>
+                                        <li><a href="#">Another action</a></li>
+                                        <li><a href="#">Something else here</a></li>
+                                        <li class="divider"></li>
+                                        <li><a href="#">Separated link</a></li>
+                                      </ul>
+                                    </div><!-- /btn-group -->
+                                  </td>                            
+                                </tr>
+                                <tr>
+                                  <td>
+                                    <div class="btn-group">
+                                      <button class="btn btn-danger">Danger</button>
+                                      <button class="btn btn-danger dropdown-toggle" data-toggle="dropdown"><span class="caret"></span></button>
+                                      <ul class="dropdown-menu">
+                                        <li><a href="#">Action</a></li>
+                                        <li><a href="#">Another action</a></li>
+                                        <li><a href="#">Something else here</a></li>
+                                        <li class="divider"></li>
+                                        <li><a href="#">Separated link</a></li>
+                                      </ul>
+                                    </div><!-- /btn-group -->
+                                  </td>
+                                  <td>
+                                    <div class="btn-group">
+                                      <button class="btn btn-warning">Warning</button>
+                                      <button class="btn btn-warning dropdown-toggle" data-toggle="dropdown"><span class="caret"></span></button>
+                                      <ul class="dropdown-menu">
+                                        <li><a href="#">Action</a></li>
+                                        <li><a href="#">Another action</a></li>
+                                        <li><a href="#">Something else here</a></li>
+                                        <li class="divider"></li>
+                                        <li><a href="#">Separated link</a></li>
+                                      </ul>
+                                    </div><!-- /btn-group -->                                                                        
+                                  </td>                            
+                                </tr>
+                                <tr>
+                                  <td>
+                                    <div class="btn-group">
+                                      <button class="btn btn-success">Success</button>
+                                      <button class="btn btn-success dropdown-toggle" data-toggle="dropdown"><span class="caret"></span></button>
+                                      <ul class="dropdown-menu">
+                                        <li><a href="#">Action</a></li>
+                                        <li><a href="#">Another action</a></li>
+                                        <li><a href="#">Something else here</a></li>
+                                        <li class="divider"></li>
+                                        <li><a href="#">Separated link</a></li>
+                                      </ul>
+                                    </div><!-- /btn-group -->
+                                  </td>
+                                  <td>
+                                    <div class="btn-group">
+                                      <button class="btn btn-info">Info</button>
+                                      <button class="btn btn-info dropdown-toggle" data-toggle="dropdown"><span class="caret"></span></button>
+                                      <ul class="dropdown-menu">
+                                        <li><a href="#">Action</a></li>
+                                        <li><a href="#">Another action</a></li>
+                                        <li><a href="#">Something else here</a></li>
+                                        <li class="divider"></li>
+                                        <li><a href="#">Separated link</a></li>
+                                      </ul>
+                                    </div><!-- /btn-group -->
+                                  </td>                            
+                                </tr>
+                                <tr>
+                                  <td colspan="2">
+                                    <div class="btn-group">
+                                      <button class="btn btn-inverse">Inverse</button>
+                                      <button class="btn btn-inverse dropdown-toggle" data-toggle="dropdown"><span class="caret"></span></button>
+                                      <ul class="dropdown-menu">
+                                        <li><a href="#">Action</a></li>
+                                        <li><a href="#">Another action</a></li>
+                                        <li><a href="#">Something else here</a></li>
+                                        <li class="divider"></li>
+                                        <li><a href="#">Separated link</a></li>
+                                      </ul>
+                                    </div><!-- /btn-group -->
+                                  </td>                                                            
+                                </tr>                                
+                              </tbody>
+                            </table>
+                            <hr> 
+                            <h3 class="fs_16">This also works with all button sizes</h3>
+                            <p><code>.btn-large, .btn-small, .btn-mini</code></p>   
+                            <div class="btn-toolbar">
+                              <div class="btn-group">
+                                <button class="btn btn-large">Large action</button>
+                                <button class="btn btn-large dropdown-toggle" data-toggle="dropdown"><span class="caret"></span></button>
+                                <ul class="dropdown-menu">
+                                  <li><a href="#">Action</a></li>
+                                  <li><a href="#">Another action</a></li>
+                                  <li><a href="#">Something else here</a></li>
+                                  <li class="divider"></li>
+                                  <li><a href="#">Separated link</a></li>
+                                </ul>
+                              </div><!-- /btn-group -->
+                              <div class="btn-group">
+                                <button class="btn btn-small">Small action</button>
+                                <button class="btn btn-small dropdown-toggle" data-toggle="dropdown"><span class="caret"></span></button>
+                                <ul class="dropdown-menu">
+                                  <li><a href="#">Action</a></li>
+                                  <li><a href="#">Another action</a></li>
+                                  <li><a href="#">Something else here</a></li>
+                                  <li class="divider"></li>
+                                  <li><a href="#">Separated link</a></li>
+                                </ul>
+                              </div><!-- /btn-group -->
+                              <div class="btn-group">
+                                <button class="btn btn-mini">Mini action</button>
+                                <button class="btn btn-mini dropdown-toggle" data-toggle="dropdown"><span class="caret"></span></button>
+                                <ul class="dropdown-menu">
+                                  <li><a href="#">Action</a></li>
+                                  <li><a href="#">Another action</a></li>
+                                  <li><a href="#">Something else here</a></li>
+                                  <li class="divider"></li>
+                                  <li><a href="#">Separated link</a></li>
+                                </ul>
+                              </div><!-- /btn-group -->
+                            </div>
+
+
+                          </section>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="span12 no_space">
+                      <div class="span6">
+                        <div class="widget widget_2">
+                          <header>
+                            <h3>One class, multiple tags</h3>
+                            <ul class="toggle_content">                         
+                                <li class="arrow"><a href="#">Toggle Content</a></li>
+                            </ul>
+                          </header>
+                          <section class="welly">                              
+<pre class="prettyprint linenums">
+&lt;a class="btn" href=""&gt;Link&lt;/a&gt;
+&lt;button class="btn" type="submit"&gt;
+  Button
+&lt;/button&gt;
+&lt;input class="btn" type="button"
+         value="Input"&gt;
+&lt;input class="btn" type="submit"
+         value="Submit"&gt;
+</pre>
+                          <form>
+                            <a class="btn" href="#">Link</a>
+                            <button class="btn" type="submit">Button</button>
+                            <input class="btn" type="button" value="Input">
+                            <input class="btn" type="submit" value="Submit">
+                          </form> 
+                                    
+                          </section>
+                        </div>
+                      </div>
+                      <div class="span6">
+                        <div class="widget widget_2">
+                          <header>
+                            <h3>Dropup menus</h3>
+                            <ul class="toggle_content">                         
+                                <li class="arrow"><a href="#">Toggle Content</a></li>
+                            </ul>
+                          </header>
+                          <section class="welly group">  
+<pre class="prettyprint linenums">
+&lt;div class="btn-group dropup"&gt;
+  &lt;button class="btn"&gt;Dropup&lt;/button&gt;
+  &lt;button class="btn dropdown-toggle" data-toggle="dropdown"&gt;
+    &lt;span class="caret"&gt;&lt;/span&gt;
+  &lt;/button&gt;
+  &lt;ul class="dropdown-menu"&gt;
+    &lt;!-- dropdown menu links --&gt;
+  &lt;/ul&gt;
+&lt;/div&gt;
+</pre>                      
+                            <div class="btn-toolbar" style="margin-top: 9px;">
+                              <div class="btn-group dropup">
+                                <button class="btn">Dropup</button>
+                                <button class="btn dropdown-toggle" data-toggle="dropdown"><span class="caret"></span></button>
+                                <ul class="dropdown-menu">
+                                  <li><a href="#">Action</a></li>
+                                  <li><a href="#">Another action</a></li>
+                                  <li><a href="#">Something else here</a></li>
+                                  <li class="divider"></li>
+                                  <li><a href="#">Separated link</a></li>
+                                </ul>
+                              </div><!-- /btn-group -->
+                              <div class="btn-group dropup">
+                                <button class="btn primary">Right dropup</button>
+                                <button class="btn primary dropdown-toggle" data-toggle="dropdown"><span class="caret"></span></button>
+                                <ul class="dropdown-menu pull-right">
+                                  <li><a href="#">Action</a></li>
+                                  <li><a href="#">Another action</a></li>
+                                  <li><a href="#">Something else here</a></li>
+                                  <li class="divider"></li>
+                                  <li><a href="#">Separated link</a></li>
+                                </ul>
+                              </div><!-- /btn-group -->
+                            </div>                        
+                            
+
+
+                          </section>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="span12 no_space">
+                      <div class="span6">
+                        <div class="widget widget_2">
+                          <header>
+                            <h3>Button groups <span>- Default example</span></h3>
+                            <ul class="toggle_content">                         
+                                <li class="arrow"><a href="#">Toggle Content</a></li>
+                            </ul>
+                          </header>
+                          <section class="welly">                              
+<pre class="prettyprint linenums">
+&lt;div class="btn-group"&gt;
+  &lt;button class="btn"&gt;1&lt;/button&gt;
+  &lt;button class="btn"&gt;2&lt;/button&gt;
+  &lt;button class="btn"&gt;3&lt;/button&gt;
+&lt;/div&gt;
+</pre>
+                            <div class="btn-group" style="margin: 9px 0;">
+                              <button class="btn">Left</button>
+                              <button class="btn">Middle</button>
+                              <button class="btn">Right</button>
+                            </div>
+                                    
+                          </section>
+                        </div>
+                      </div>
+                      <div class="span6">
+                        <div class="widget widget_2">
+                          <header>
+                            <h3>Button groups <span>- Toolbar example</span></h3>
+                            <ul class="toggle_content">                         
+                                <li class="arrow"><a href="#">Toggle Content</a></li>
+                            </ul>
+                          </header>
+                          <section class="welly group">  
+<pre class="prettyprint linenums">
+&lt;div class="btn-toolbar"&gt;
+  &lt;div class="btn-group"&gt;
+    ...
+  &lt;/div&gt;
+&lt;/div&gt;
+</pre>                      
+                            <div class="btn-toolbar">
+                              <div class="btn-group">
+                                <button class="btn">1</button>
+                                <button class="btn">2</button>
+                                <button class="btn">3</button>
+                                <button class="btn">4</button>
+                              </div>
+                              <div class="btn-group">
+                                <button class="btn">5</button>
+                                <button class="btn">6</button>
+                                <button class="btn">7</button>
+                              </div>
+                              <div class="btn-group">
+                                <button class="btn">8</button>
+                              </div>
+                            </div>                       
+                            
+
+                          </section>
+                        </div>
+                      </div>
+                    </div>                    
+
+                  </div>
+                  <div id="icons" class="tab-pane">
+                    <div class="span12 no_space">
+
+                      <div class="widget widget_2">
+                        <header>
+                          <h3>Icons <small>- provided by <a href="http://glyphicons.com/" target="_blank">Glyphicons</a></small></h3>
+                          <ul class="toggle_content">                         
+                              <li class="arrow"><a href="#">Toggle Content</a></li>
+                          </ul>
+                        </header>
+                        <section class="welly group">                                                                                               
+                          <div class="span3 span_align">
+                            <ul class="the-icons">
+                              <li><i class="icon-glass"></i> icon-glass</li>
+                              <li><i class="icon-music"></i> icon-music</li>
+                              <li><i class="icon-search"></i> icon-search</li>
+                              <li><i class="icon-envelope"></i> icon-envelope</li>
+                              <li><i class="icon-heart"></i> icon-heart</li>
+                              <li><i class="icon-star"></i> icon-star</li>
+                              <li><i class="icon-star-empty"></i> icon-star-empty</li>
+                              <li><i class="icon-user"></i> icon-user</li>
+                              <li><i class="icon-film"></i> icon-film</li>
+                              <li><i class="icon-th-large"></i> icon-th-large</li>
+                              <li><i class="icon-th"></i> icon-th</li>
+                              <li><i class="icon-th-list"></i> icon-th-list</li>
+                              <li><i class="icon-ok"></i> icon-ok</li>
+                              <li><i class="icon-remove"></i> icon-remove</li>
+                              <li><i class="icon-zoom-in"></i> icon-zoom-in</li>
+                              <li><i class="icon-zoom-out"></i> icon-zoom-out</li>
+                              <li><i class="icon-off"></i> icon-off</li>
+                              <li><i class="icon-signal"></i> icon-signal</li>
+                              <li><i class="icon-cog"></i> icon-cog</li>
+                              <li><i class="icon-trash"></i> icon-trash</li>
+                              <li><i class="icon-home"></i> icon-home</li>
+                              <li><i class="icon-file"></i> icon-file</li>
+                              <li><i class="icon-time"></i> icon-time</li>
+                              <li><i class="icon-road"></i> icon-road</li>
+                              <li><i class="icon-download-alt"></i> icon-download-alt</li>
+                              <li><i class="icon-download"></i> icon-download</li>
+                              <li><i class="icon-upload"></i> icon-upload</li>
+                              <li><i class="icon-inbox"></i> icon-inbox</li>
+                              <li><i class="icon-play-circle"></i> icon-play-circle</li>
+                              <li><i class="icon-repeat"></i> icon-repeat</li>
+                              <li><i class="icon-refresh"></i> icon-refresh</li>
+                              <li><i class="icon-list-alt"></i> icon-list-alt</li>
+                              <li><i class="icon-lock"></i> icon-lock</li>
+                              <li><i class="icon-flag"></i> icon-flag</li>
+                              <li><i class="icon-headphones"></i> icon-headphones</li>
+                            </ul>
+                          </div>
+                          <div class="span3">
+                            <ul class="the-icons">
+                              <li><i class="icon-volume-off"></i> icon-volume-off</li>
+                              <li><i class="icon-volume-down"></i> icon-volume-down</li>
+                              <li><i class="icon-volume-up"></i> icon-volume-up</li>
+                              <li><i class="icon-qrcode"></i> icon-qrcode</li>
+                              <li><i class="icon-barcode"></i> icon-barcode</li>
+                              <li><i class="icon-tag"></i> icon-tag</li>
+                              <li><i class="icon-tags"></i> icon-tags</li>
+                              <li><i class="icon-book"></i> icon-book</li>
+                              <li><i class="icon-bookmark"></i> icon-bookmark</li>
+                              <li><i class="icon-print"></i> icon-print</li>
+                              <li><i class="icon-camera"></i> icon-camera</li>
+                              <li><i class="icon-font"></i> icon-font</li>
+                              <li><i class="icon-bold"></i> icon-bold</li>
+                              <li><i class="icon-italic"></i> icon-italic</li>
+                              <li><i class="icon-text-height"></i> icon-text-height</li>
+                              <li><i class="icon-text-width"></i> icon-text-width</li>
+                              <li><i class="icon-align-left"></i> icon-align-left</li>
+                              <li><i class="icon-align-center"></i> icon-align-center</li>
+                              <li><i class="icon-align-right"></i> icon-align-right</li>
+                              <li><i class="icon-align-justify"></i> icon-align-justify</li>
+                              <li><i class="icon-list"></i> icon-list</li>
+                              <li><i class="icon-indent-left"></i> icon-indent-left</li>
+                              <li><i class="icon-indent-right"></i> icon-indent-right</li>
+                              <li><i class="icon-facetime-video"></i> icon-facetime-video</li>
+                              <li><i class="icon-picture"></i> icon-picture</li>
+                              <li><i class="icon-pencil"></i> icon-pencil</li>
+                              <li><i class="icon-map-marker"></i> icon-map-marker</li>
+                              <li><i class="icon-adjust"></i> icon-adjust</li>
+                              <li><i class="icon-tint"></i> icon-tint</li>
+                              <li><i class="icon-edit"></i> icon-edit</li>
+                              <li><i class="icon-share"></i> icon-share</li>
+                              <li><i class="icon-check"></i> icon-check</li>
+                              <li><i class="icon-move"></i> icon-move</li>
+                              <li><i class="icon-step-backward"></i> icon-step-backward</li>
+                              <li><i class="icon-fast-backward"></i> icon-fast-backward</li>
+                            </ul>
+                          </div>
+                          <div class="span3">
+                            <ul class="the-icons">
+                              <li><i class="icon-backward"></i> icon-backward</li>
+                              <li><i class="icon-play"></i> icon-play</li>
+                              <li><i class="icon-pause"></i> icon-pause</li>
+                              <li><i class="icon-stop"></i> icon-stop</li>
+                              <li><i class="icon-forward"></i> icon-forward</li>
+                              <li><i class="icon-fast-forward"></i> icon-fast-forward</li>
+                              <li><i class="icon-step-forward"></i> icon-step-forward</li>
+                              <li><i class="icon-eject"></i> icon-eject</li>
+                              <li><i class="icon-chevron-left"></i> icon-chevron-left</li>
+                              <li><i class="icon-chevron-right"></i> icon-chevron-right</li>
+                              <li><i class="icon-plus-sign"></i> icon-plus-sign</li>
+                              <li><i class="icon-minus-sign"></i> icon-minus-sign</li>
+                              <li><i class="icon-remove-sign"></i> icon-remove-sign</li>
+                              <li><i class="icon-ok-sign"></i> icon-ok-sign</li>
+                              <li><i class="icon-question-sign"></i> icon-question-sign</li>
+                              <li><i class="icon-info-sign"></i> icon-info-sign</li>
+                              <li><i class="icon-screenshot"></i> icon-screenshot</li>
+                              <li><i class="icon-remove-circle"></i> icon-remove-circle</li>
+                              <li><i class="icon-ok-circle"></i> icon-ok-circle</li>
+                              <li><i class="icon-ban-circle"></i> icon-ban-circle</li>
+                              <li><i class="icon-arrow-left"></i> icon-arrow-left</li>
+                              <li><i class="icon-arrow-right"></i> icon-arrow-right</li>
+                              <li><i class="icon-arrow-up"></i> icon-arrow-up</li>
+                              <li><i class="icon-arrow-down"></i> icon-arrow-down</li>
+                              <li><i class="icon-share-alt"></i> icon-share-alt</li>
+                              <li><i class="icon-resize-full"></i> icon-resize-full</li>
+                              <li><i class="icon-resize-small"></i> icon-resize-small</li>
+                              <li><i class="icon-plus"></i> icon-plus</li>
+                              <li><i class="icon-minus"></i> icon-minus</li>
+                              <li><i class="icon-asterisk"></i> icon-asterisk</li>
+                              <li><i class="icon-exclamation-sign"></i> icon-exclamation-sign</li>
+                              <li><i class="icon-gift"></i> icon-gift</li>
+                              <li><i class="icon-leaf"></i> icon-leaf</li>
+                              <li><i class="icon-fire"></i> icon-fire</li>
+                              <li><i class="icon-eye-open"></i> icon-eye-open</li>
+                            </ul>
+                          </div>
+                          <div class="span3">
+                            <ul class="the-icons">
+                              <li><i class="icon-eye-close"></i> icon-eye-close</li>
+                              <li><i class="icon-warning-sign"></i> icon-warning-sign</li>
+                              <li><i class="icon-plane"></i> icon-plane</li>
+                              <li><i class="icon-calendar"></i> icon-calendar</li>
+                              <li><i class="icon-random"></i> icon-random</li>
+                              <li><i class="icon-comment"></i> icon-comment</li>
+                              <li><i class="icon-magnet"></i> icon-magnet</li>
+                              <li><i class="icon-chevron-up"></i> icon-chevron-up</li>
+                              <li><i class="icon-chevron-down"></i> icon-chevron-down</li>
+                              <li><i class="icon-retweet"></i> icon-retweet</li>
+                              <li><i class="icon-shopping-cart"></i> icon-shopping-cart</li>
+                              <li><i class="icon-folder-close"></i> icon-folder-close</li>
+                              <li><i class="icon-folder-open"></i> icon-folder-open</li>
+                              <li><i class="icon-resize-vertical"></i> icon-resize-vertical</li>
+                              <li><i class="icon-resize-horizontal"></i> icon-resize-horizontal</li>
+                              <li><i class="icon-hdd"></i> icon-hdd</li>
+                              <li><i class="icon-bullhorn"></i> icon-bullhorn</li>
+                              <li><i class="icon-bell"></i> icon-bell</li>
+                              <li><i class="icon-certificate"></i> icon-certificate</li>
+                              <li><i class="icon-thumbs-up"></i> icon-thumbs-up</li>
+                              <li><i class="icon-thumbs-down"></i> icon-thumbs-down</li>
+                              <li><i class="icon-hand-right"></i> icon-hand-right</li>
+                              <li><i class="icon-hand-left"></i> icon-hand-left</li>
+                              <li><i class="icon-hand-up"></i> icon-hand-up</li>
+                              <li><i class="icon-hand-down"></i> icon-hand-down</li>
+                              <li><i class="icon-circle-arrow-right"></i> icon-circle-arrow-right</li>
+                              <li><i class="icon-circle-arrow-left"></i> icon-circle-arrow-left</li>
+                              <li><i class="icon-circle-arrow-up"></i> icon-circle-arrow-up</li>
+                              <li><i class="icon-circle-arrow-down"></i> icon-circle-arrow-down</li>
+                              <li><i class="icon-globe"></i> icon-globe</li>
+                              <li><i class="icon-wrench"></i> icon-wrench</li>
+                              <li><i class="icon-tasks"></i> icon-tasks</li>
+                              <li><i class="icon-filter"></i> icon-filter</li>
+                              <li><i class="icon-briefcase"></i> icon-briefcase</li>
+                              <li><i class="icon-fullscreen"></i> icon-fullscreen</li>
+                            </ul>
+                          </div>                        
+                        </section>
+                      </div>
+                      <div class="widget widget_2">
+                        <header>
+                          <h3>Awesome icons <small>- provided by <a href="http://fortawesome.github.com/Font-Awesome/" target="_blank">Font Awesome</a></small></h3>
+                          <ul class="toggle_content">                         
+                              <li class="arrow"><a href="#">Toggle Content</a></li>
+                          </ul>
+                        </header>
+                        <section class="welly group color_black">                                                                                               
+                          <div class="span12"><h5 class="titlee">Web Application Icons</h5></div>
+                          <div class="span12 no_space">
+                            <div class="span3">
+                              <ul class="the-icons">
+                                <li><i class="awesome-adjust"></i> awesome-adjust</li>
+                                <li><i class="awesome-asterisk"></i> awesome-asterisk</li>
+                                <li><i class="awesome-ban-circle"></i> awesome-ban-circle</li>
+                                <li><i class="awesome-bar-chart"></i> awesome-bar-chart</li>
+                                <li><i class="awesome-barcode"></i> awesome-barcode</li>
+                                <li><i class="awesome-beaker"></i> awesome-beaker</li>
+                                <li><i class="awesome-bell"></i> awesome-bell</li>
+                                <li><i class="awesome-bolt"></i> awesome-bolt</li>
+                                <li><i class="awesome-book"></i> awesome-book</li>
+                                <li><i class="awesome-bookmark"></i> awesome-bookmark</li>
+                                <li><i class="awesome-bookmark-empty"></i> awesome-bookmark-empty</li>
+                                <li><i class="awesome-briefcase"></i> awesome-briefcase</li>
+                                <li><i class="awesome-bullhorn"></i> awesome-bullhorn</li>
+                                <li><i class="awesome-calendar"></i> awesome-calendar</li>
+                                <li><i class="awesome-camera"></i> awesome-camera</li>
+                                <li><i class="awesome-camera-retro"></i> awesome-camera-retro</li>
+                                <li><i class="awesome-certificate"></i> awesome-certificate</li>
+                                <li><i class="awesome-check"></i> awesome-check</li>
+                                <li><i class="awesome-check-empty"></i> awesome-check-empty</li>
+                                <li><i class="awesome-cloud"></i> awesome-cloud</li>
+                                <li><i class="awesome-cog"></i> awesome-cog</li>
+                                <li><i class="awesome-cogs"></i> awesome-cogs</li>
+                                <li><i class="awesome-comment"></i> awesome-comment</li>
+                                <li><i class="awesome-comment-alt"></i> awesome-comment-alt</li>
+                                <li><i class="awesome-comments"></i> awesome-comments</li>
+                                <li><i class="awesome-comments-alt"></i> awesome-comments-alt</li>
+                                <li><i class="awesome-credit-card"></i> awesome-credit-card</li>
+                                <li><i class="awesome-dashboard"></i> awesome-dashboard</li>
+                                <li><i class="awesome-download"></i> awesome-download</li>
+                                <li><i class="awesome-download-alt"></i> awesome-download-alt</li>
+                                <li><i class="awesome-edit"></i> awesome-edit</li>
+                                <li><i class="awesome-envelope"></i> awesome-envelope</li>
+                                <li><i class="awesome-envelope-alt"></i> awesome-envelope-alt</li>
+                              </ul>
+                            </div>
+                            <div class="span3">
+                              <ul class="the-icons">
+                                <li><i class="awesome-exclamation-sign"></i> awesome-exclamation-sign</li>
+                                <li><i class="awesome-external-link"></i> awesome-external-link</li>
+                                <li><i class="awesome-eye-close"></i> awesome-eye-close</li>
+                                <li><i class="awesome-eye-open"></i> awesome-eye-open</li>
+                                <li><i class="awesome-facetime-video"></i> awesome-facetime-video</li>
+                                <li><i class="awesome-film"></i> awesome-film</li>
+                                <li><i class="awesome-filter"></i> awesome-filter</li>
+                                <li><i class="awesome-fire"></i> awesome-fire</li>
+                                <li><i class="awesome-flag"></i> awesome-flag</li>
+                                <li><i class="awesome-folder-close"></i> awesome-folder-close</li>
+                                <li><i class="awesome-folder-open"></i> awesome-folder-open</li>
+                                <li><i class="awesome-gift"></i> awesome-gift</li>
+                                <li><i class="awesome-glass"></i> awesome-glass</li>
+                                <li><i class="awesome-globe"></i> awesome-globe</li>
+                                <li><i class="awesome-group"></i> awesome-group</li>
+                                <li><i class="awesome-hdd"></i> awesome-hdd</li>
+                                <li><i class="awesome-headphones"></i> awesome-headphones</li>
+                                <li><i class="awesome-heart"></i> awesome-heart</li>
+                                <li><i class="awesome-heart-empty"></i> awesome-heart-empty</li>
+                                <li><i class="awesome-home"></i> awesome-home</li>
+                                <li><i class="awesome-inbox"></i> awesome-inbox</li>
+                                <li><i class="awesome-info-sign"></i> awesome-info-sign</li>
+                                <li><i class="awesome-key"></i> awesome-key</li>
+                                <li><i class="awesome-leaf"></i> awesome-leaf</li>
+                                <li><i class="awesome-legal"></i> awesome-legal</li>
+                                <li><i class="awesome-lemon"></i> awesome-lemon</li>
+                                <li><i class="awesome-lock"></i> awesome-lock</li>
+                                <li><i class="awesome-unlock"></i> awesome-unlock</li>
+                                <li><i class="awesome-magic"></i> awesome-magic</li>
+                                <li><i class="awesome-magnet"></i> awesome-magnet</li>
+                                <li><i class="awesome-map-marker"></i> awesome-map-marker</li>
+                                <li><i class="awesome-minus"></i> awesome-minus</li>
+                                <li><i class="awesome-minus-sign"></i> awesome-minus-sign</li>
+                              </ul>
+                            </div>
+                            <div class="span3">
+                              <ul class="the-icons">
+                                <li><i class="awesome-money"></i> awesome-money</li>
+                                <li><i class="awesome-move"></i> awesome-move</li>
+                                <li><i class="awesome-music"></i> awesome-music</li>
+                                <li><i class="awesome-off"></i> awesome-off</li>
+                                <li><i class="awesome-ok"></i> awesome-ok</li>
+                                <li><i class="awesome-ok-circle"></i> awesome-ok-circle</li>
+                                <li><i class="awesome-ok-sign"></i> awesome-ok-sign</li>
+                                <li><i class="awesome-pencil"></i> awesome-pencil</li>
+                                <li><i class="awesome-picture"></i> awesome-picture</li>
+                                <li><i class="awesome-plane"></i> awesome-plane</li>
+                                <li><i class="awesome-plus"></i> awesome-plus</li>
+                                <li><i class="awesome-plus-sign"></i> awesome-plus-sign</li>
+                                <li><i class="awesome-print"></i> awesome-print</li>
+                                <li><i class="awesome-pushpin"></i> awesome-pushpin</li>
+                                <li><i class="awesome-qrcode"></i> awesome-qrcode</li>
+                                <li><i class="awesome-question-sign"></i> awesome-question-sign</li>
+                                <li><i class="awesome-random"></i> awesome-random</li>
+                                <li><i class="awesome-refresh"></i> awesome-refresh</li>
+                                <li><i class="awesome-remove"></i> awesome-remove</li>
+                                <li><i class="awesome-remove-circle"></i> awesome-remove-circle</li>
+                                <li><i class="awesome-remove-sign"></i> awesome-remove-sign</li>
+                                <li><i class="awesome-reorder"></i> awesome-reorder</li>
+                                <li><i class="awesome-resize-horizontal"></i> awesome-resize-horizontal</li>
+                                <li><i class="awesome-resize-vertical"></i> awesome-resize-vertical</li>
+                                <li><i class="awesome-retweet"></i> awesome-retweet</li>
+                                <li><i class="awesome-road"></i> awesome-road</li>
+                                <li><i class="awesome-rss"></i> awesome-rss</li>
+                                <li><i class="awesome-screenshot"></i> awesome-screenshot</li>
+                                <li><i class="awesome-search"></i> awesome-search</li>
+                                <li><i class="awesome-share"></i> awesome-share</li>
+                                <li><i class="awesome-share-alt"></i> awesome-share-alt</li>
+                                <li><i class="awesome-shopping-cart"></i> awesome-shopping-cart</li>
+                              </ul>
+                            </div>
+                            <div class="span3">
+                              <ul class="the-icons">
+                                <li><i class="awesome-signal"></i> awesome-signal</li>
+                                <li><i class="awesome-signin"></i> awesome-signin</li>
+                                <li><i class="awesome-signout"></i> awesome-signout</li>
+                                <li><i class="awesome-sitemap"></i> awesome-sitemap</li>
+                                <li><i class="awesome-sort"></i> awesome-sort</li>
+                                <li><i class="awesome-sort-down"></i> awesome-sort-down</li>
+                                <li><i class="awesome-sort-up"></i> awesome-sort-up</li>
+                                <li><i class="awesome-star"></i> awesome-star</li>
+                                <li><i class="awesome-star-empty"></i> awesome-star-empty</li>
+                                <li><i class="awesome-star-half"></i> awesome-star-half</li>
+                                <li><i class="awesome-tag"></i> awesome-tag</li>
+                                <li><i class="awesome-tags"></i> awesome-tags</li>
+                                <li><i class="awesome-tasks"></i> awesome-tasks</li>
+                                <li><i class="awesome-thumbs-down"></i> awesome-thumbs-down</li>
+                                <li><i class="awesome-thumbs-up"></i> awesome-thumbs-up</li>
+                                <li><i class="awesome-time"></i> awesome-time</li>
+                                <li><i class="awesome-tint"></i> awesome-tint</li>
+                                <li><i class="awesome-trash"></i> awesome-trash</li>
+                                <li><i class="awesome-trophy"></i> awesome-trophy</li>
+                                <li><i class="awesome-truck"></i> awesome-truck</li>
+                                <li><i class="awesome-umbrella"></i> awesome-umbrella</li>
+                                <li><i class="awesome-upload"></i> awesome-upload</li>
+                                <li><i class="awesome-upload-alt"></i> awesome-upload-alt</li>
+                                <li><i class="awesome-user"></i> awesome-user</li>
+                                <li><i class="awesome-user-md"></i> awesome-user-md</li>
+                                <li><i class="awesome-volume-off"></i> awesome-volume-off</li>
+                                <li><i class="awesome-volume-down"></i> awesome-volume-down</li>
+                                <li><i class="awesome-volume-up"></i> awesome-volume-up</li>
+                                <li><i class="awesome-warning-sign"></i> awesome-warning-sign</li>
+                                <li><i class="awesome-wrench"></i> awesome-wrench</li>
+                                <li><i class="awesome-zoom-in"></i> awesome-zoom-in</li>
+                                <li><i class="awesome-zoom-out"></i> awesome-zoom-out</li>
+                              </ul>
+                            </div>
+                          </div>
+                          <div class="span12 no_space"><h5 class="titlee">Text Editor Icons</h5></div>
+                          <div class="span12 no_space">
+                            <div class="span3">
+                              <ul class="the-icons">
+                                <li><i class="awesome-file"></i> awesome-file</li>
+                                <li><i class="awesome-cut"></i> awesome-cut</li>
+                                <li><i class="awesome-copy"></i> awesome-copy</li>
+                                <li><i class="awesome-paste"></i> awesome-paste</li>
+                                <li><i class="awesome-save"></i> awesome-save</li>
+                                <li><i class="awesome-undo"></i> awesome-undo</li>
+                                <li><i class="awesome-repeat"></i> awesome-repeat</li>
+                                <li><i class="awesome-paper-clip"></i> awesome-paper-clip</li>
+                              </ul>
+                            </div>
+                            <div class="span3">
+                              <ul class="the-icons">
+                                <li><i class="awesome-text-height"></i> awesome-text-height</li>
+                                <li><i class="awesome-text-width"></i> awesome-text-width</li>
+                                <li><i class="awesome-align-left"></i> awesome-align-left</li>
+                                <li><i class="awesome-align-center"></i> awesome-align-center</li>
+                                <li><i class="awesome-align-right"></i> awesome-align-right</li>
+                                <li><i class="awesome-align-justify"></i> awesome-align-justify</li>
+                                <li><i class="awesome-indent-left"></i> awesome-indent-left</li>
+                                <li><i class="awesome-indent-right"></i> awesome-indent-right</li>
+                              </ul>
+                            </div>
+                            <div class="span3">
+                              <ul class="the-icons">
+                                <li><i class="awesome-font"></i> awesome-font</li>
+                                <li><i class="awesome-bold"></i> awesome-bold</li>
+                                <li><i class="awesome-italic"></i> awesome-italic</li>
+                                <li><i class="awesome-strikethrough"></i> awesome-strikethrough</li>
+                                <li><i class="awesome-underline"></i> awesome-underline</li>
+                                <li><i class="awesome-link"></i> awesome-link</li>
+                                <li><i class="awesome-columns"></i> awesome-columns</li>
+                                <li><i class="awesome-table"></i> awesome-table</li>
+                              </ul>
+                            </div>
+                            <div class="span3">
+                              <ul class="the-icons">
+                                <li><i class="awesome-th-large"></i> awesome-th-large</li>
+                                <li><i class="awesome-th"></i> awesome-th</li>
+                                <li><i class="awesome-th-list"></i> awesome-th-list</li>
+                                <li><i class="awesome-list"></i> awesome-list</li>
+                                <li><i class="awesome-list-ol"></i> awesome-list-ol</li>
+                                <li><i class="awesome-list-ul"></i> awesome-list-ul</li>
+                                <li><i class="awesome-list-alt"></i> awesome-list-alt</li>
+                              </ul>
+                            </div>
+                          </div>
+                          <div class="span12 no_space"><h5 class="titlee">Directional Icons</h5></div>
+                          <div class="span12 no_space">
+                            <div class="span3">
+                              <ul class="the-icons">
+                                <li><i class="awesome-arrow-down"></i> awesome-arrow-down</li>
+                                <li><i class="awesome-arrow-left"></i> awesome-arrow-left</li>
+                                <li><i class="awesome-arrow-right"></i> awesome-arrow-right</li>
+                                <li><i class="awesome-arrow-up"></i> awesome-arrow-up</li>
+                                <li><i class="awesome-chevron-down"></i> awesome-chevron-down</li>
+                              </ul>
+                            </div>
+                            <div class="span3">
+                              <ul class="the-icons">
+                                <li><i class="awesome-circle-arrow-down"></i> awesome-circle-arrow-down</li>
+                                <li><i class="awesome-circle-arrow-left"></i> awesome-circle-arrow-left</li>
+                                <li><i class="awesome-circle-arrow-right"></i> awesome-circle-arrow-right</li>
+                                <li><i class="awesome-circle-arrow-up"></i> awesome-circle-arrow-up</li>
+                                <li><i class="awesome-chevron-left"></i> awesome-chevron-left</li>
+                              </ul>
+                            </div>
+                            <div class="span3">
+                              <ul class="the-icons">
+                                <li><i class="awesome-caret-down"></i> awesome-caret-down</li>
+                                <li><i class="awesome-caret-left"></i> awesome-caret-left</li>
+                                <li><i class="awesome-caret-right"></i> awesome-caret-right</li>
+                                <li><i class="awesome-caret-up"></i> awesome-caret-up</li>
+                                <li><i class="awesome-chevron-right"></i> awesome-chevron-right</li>
+                              </ul>
+                            </div>
+                            <div class="span3">
+                              <ul class="the-icons">
+                                <li><i class="awesome-hand-down"></i> awesome-hand-down</li>
+                                <li><i class="awesome-hand-left"></i> awesome-hand-left</li>
+                                <li><i class="awesome-hand-right"></i> awesome-hand-right</li>
+                                <li><i class="awesome-hand-up"></i> awesome-hand-up</li>
+                                <li><i class="awesome-chevron-up"></i> awesome-chevron-up</li>
+                              </ul>
+                            </div>
+                          </div>
+                          <div class="span12 no_space"><h5 class="titlee">Video Player Icons</h5></div>
+                          <div class="span12 no_space">
+                            <div class="span3">
+                              <ul class="the-icons">
+                                <li><i class="awesome-play-circle"></i> awesome-play-circle</li>
+                                <li><i class="awesome-play"></i> awesome-play</li>
+                                <li><i class="awesome-pause"></i> awesome-pause</li>
+                                <li><i class="awesome-stop"></i> awesome-stop</li>
+                              </ul>
+                            </div>
+                            <div class="span3">
+                              <ul class="the-icons">
+                                <li><i class="awesome-step-backward"></i> awesome-step-backward</li>
+                                <li><i class="awesome-fast-backward"></i> awesome-fast-backward</li>
+                                <li><i class="awesome-backward"></i> awesome-backward</li>
+                                <li><i class="awesome-forward"></i> awesome-forward</li>
+                              </ul>
+                            </div>
+                            <div class="span3">
+                              <ul class="the-icons">
+                                <li><i class="awesome-fast-forward"></i> awesome-fast-forward</li>
+                                <li><i class="awesome-step-forward"></i> awesome-step-forward</li>
+                                <li><i class="awesome-eject"></i> awesome-eject</li>
+                              </ul>
+                            </div>
+                            <div class="span3">
+                              <ul class="the-icons">
+                                <li><i class="awesome-fullscreen"></i> awesome-fullscreen</li>
+                                <li><i class="awesome-resize-full"></i> awesome-resize-full</li>
+                                <li><i class="awesome-resize-small"></i> awesome-resize-small</li>
+                              </ul>
+                            </div>
+                          </div>
+                          <div class="span12 no_space"><h5 class="titlee">Social Icons</h5></div>
+                          <div class="span12 no_space">
+                            <div class="span3">
+                              <ul class="the-icons">
+                                <li><i class="awesome-phone"></i> awesome-phone</li>
+                                <li><i class="awesome-phone-sign"></i> awesome-phone-sign</li>
+                                <li><i class="awesome-facebook"></i> awesome-facebook</li>
+                                <li><i class="awesome-facebook-sign"></i> awesome-facebook-sign</li>
+                              </ul>
+                            </div>
+                            <div class="span3">
+                              <ul class="the-icons">
+                                <li><i class="awesome-twitter"></i> awesome-twitter</li>
+                                <li><i class="awesome-twitter-sign"></i> awesome-twitter-sign</li>
+                                <li><i class="awesome-github"></i> awesome-github</li>
+                                <li><i class="awesome-github-sign"></i> awesome-github-sign</li>
+                              </ul>
+                            </div>
+                            <div class="span3">
+                              <ul class="the-icons">
+                                <li><i class="awesome-linkedin"></i> awesome-linkedin</li>
+                                <li><i class="awesome-linkedin-sign"></i> awesome-linkedin-sign</li>
+                                <li><i class="awesome-pinterest"></i> awesome-pinterest</li>
+                                <li><i class="awesome-pinterest-sign"></i> awesome-pinterest-sign</li>
+                              </ul>
+                            </div>
+                            <div class="span3">
+                              <ul class="the-icons">
+                                <li><i class="awesome-google-plus"></i> awesome-google-plus</li>
+                                <li><i class="awesome-google-plus-sign"></i> awesome-google-plus-sign</li>
+                                <li><i class="awesome-sign-blank"></i> awesome-sign-blank</li>
+                              </ul>
+                            </div>
+                          </div>
+                                                  
+                        </section>
+                      </div>
+                      <div class="widget widget_2">
+                        <header>
+                          <h3>Flag icons <small>- provided by <a href="http://www.famfamfam.com/lab/icons/flags/" target="_blank">FamFamFam</a></small></h3>
+                          <ul class="toggle_content">                         
+                              <li class="arrow"><a href="#">Toggle Content</a></li>
+                          </ul>
+                        </header>
+                        <section class="welly group">                                                                                               
+                          <div class="span3 span_align">
+                            <ul class="the-icons">
+                              <li><i class="flag-ad"></i> flag-ad</li>
+                              <li><i class="flag-ae"></i> flag-ae</li>
+                              <li><i class="flag-af"></i> flag-af</li>
+                              <li><i class="flag-ag"></i> flag-ag</li>
+                              <li><i class="flag-ai"></i> flag-ai</li>
+                              
+                              <li><i class="flag-al"></i> flag-al</li>
+                              <li><i class="flag-am"></i> flag-am</li>
+                              <li><i class="flag-an"></i> flag-an</li>
+                              <li><i class="flag-ao"></i> flag-ao</li>
+                              <li><i class="flag-ar"></i> flag-ar</li>
+                              
+                              <li><i class="flag-as"></i> flag-as</li>
+                              <li><i class="flag-at"></i> flag-at</li>
+                              <li><i class="flag-au"></i> flag-au</li>
+                              <li><i class="flag-aw"></i> flag-aw</li>
+                              <li><i class="flag-ax"></i> flag-ax</li>
+                              
+                              <li><i class="flag-az"></i> flag-az</li>
+                              <li><i class="flag-ba"></i> flag-ba</li>
+                              <li><i class="flag-bb"></i> flag-bb</li>
+                              <li><i class="flag-bd"></i> flag-bd</li>
+                              <li><i class="flag-be"></i> flag-be</li>
+                              
+                              <li><i class="flag-bf"></i> flag-bf</li>
+                              <li><i class="flag-bg"></i> flag-bg</li>
+                              <li><i class="flag-bh"></i> flag-bh</li>
+                              <li><i class="flag-bi"></i> flag-bi</li>
+                              <li><i class="flag-bj"></i> flag-bj</li>
+                              
+                              <li><i class="flag-bm"></i> flag-bm</li>
+                              <li><i class="flag-bn"></i> flag-bn</li>
+                              <li><i class="flag-bo"></i> flag-bo</li>
+                              <li><i class="flag-br"></i> flag-br</li>
+                              <li><i class="flag-bs"></i> flag-bs</li>
+                              
+                              <li><i class="flag-bt"></i> flag-bt</li>
+                              <li><i class="flag-bv"></i> flag-bv</li>
+                              <li><i class="flag-bw"></i> flag-bw</li>
+                              <li><i class="flag-by"></i> flag-by</li>
+                              <li><i class="flag-bz"></i> flag-bz</li>
+                              
+                              <li><i class="flag-ca"></i> flag-ca</li>
+                              <li><i class="flag-catalonia"></i> flag-catalonia</li>
+                              <li><i class="flag-cc"></i> flag-cc</li>
+                              <li><i class="flag-cd"></i> flag-cd</li>
+                              <li><i class="flag-cf"></i> flag-cf</li>
+                              
+                              <li><i class="flag-cg"></i> flag-cg</li>
+                              <li><i class="flag-ch"></i> flag-ch</li>
+                              <li><i class="flag-ci"></i> flag-ci</li>
+                              <li><i class="flag-ck"></i> flag-ck</li>
+                              <li><i class="flag-cl"></i> flag-cl</li>
+                              
+                              <li><i class="flag-cm"></i> flag-cm</li>
+                              <li><i class="flag-cn"></i> flag-cn</li>
+                              <li><i class="flag-co"></i> flag-co</li>
+                              <li><i class="flag-cr"></i> flag-cr</li>
+                              <li><i class="flag-cs"></i> flag-cs</li>
+                              
+                              <li><i class="flag-cu"></i> flag-cu</li>
+                              <li><i class="flag-cv"></i> flag-cv</li>
+                              <li><i class="flag-cx"></i> flag-cx</li>
+                              <li><i class="flag-cy"></i> flag-cy</li>
+                              <li><i class="flag-cz"></i> flag-cz</li>
+                              
+                              <li><i class="flag-de"></i> flag-de</li>
+                              <li><i class="flag-dj"></i> flag-dj</li>
+                              <li><i class="flag-dk"></i> flag-dk</li>
+                              <li><i class="flag-dm"></i> flag-dm</li>
+                              <li><i class="flag-do"></i> flag-do</li>
+
+                              <li><i class="flag-dz"></i> flag-dz</li>
+                              <li><i class="flag-ec"></i> flag-ec</li>
+
+                            </ul>
+                          </div>
+                          <div class="span3">
+                            <ul class="the-icons">                              
+                              <li><i class="flag-ee"></i> flag-ee</li>
+                              <li><i class="flag-eg"></i> flag-eg</li>
+                              <li><i class="flag-eh"></i> flag-eh</li>
+                              
+                              <li><i class="flag-england"></i> flag-england</li>
+                              <li><i class="flag-er"></i> flag-er</li>
+                              <li><i class="flag-es"></i> flag-es</li>
+                              <li><i class="flag-et"></i> flag-et</li>
+                              <li><i class="flag-europeanunion"></i> flag-europeanunion</li>
+                              
+                              <li><i class="flag-fam"></i> flag-fam</li>
+                              <li><i class="flag-fi"></i> flag-fi</li>
+                              <li><i class="flag-fj"></i> flag-fj</li>
+                              <li><i class="flag-fk"></i> flag-fk</li>
+                              <li><i class="flag-fm"></i> flag-fm</li>
+                              
+                              <li><i class="flag-fo"></i> flag-fo</li>
+                              <li><i class="flag-fr"></i> flag-fr</li>
+                              <li><i class="flag-ga"></i> flag-ga</li>
+                              <li><i class="flag-gb"></i> flag-gb</li>
+                              <li><i class="flag-gd"></i> flag-gd</li>
+                              
+                              <li><i class="flag-ge"></i> flag-ge</li>
+                              <li><i class="flag-gf"></i> flag-gf</li>
+                              <li><i class="flag-gh"></i> flag-gh</li>
+                              <li><i class="flag-gi"></i> flag-gi</li>
+                              <li><i class="flag-gl"></i> flag-gl</li>
+                              
+                              <li><i class="flag-gm"></i> flag-gm</li>
+                              <li><i class="flag-gn"></i> flag-gn</li>
+                              <li><i class="flag-gp"></i> flag-gp</li>
+                              <li><i class="flag-gq"></i> flag-gq</li>
+                              <li><i class="flag-gr"></i> flag-gr</li>
+                              
+                              <li><i class="flag-gs"></i> flag-gs</li>
+                              <li><i class="flag-gt"></i> flag-gt</li>
+                              <li><i class="flag-gu"></i> flag-gu</li>
+                              <li><i class="flag-gw"></i> flag-gw</li>
+                              <li><i class="flag-gy"></i> flag-gy</li>
+                              
+                              <li><i class="flag-hk"></i> flag-hk</li>
+                              <li><i class="flag-hm"></i> flag-hm</li>
+                              <li><i class="flag-hn"></i> flag-hn</li>
+                              <li><i class="flag-hr"></i> flag-hr</li>
+                              <li><i class="flag-ht"></i> flag-ht</li>
+                              
+                              <li><i class="flag-hu"></i> flag-hu</li>
+                              <li><i class="flag-id"></i> flag-id</li>
+                              <li><i class="flag-ie"></i> flag-ie</li>
+                              <li><i class="flag-il"></i> flag-il</li>
+                              <li><i class="flag-in"></i> flag-in</li>
+                              
+                              <li><i class="flag-io"></i> flag-io</li>
+                              <li><i class="flag-iq"></i> flag-iq</li>
+                              <li><i class="flag-ir"></i> flag-ir</li>
+                              <li><i class="flag-is"></i> flag-is</li>
+                              <li><i class="flag-it"></i> flag-it</li>
+                              
+                              <li><i class="flag-jm"></i> flag-jm</li>
+                              <li><i class="flag-jo"></i> flag-jo</li>
+                              <li><i class="flag-jp"></i> flag-jp</li>
+                              <li><i class="flag-ke"></i> flag-ke</li>
+                              <li><i class="flag-kg"></i> flag-kg</li>
+                              
+                              <li><i class="flag-kh"></i> flag-kh</li>
+                              <li><i class="flag-ki"></i> flag-ki</li>
+                              <li><i class="flag-km"></i> flag-km</li>
+                              <li><i class="flag-kn"></i> flag-kn</li>
+                              <li><i class="flag-kp"></i> flag-kp</li>
+
+                              <li><i class="flag-kr"></i> flag-kr</li>
+                              <li><i class="flag-kw"></i> flag-kw</li>
+                              <li><i class="flag-ky"></i> flag-ky</li>
+                              <li><i class="flag-kz"></i> flag-kz</li>
+                            </ul>
+                          </div>
+                          <div class="span3">
+                            <ul class="the-icons">                                                            
+                              <li><i class="flag-la"></i> flag-la</li>
+                              
+                              <li><i class="flag-lb"></i> flag-lb</li>
+                              <li><i class="flag-lc"></i> flag-lc</li>
+                              <li><i class="flag-li"></i> flag-li</li>
+                              <li><i class="flag-lk"></i> flag-lk</li>
+                              <li><i class="flag-lr"></i> flag-lr</li>
+                              
+                              <li><i class="flag-ls"></i> flag-ls</li>
+                              <li><i class="flag-lt"></i> flag-lt</li>
+                              <li><i class="flag-lu"></i> flag-lu</li>
+                              <li><i class="flag-lv"></i> flag-lv</li>
+                              <li><i class="flag-ly"></i> flag-ly</li>
+                              
+                              <li><i class="flag-ma"></i> flag-ma</li>
+                              <li><i class="flag-mc"></i> flag-mc</li>
+                              <li><i class="flag-md"></i> flag-md</li>
+                              <li><i class="flag-me"></i> flag-me</li>
+                              <li><i class="flag-mg"></i> flag-mg</li>
+                              
+                              <li><i class="flag-mh"></i> flag-mh</li>
+                              <li><i class="flag-mk"></i> flag-mk</li>
+                              <li><i class="flag-ml"></i> flag-ml</li>
+                              <li><i class="flag-mm"></i> flag-mm</li>
+                              <li><i class="flag-mn"></i> flag-mn</li>
+                              
+                              <li><i class="flag-mo"></i> flag-mo</li>
+                              <li><i class="flag-mp"></i> flag-mp</li>
+                              <li><i class="flag-mq"></i> flag-mq</li>
+                              <li><i class="flag-mr"></i> flag-mr</li>
+                              <li><i class="flag-ms"></i> flag-ms</li>
+                              
+                              <li><i class="flag-mt"></i> flag-mt</li>
+                              <li><i class="flag-mu"></i> flag-mu</li>
+                              <li><i class="flag-mv"></i> flag-mv</li>
+                              <li><i class="flag-mw"></i> flag-mw</li>
+                              <li><i class="flag-mx"></i> flag-mx</li>
+                              
+                              <li><i class="flag-my"></i> flag-my</li>
+                              <li><i class="flag-mz"></i> flag-mz</li>
+                              <li><i class="flag-na"></i> flag-na</li>
+                              <li><i class="flag-nc"></i> flag-nc</li>
+                              <li><i class="flag-ne"></i> flag-ne</li>
+                              
+                              <li><i class="flag-nf"></i> flag-nf</li>
+                              <li><i class="flag-ng"></i> flag-ng</li>
+                              <li><i class="flag-ni"></i> flag-ni</li>
+                              <li><i class="flag-nl"></i> flag-nl</li>
+                              <li><i class="flag-no"></i> flag-no</li>
+                              
+                              <li><i class="flag-np"></i> flag-np</li>
+                              <li><i class="flag-nr"></i> flag-nr</li>
+                              <li><i class="flag-nu"></i> flag-nu</li>
+                              <li><i class="flag-nz"></i> flag-nz</li>
+                              <li><i class="flag-om"></i> flag-om</li>
+                              
+                              <li><i class="flag-pa"></i> flag-pa</li>
+                              <li><i class="flag-pe"></i> flag-pe</li>
+                              <li><i class="flag-pf"></i> flag-pf</li>
+                              <li><i class="flag-pg"></i> flag-pg</li>
+                              <li><i class="flag-ph"></i> flag-ph</li>
+                              
+                              <li><i class="flag-pk"></i> flag-pk</li>
+                              <li><i class="flag-pl"></i> flag-pl</li>
+                              <li><i class="flag-pm"></i> flag-pm</li>
+                              <li><i class="flag-pn"></i> flag-pn</li>
+                              <li><i class="flag-pr"></i> flag-pr</li>
+
+                              <li><i class="flag-ps"></i> flag-ps</li>
+                              <li><i class="flag-pt"></i> flag-pt</li>
+                              <li><i class="flag-pw"></i> flag-pw</li>
+                              <li><i class="flag-py"></i> flag-py</li>
+                              <li><i class="flag-qa"></i> flag-qa</li>
+
+                              <li><i class="flag-re"></i> flag-re</li>
+                            </ul>
+                          </div>
+                          <div class="span3">
+                            <ul class="the-icons">                                                                                                                      
+                              <li><i class="flag-ro"></i> flag-ro</li>
+                              <li><i class="flag-rs"></i> flag-rs</li>
+                              <li><i class="flag-ru"></i> flag-ru</li>
+                              <li><i class="flag-rw"></i> flag-rw</li>
+                              
+                              <li><i class="flag-sa"></i> flag-sa</li>
+                              <li><i class="flag-sb"></i> flag-sb</li>
+                              <li><i class="flag-sc"></i> flag-sc</li>
+                              <li><i class="flag-scotland"></i> flag-scotland</li>
+                              <li><i class="flag-sd"></i> flag-sd</li>
+                              
+                              <li><i class="flag-se"></i> flag-se</li>
+                              <li><i class="flag-sg"></i> flag-sg</li>
+                              <li><i class="flag-sh"></i> flag-sh</li>
+                              <li><i class="flag-si"></i> flag-si</li>
+                              <li><i class="flag-sj"></i> flag-sj</li>
+                              
+                              <li><i class="flag-sk"></i> flag-sk</li>
+                              <li><i class="flag-sl"></i> flag-sl</li>
+                              <li><i class="flag-sm"></i> flag-sm</li>
+                              <li><i class="flag-sn"></i> flag-sn</li>
+                              <li><i class="flag-so"></i> flag-so</li>
+                              
+                              <li><i class="flag-sr"></i> flag-sr</li>
+                              <li><i class="flag-st"></i> flag-st</li>
+                              <li><i class="flag-sv"></i> flag-sv</li>
+                              <li><i class="flag-sy"></i> flag-sy</li>
+                              <li><i class="flag-sz"></i> flag-sz</li>
+                              
+                              <li><i class="flag-tc"></i> flag-tc</li>
+                              <li><i class="flag-td"></i> flag-td</li>
+                              <li><i class="flag-tf"></i> flag-tf</li>
+                              <li><i class="flag-tg"></i> flag-tg</li>
+                              <li><i class="flag-th"></i> flag-th</li>
+                              
+                              <li><i class="flag-tj"></i> flag-tj</li>
+                              <li><i class="flag-tk"></i> flag-tk</li>
+                              <li><i class="flag-tl"></i> flag-tl</li>
+                              <li><i class="flag-tm"></i> flag-tm</li>
+                              <li><i class="flag-tn"></i> flag-tn</li>
+                              
+                              <li><i class="flag-to"></i> flag-to</li>
+                              <li><i class="flag-tr"></i> flag-tr</li>
+                              <li><i class="flag-tt"></i> flag-tt</li>
+                              <li><i class="flag-tv"></i> flag-tv</li>
+                              <li><i class="flag-tw"></i> flag-tw</li>
+                              
+                              <li><i class="flag-tz"></i> flag-tz</li>
+                              <li><i class="flag-ua"></i> flag-ua</li>
+                              <li><i class="flag-ug"></i> flag-ug</li>
+                              <li><i class="flag-um"></i> flag-um</li>
+                              <li><i class="flag-us"></i> flag-us</li>
+                              
+                              <li><i class="flag-uy"></i> flag-uy</li>
+                              <li><i class="flag-uz"></i> flag-uz</li>
+                              <li><i class="flag-va"></i> flag-va</li>
+                              <li><i class="flag-vc"></i> flag-vc</li>
+                              <li><i class="flag-ve"></i> flag-ve</li>
+                              
+                              <li><i class="flag-vg"></i> flag-vg</li>
+                              <li><i class="flag-vi"></i> flag-vi</li>
+                              <li><i class="flag-vn"></i> flag-vn</li>
+                              <li><i class="flag-vu"></i> flag-vu</li>
+                              <li><i class="flag-wales"></i> flag-wales</li>
+
+                              <li><i class="flag-wf"></i> flag-wf</li>
+                              <li><i class="flag-ws"></i> flag-ws</li>
+                              <li><i class="flag-ye"></i> flag-ye</li>
+                              <li><i class="flag-yt"></i> flag-yt</li>
+                              <li><i class="flag-za"></i> flag-za</li>
+                              
+                              <li><i class="flag-zm"></i> flag-zm</li>
+                              <li><i class="flag-zw"></i> flag-zw</li>  
+
+                            </ul>  
+                          </div>                        
+                        </section>
+                      </div>
+                      <div class="widget widget_2">
+                        <header>
+                          <h3>Sweet icons <small>- provided by <a href="http://iconsweets2.com/" target="_blank">Iconsweets</a></small></h3>
+                          <ul class="toggle_content">                         
+                              <li class="arrow"><a href="#">Toggle Content</a></li>
+                          </ul>
+                        </header>
+                        <section class="welly group">                                                                                               
+                          <div class="span6 span_align">
+                            <ul class="the-icons">
+                              <li><i class="sweet-magnifying-glass"></i> sweet-magnifying-glass</li>
+                              <li><i class="sweet-trashcan"></i> sweet-trashcan</li>
+                              <li><i class="sweet-trashcan-2"></i> sweet-trashcan-2</li>
+                              <li><i class="sweet-presentation"></i> sweet-presentation</li>
+                              <li><i class="sweet-download-to-computer"></i> flag-ai</li>
+                              
+                              <li><i class="sweet-download"></i> sweet-download</li>
+                              <li><i class="sweet-upload"></i> sweet-upload</li>
+                              <li><i class="sweet-flag"></i> sweet-flag</li>
+                              <li><i class="sweet-flag-2"></i> sweet-flag-2</li>
+                              <li><i class="sweet-finish-flag"></i> sweet-finish-flag</li>
+                              
+                              <li><i class="sweet-winner-podium"></i> winner-podium</li>
+                              <li><i class="sweet-cup"></i> sweet-cup</li>
+                              <li><i class="sweet-home"></i> sweet-home</li>
+                              <li><i class="sweet-home-2"></i> sweet-home-2</li>
+                              <li><i class="sweet-link"></i> sweet-link</li>
+
+                              <li><i class="sweet-link-2"></i> sweet-link-2</li>
+                              <li><i class="sweet-note-book"></i> sweet-note-book</li>
+                              <li><i class="sweet-book"></i> sweet-book</li>
+                              <li><i class="sweet-book-large"></i> sweet-book-large</li>
+                              <li><i class="sweet-books"></i> sweet-books</li>
+
+                              <li><i class="sweet-tree"></i> sweet-tree</li>
+                              <li><i class="sweet-under-construction"></i> sweet-under-construction</li>
+                              <li><i class="sweet-umbrella"></i> sweet-umbrella</li>
+                              <li><i class="sweet-mail"></i> sweet-mail</li>
+                              <li><i class="sweet-help"></i> sweet-help</li>
+
+                              <li><i class="sweet-rss"></i> sweet-rss</li>
+                              <li><i class="sweet-strategy"></i> sweet-strategy</li>
+                              <li><i class="sweet-strategy-2"></i> sweet-strategy-2</li>
+                              <li><i class="sweet-apartment-building"></i> sweet-apartment-building</li>
+                              <li><i class="sweet-companies"></i> sweet-companies</li>
+
+                              <li><i class="sweet-pacman-ghost"></i> sweet-pacman-ghost</li>
+                              <li><i class="sweet-pacman"></i> sweet-pacman</li>
+                              <li><i class="sweet-vault"></i> sweet-vault</li>
+                              <li><i class="sweet-archive"></i> sweet-archive</li>
+                              <li><i class="sweet-file-cabinet"></i> sweet-file-cabinet</li>
+
+                              <li><i class="sweet-bandaid"></i> sweet-bandaid</li>
+                              <li><i class="sweet-post-card"></i> sweet-post-card</li>
+                              <li><i class="sweet-alert"></i> sweet-alert</li>
+                              <li><i class="sweet-alert-2"></i> sweet-alert-2</li>
+                              <li><i class="sweet-alarm-bell"></i> sweet-alarm-bell</li>
+
+                              <li><i class="sweet-alarm-bell-2"></i> sweet-alarm-bell-2</li>
+                              <li><i class="sweet-robot"></i> sweet-robot</li>
+                              <li><i class="sweet-globe"></i> sweet-globe</li>
+                              <li><i class="sweet-globe-2"></i> sweet-globe-2</li>
+                              <li><i class="sweet-chemical"></i> sweet-chemical</li>
+
+                              <li><i class="sweet-light-bulb"></i> sweet-light-bulb</li>
+                              <li><i class="sweet-cloud"></i> sweet-cloud</li>
+                              <li><i class="sweet-cloud-upload"></i> sweet-cloud-upload</li>
+                              <li><i class="sweet-cloud-download"></i> sweet-cloud-download</li>
+                              <li><i class="sweet-lamp"></i> sweet-lamp</li>
+
+                              <li><i class="sweet-preview"></i> sweet-preview</li>
+                              <li><i class="sweet-ice-cream"></i> sweet-ice-cream</li>
+                              <li><i class="sweet-ice-cream-2"></i> sweet-ice-cream-2</li>
+                              <li><i class="sweet-paperclip"></i> sweet-paperclip</li>
+                              <li><i class="sweet-footprints"></i> sweet-footprints</li>
+
+                              <li><i class="sweet-firefox"></i> sweet-firefox</li>
+                              <li><i class="sweet-chrome"></i> sweet-chrome</li>
+                              <li><i class="sweet-safari"></i> sweet-safari</li>
+                              <li><i class="sweet-loading-bar"></i> sweet-loading-bar</li>
+                              <li><i class="sweet-bulls-eye"></i> sweet-bulls-eye</li>
+
+                              <li><i class="sweet-folder"></i> sweet-folder</li>
+                              <li><i class="sweet-locked"></i> sweet-locked</li>
+                              <li><i class="sweet-locked-2"></i> sweet-locked-2</li>
+                              <li><i class="sweet-unlocked"></i> sweet-unlocked</li>
+                              <li><i class="sweet-tag"></i> sweet-tag</li>
+
+                              <li><i class="sweet-tag-2"></i> sweet-tag-2</li>
+                              <li><i class="sweet-macos"></i> sweet-macos</li>
+                              <li><i class="sweet-windows"></i> sweet-windows</li>
+                              <li><i class="sweet-linux"></i> sweet-linux</li>
+                              <li><i class="sweet-create-write"></i> sweet-create-write</li>
+
+                              <li><i class="sweet-expose"></i> sweet-expose</li>
+                              <li><i class="sweet-key"></i> sweet-key</li>
+                              <li><i class="sweet-key-2"></i> sweet-key-2</li>
+                              <li><i class="sweet-table"></i> sweet-table</li>
+                              <li><i class="sweet-chair"></i> sweet-chair</li>
+
+                              <li><i class="sweet-acces-denied-sign"></i> sweet-acces-denied-sign</li>
+                              <li><i class="sweet-balloons"></i> sweet-balloons</li>
+                              <li><i class="sweet-cat"></i> sweet-cat</li>
+                              <li><i class="sweet-airplane"></i> sweet-airplane</li>
+                              <li><i class="sweet-truck"></i> sweet-truck</li>
+
+                              <li><i class="sweet-car"></i> sweet-car</li>
+                              <li><i class="sweet-info-about"></i> sweet-info-about</li>
+                              <li><i class="sweet-alarm-clock"></i> sweet-alarm-clock</li>
+                              <li><i class="sweet-timer"></i> sweet-timer</li>
+                              <li><i class="sweet-stop-watch"></i> sweet-stop-watch</li>
+
+                              <li><i class="sweet-clock"></i> sweet-clock</li>
+                              <li><i class="sweet-day-calendar"></i> sweet-day-calendar</li>
+                              <li><i class="sweet-month-calendar"></i> sweet-month-calendar</li>
+                              <li><i class="sweet-dress"></i> sweet-dress</li>
+                              <li><i class="sweet-t-shirt"></i> sweet-t-shirt</li>
+
+                              <li><i class="sweet-sport-shirt"></i> sweet-sport-shirt</li>
+                              <li><i class="sweet-sweater"></i> sweet-sweater</li>
+                              <li><i class="sweet-sleeveless-shirt"></i> sweet-sleeveless-shirt</li>
+                              <li><i class="sweet-pants"></i> sweet-pants</li>
+                              <li><i class="sweet-socks"></i> sweet-socks</li>
+
+                              <li><i class="sweet-trolly"></i> sweet-trolly</li>
+                              <li><i class="sweet-medical-case"></i> sweet-medical-case</li>
+                              <li><i class="sweet-suitcase"></i> sweet-suitcase</li>
+                              <li><i class="sweet-plane-suitcase"></i> sweet-plane-suitcase</li>
+                              <li><i class="sweet-travel-suitcase"></i> sweet-travel-suitcase</li>
+
+                              <li><i class="sweet-shopping-bag"></i> sweet-shopping-bag</li>
+                              <li><i class="sweet-ladys-purse"></i> sweet-ladys-purse</li>
+                              <li><i class="sweet-bag"></i> sweet-bag</li>
+                              <li><i class="sweet-paypal"></i> sweet-paypal</li>
+                              <li><i class="sweet-paypal-2"></i> sweet-paypal-2</li>
+
+                              <li><i class="sweet-paypal-3"></i> sweet-paypal-3</li>
+                              <li><i class="sweet-money"></i> sweet-money</li>
+                              <li><i class="sweet-money-2"></i> sweet-money-2</li>
+                              <li><i class="sweet-price-tag"></i> sweet-price-tag</li>
+                              <li><i class="sweet-price-tag-2"></i> sweet-price-tag-2</li>
+
+                              <li><i class="sweet-piggy-bank"></i> sweet-piggy-bank</li>
+                              <li><i class="sweet-lemonade-stand"></i> sweet-lemonade-stand</li>
+                              <li><i class="sweet-shopping-basket"></i> sweet-shopping-basket</li>
+                              <li><i class="sweet-shopping-basket-2"></i> sweet-shopping-basket-2</li>
+                              <li><i class="sweet-scan-label-2"></i> sweet-scan-label-2</li>
+
+                              <li><i class="sweet-shopping-cart"></i> sweet-shopping-cart</li>
+                              <li><i class="sweet-shopping-cart-2"></i> sweet-shopping-cart-2</li>
+                              <li><i class="sweet-shopping-cart-3"></i> sweet-shopping-cart-3</li>
+                              <li><i class="sweet-shopping-cart-4"></i> sweet-shopping-cart-4</li>
+                              <li><i class="sweet-digg"></i> sweet-digg</li>
+
+                              <li><i class="sweet-digg-2"></i> sweet-digg-2</li>
+                              <li><i class="sweet-google-buzz"></i> sweet-google-buzz</li>
+                              <li><i class="sweet-delicious"></i> sweet-delicious</li>
+                              <li><i class="sweet-twitter"></i> sweet-twitter</li>
+                              <li><i class="sweet-twitter-2"></i> sweet-twitter-2</li>
+
+                              <li><i class="sweet-tumbler"></i> sweet-tumbler</li>
+                              <li><i class="sweet-plixi"></i> sweet-plixi</li>
+                              <li><i class="sweet-dribbble"></i> sweet-dribbble</li>
+                              <li><i class="sweet-dribbble-2"></i> sweet-dribbble-2</li>
+                              <li><i class="sweet-stuble-upon"></i> sweet-stuble-upon</li>
+
+                              <li><i class="sweet-lastfm-2"></i> sweet-lastfm-2</li>
+                              <li><i class="sweet-moby-picture"></i> sweet-moby-picture</li>
+                              <li><i class="sweet-youtube"></i> sweet-youtube</li>
+                              <li><i class="sweet-youtube-2"></i> sweet-youtube-2</li>
+                              <li><i class="sweet-vimeo"></i> sweet-vimeo</li>
+
+                              <li><i class="sweet-vimeo-2"></i> sweet-vimeo-2</li>
+                              <li><i class="sweet-skype"></i> sweet-skype</li>
+                              <li><i class="sweet-facebook"></i> sweet-facebook</li>
+                              <li><i class="sweet-facebook-like"></i> sweet-facebook-like</li>
+                              <li><i class="sweet-facebook-like-2"></i> sweet-facebook-like-2</li>
+
+                              <li><i class="sweet-myspace-2"></i> sweet-myspace-2</li>
+                              <li><i class="sweet-dropbox"></i> sweet-dropbox</li>
+                              <li><i class="sweet-four-square"></i> sweet-four-square</li>
+                              <li><i class="sweet-gowalla-2"></i> sweet-gowalla-2</li>
+                              <li><i class="sweet-ichat"></i> sweet-ichat</li>
+
+                              <li><i class="sweet-google-plus"></i> sweet-google-plus</li>
+                              <li><i class="sweet-twitter-3"></i> sweet-twitter-3</li>
+                              <li><i class="sweet-linkedin"></i> sweet-linkedin</li>
+                              <li><i class="sweet-walking-man"></i> sweet-walking-man</li>
+                              
+
+                            </ul>
+                          </div>
+                          <div class="span6">
+                            <ul class="the-icons">
+                              <li><i class="sweet-running-man"></i> sweet-running-man</li>
+                              <li><i class="sweet-exit"></i> sweet-exit</li>
+                              <li><i class="sweet-male-contour"></i> sweet-male-contour</li>
+                              <li><i class="sweet-female-contour"></i> sweet-female-contour</li>
+                              <li><i class="sweet-user"></i> sweet-user</li>
+                              <li><i class="sweet-users"></i> sweet-users</li>
+
+                              <li><i class="sweet-admin-user"></i> sweet-admin-user</li>
+                              <li><i class="sweet-male-symbol"></i> sweet-male-symbol</li>
+                              <li><i class="sweet-female-symbol"></i> sweet-female-symbol</li>
+                              <li><i class="sweet-user-2"></i> sweet-user-2</li>
+                              <li><i class="sweet-users-2"></i> sweet-users-2</li>
+
+                              <li><i class="sweet-admin-user-2"></i> sweet-admin-user-2</li>
+                              <li><i class="sweet-user-comment"></i> sweet-user-comment</li>
+                              <li><i class="sweet-cog"></i> sweet-cog</li>
+                              <li><i class="sweet-cog-2"></i> sweet-cog-2</li>
+                              <li><i class="sweet-cog-3"></i> sweet-cog-3</li>
+                              
+                              <li><i class="sweet-cog-4"></i> sweet-cog-4</li>
+                              <li><i class="sweet-settings"></i> sweet-settings</li>
+                              <li><i class="sweet-settings-2"></i> sweet-settings-2</li>
+                              <li><i class="sweet-hd"></i> sweet-hd</li>
+                              <li><i class="sweet-hd-2"></i> sweet-hd-2</li>
+
+                              <li><i class="sweet-hd-3"></i> sweet-hd-3</li>
+                              <li><i class="sweet-sd"></i> sweet-sd</li>
+                              <li><i class="sweet-sd-3"></i> sweet-sd-3</li>
+                              <li><i class="sweet-bluray"></i> sweet-bluray</li>
+                              <li><i class="sweet-record"></i> sweet-record</li>
+                              
+                              <li><i class="sweet-cd"></i> sweet-cd</li>
+                              <li><i class="sweet-cassette"></i> sweet-cassette</li>
+                              <li><i class="sweet-image"></i> sweet-image</li>
+                              <li><i class="sweet-image-2"></i> sweet-image-2</li>
+                              <li><i class="sweet-image-3"></i> sweet-image-3</li>
+
+                              <li><i class="sweet-sound"></i> sweet-sound</li>
+                              <li><i class="sweet-film-strip"></i> sweet-film-strip</li>
+                              <li><i class="sweet-film-strip-2"></i> sweet-film-strip-2</li>
+                              <li><i class="sweet-headphones"></i> sweet-headphones</li>
+                              <li><i class="sweet-microphone"></i> sweet-microphone</li>
+                              
+                              <li><i class="sweet-printer"></i> sweet-printer</li>
+                              <li><i class="sweet-radio"></i> sweet-radio</li>
+                              <li><i class="sweet-television"></i> sweet-television</li>
+                              <li><i class="sweet-computer-imac"></i> sweet-computer-imac</li>
+                              <li><i class="sweet-laptop"></i> sweet-laptop</li>
+
+                              <li><i class="sweet-mighty-mouse"></i> sweet-mighty-mouse</li>
+                              <li><i class="sweet-magic-mouse"></i> sweet-magic-mouse</li>
+                              <li><i class="sweet-mouse-wires"></i> sweet-mouse-wires</li>
+                              <li><i class="sweet-camera"></i> sweet-camera</li>
+                              <li><i class="sweet-camera-2"></i> sweet-camera-2</li>
+                              
+                              <li><i class="sweet-monitor"></i> sweet-monitor</li>
+                              <li><i class="sweet-ipod-classic"></i> sweet-ipod-classic</li>
+                              <li><i class="sweet-ipod-nano"></i> sweet-ipod-nano</li>
+                              <li><i class="sweet-ipad"></i> sweet-ipad</li>
+                              <li><i class="sweet-film-camera"></i> sweet-film-camera</li>
+
+                              <li><i class="sweet-calculator"></i> sweet-calculator</li>
+                              <li><i class="sweet-cash-register"></i> sweet-cash-register</li>
+                              <li><i class="sweet-fax"></i> sweet-fax</li>
+                              <li><i class="sweet-frames"></i> sweet-frames</li>
+                              <li><i class="sweet-coverflow"></i> sweet-coverflow</li>
+                              
+                              <li><i class="sweet-list"></i> sweet-list</li>
+                              <li><i class="sweet-list-images"></i> sweet-list-images</li>
+                              <li><i class="sweet-list-image"></i> sweet-list-image</li>
+                              <li><i class="sweet-blick-images"></i> sweet-blick-images</li>
+                              <li><i class="sweet-wordpress"></i> sweet-wordpress</li>
+
+                              <li><i class="sweet-wordpress-2"></i> sweet-wordpress-2</li>
+                              <li><i class="sweet-joomla"></i> sweet-joomla</li>
+                              <li><i class="sweet-expression-engine"></i> sweet-expression-engine</li>
+                              <li><i class="sweet-drupal"></i> sweet-drupal</li>
+                              <li><i class="sweet-bended-arrow-right"></i> sweet-bended-arrow-right</li>
+                              
+                              <li><i class="sweet-bended-arrow-left"></i> sweet-bended-arrow-left</li>
+                              <li><i class="sweet-bended-arrow-down"></i> sweet-bended-arrow-down</li>
+                              <li><i class="sweet-bended-arrow-up"></i> sweet-bended-arrow-up</li>
+                              <li><i class="sweet-refresh"></i> sweet-refresh</li>
+                              <li><i class="sweet-refresh-2"></i> sweet-refresh-2</li>
+
+                              <li><i class="sweet-repeat"></i> sweet-repeat</li>
+                              <li><i class="sweet-shuffle"></i> sweet-shuffle</li>
+                              <li><i class="sweet-refresh-3"></i> sweet-refresh-3</li>
+                              <li><i class="sweet-refresh-4"></i> sweet-refresh-4</li>
+                              <li><i class="sweet-recycle-symbol"></i> sweet-recycle-symbol</li>
+                              
+                              <li><i class="sweet-go-full-screen"></i> sweet-go-full-screen</li>
+                              <li><i class="sweet-go-back-screen"></i> sweet-go-back-screen</li>
+                              <li><i class="sweet-go-back-from-screen"></i> sweet-go-back-from-screen</li>
+                              <li><i class="sweet-iphone-g3"></i> sweet-iphone-g3</li>
+                              <li><i class="sweet-iphone-4"></i> sweet-iphone-4</li>
+
+                              <li><i class="sweet-blackberry"></i> sweet-blackberry</li>
+                              <li><i class="sweet-android"></i> sweet-android</li>
+                              <li><i class="sweet-mobile-phone"></i> sweet-mobile-phone</li>
+                              <li><i class="sweet-bluetooth"></i> sweet-bluetooth</li>
+                              <li><i class="sweet-bluetooth-2"></i> sweet-bluetooth-2</li>
+                              
+                              <li><i class="sweet-wifi-signal"></i> sweet-wifi-signal</li>
+                              <li><i class="sweet-wifi-signal-2"></i> sweet-wifi-signal-2</li>
+                              <li><i class="sweet-inbox"></i> sweet-inbox</li>
+                              <li><i class="sweet-box-outgoing"></i> sweet-box-outgoing</li>
+                              <li><i class="sweet-box-incoming"></i> sweet-box-incoming</li>
+
+                              <li><i class="sweet-speech-bubble"></i> sweet-speech-bubble</li>
+                              <li><i class="sweet-speech-bubbles"></i> sweet-speech-bubbles</li>
+                              <li><i class="sweet-speech-bubble-2"></i> sweet-speech-bubble-2</li>
+                              <li><i class="sweet-speech-bubbles-2"></i> sweet-speech-bubbles-2</li>
+                              <li><i class="sweet-phone"></i> sweet-phone</li>
+                              
+                              <li><i class="sweet-phone-3"></i> sweet-phone-3</li>
+                              <li><i class="sweet-phone-hook"></i> sweet-phone-hook</li>
+                              <li><i class="sweet-battery-full"></i> sweet-battery-full</li>
+                              <li><i class="sweet-battery-almost-full"></i> sweet-battery-almost-full</li>
+                              <li><i class="sweet-battery-almost-empty"></i> sweet-battery-almost-empty</li>
+
+                              <li><i class="sweet-battery-empty"></i> sweet-battery-empty</li>
+                              <li><i class="sweet-battery"></i> sweet-battery</li>
+                              <li><i class="sweet-power"></i> sweet-power</li>
+                              <li><i class="sweet-electricity-input"></i> sweet-electricity-input</li>
+                              <li><i class="sweet-electricity-plug"></i> sweet-electricity-plug</li>
+                              
+                              <li><i class="sweet-paint-brush"></i> sweet-paint-brush</li>
+                              <li><i class="sweet-small-brush"></i> sweet-small-brush</li>
+                              <li><i class="sweet-fountain-pen"></i> sweet-fountain-pen</li>
+                              <li><i class="sweet-big-brush"></i> sweet-big-brush</li>
+                              <li><i class="sweet-pencil"></i> sweet-pencil</li>
+
+                              <li><i class="sweet-clipboard"></i> sweet-clipboard</li>
+                              <li><i class="sweet-cut-scissors"></i> sweet-cut-scissors</li>
+                              <li><i class="sweet-eyedropper"></i> sweet-eyedropper</li>
+                              <li><i class="sweet-abacus"></i> sweet-abacus</li>
+                              <li><i class="sweet-ruler-2"></i> sweet-ruler-2</li>
+                              
+                              <li><i class="sweet-ruler"></i> sweet-ruler</li>
+                              <li><i class="sweet-map"></i> sweet-map</li>
+                              <li><i class="sweet-google-maps"></i> sweet-google-maps</li>
+                              <li><i class="sweet-sign-post"></i> sweet-sign-post</li>
+                              <li><i class="sweet-marker"></i> sweet-marker</li>
+
+                              <li><i class="sweet-document"></i> sweet-document</li>
+                              <li><i class="sweet-documents"></i> sweet-documents</li>
+                              <li><i class="sweet-pdf-document"></i> sweet-pdf-document</li>
+                              <li><i class="sweet-pdf-documents"></i> sweet-pdf-documents</li>
+                              <li><i class="sweet-word-document"></i> sweet-word-document</li>
+                              
+                              <li><i class="sweet-word-documents"></i> sweet-word-documents</li>
+                              <li><i class="sweet-zip-file"></i> sweet-zip-file</li>
+                              <li><i class="sweet-zip-files"></i> sweet-zip-files</li>
+                              <li><i class="sweet-powerpoint-document"></i> sweet-powerpoint-document</li>
+                              <li><i class="sweet-powerpoint-documents"></i> sweet-powerpoint-documents</li>
+
+                              <li><i class="sweet-excel-document"></i> sweet-excel-document</li>
+                              <li><i class="sweet-excel-documents"></i> sweet-excel-documents</li>
+                              <li><i class="sweet-vcard"></i> sweet-vcard</li>
+                              <li><i class="sweet-vcard-2"></i> sweet-vcard-2</li>
+                              <li><i class="sweet-address-book"></i> sweet-address-book</li>
+                              
+                              <li><i class="sweet-chart"></i> sweet-chart</li>
+                              <li><i class="sweet-chart-2"></i> sweet-chart-2</li>
+                              <li><i class="sweet-chart-3"></i> sweet-chart-3</li>
+                              <li><i class="sweet-chart-4"></i> sweet-chart-4</li>
+                              <li><i class="sweet-chart-5"></i> sweet-chart-5</li>
+
+                              <li><i class="sweet-chart-6"></i> sweet-chart-6</li>
+                              <li><i class="sweet-chart-7"></i> sweet-chart-7</li>
+                              <li><i class="sweet-graph"></i> sweet-graph</li>
+                              <li><i class="sweet-chart-8"></i> sweet-chart-8</li>
+                              <li><i class="sweet-sd-2"></i> sweet-sd-2</li>
+                              
+                              <li><i class="sweet-dvd"></i> sweet-dvd</li>
+                              <li><i class="sweet-image"></i> sweet-image</li>
+                              <li><i class="sweet-megaphone"></i> ls</li>                              
+                            </ul>
+                          </div>                                                
+                        </section>
+                      </div>                      
+                    </div>  
+                  </div>                  
+                </div>
+
+              </div>
+
+
+            </div>                  
+          </div><!--/row-->
+        
+        </div><!--/span-->
+      </div><!--/row-->      
+      <hr>
+
+      <footer>
+        <p>&copy; LoxDesign.net - Phoenix 2012</p>
+      </footer>
+
+    </div><!--/.fluid-container-->
+
+    <!-- ===================== CHAT - Modal ===================== -->
+    <div id="chat_modal" class="chat_modal modal fade hide">
+      <div class="modal-header">
+        <ul>
+          <li class="toggle_users"><a href="#">Show Users</a></li>
+          <li class="status">
+            <a class="online" href="#"><span>Status</span></a>  
+            <ul>
+               <li><a class="online" href="#" title="Online"><span>Online</span></a></li>
+               <li><a class="away" href="#" title="Away"><span>Away</span></a></li>
+               <li><a class="busy" href="#" title="Busy"><span>Busy</span></a></li>
+               <li><a class="invisiblee" href="#" title="Invisible"><span>Invisible</span></a></li>
+               <li><a class="offline" href="#" title="Offline"><span>Offline</span></a></li>
+             </ul> 
+          </li>
+          <li class="chat_name">John Doe</li>
+        </ul>       
+        <button type="button" class="close" data-dismiss="modal">x</button>        
+      </div>
+      <div class="modal-body">
+        <div class="msg_cont left">
+          <img src="img/general/user_1.jpg" width="50" height="50" alt="User">
+          <ul>
+            <li>
+              <h3>John Doe:</h3> 
+              <span>16 minutes ago</span>
+            </li>
+            <li>Aliquam iaculis volutpat ipsum ullamcorper tempus. In in dui tortor. Mauris sed volutpat
+metus. Duis ut sapien sapien, id pellentesque orci. Nullam nisl metus, sodales ut laoreet 
+eget, pretium porttitor quam. Sed varius vulputate lacinia. </li>
+          </ul>    
+        </div>
+        <div class="msg_cont right">
+          <img src="img/general/user_2.jpg" width="50" height="50" alt="User">
+          <ul>
+            <li>
+              <h3>Jessie Doe:</h3> 
+              <span>16 minutes ago</span>
+            </li>
+            <li>Aliquam iaculis volutpat ipsum ullamcorper tempus. In in dui tortor. Mauris sed volutpat
+metus. Duis ut sapien sapien, id pellentesque orci. Nullam nisl metus, sodales ut laoreet 
+eget, pretium porttitor quam. Sed varius vulputate lacinia. </li>
+          </ul>    
+        </div>
+        <div class="msg_cont left">
+          <img src="img/general/user_1.jpg" width="50" height="50" alt="User">
+          <ul>
+            <li>
+              <h3>John Doe:</h3> 
+              <span>16 minutes ago</span>
+            </li>
+            <li>Aliquam iaculis volutpat ipsum ullamcorper tempus. In in dui tortor. Mauris sed volutpat
+metus. Duis ut sapien sapien, id pellentesque orci. Nullam nisl metus, sodales ut laoreet 
+eget, pretium porttitor quam. Sed varius vulputate lacinia. </li>
+          </ul>    
+        </div>        
+      </div>
+      <div class="modal-footer">        
+        <textarea></textarea>
+        <a href="#" class="btn btn-inverse">Send</a>
+      </div>
+    </div>
+
+    <!-- ===================== JS ===================== -->
+    <script src="js/libs/jquery-1.7.2.min.js"></script>    
+    <script src="js/libs/bootstrap.min.js"></script>   
+    <script src="js/libs/ios-orientationchange-fix.js"></script>      
+    <script src="js/libs/jquery-ui-1.8.20.custom.min.js"></script>      
+    <script src="js/common.js"></script>                 
+    
+    <!-- Site specific - JS --> 
+    <script src="js/libs/prettify.js"></script> 
+    <script src="js/script.js"></script>
+    <script src="js/specific/buttons_icons.js"></script>
+
+    <script type="text/javascript">
+
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-31818910-2']);
+      _gaq.push(['_setDomainName', 'loxdesign.net']);
+      _gaq.push(['_trackPageview']);
+
+      (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+
+    </script>
+  </body>
+</html>

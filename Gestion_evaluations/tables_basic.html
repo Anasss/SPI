@@ -1,0 +1,765 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Phoenix - Basic Tables</title>
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!-- ===================== Touch Icons ===================== -->
+    <link rel="shortcut icon" href="favicon.ico">
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="apple-touch-icon-144-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="apple-touch-icon-114-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="apple-touch-icon-72-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" href="apple-touch-icon-57-precomposed.png">
+
+    <!-- ===================== CSS ===================== -->    
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>  
+    <link rel="stylesheet" href="css/bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="css/bootstrap/bootstrap-responsive.min.css">    
+
+    <!-- Site specific - CSS -->   
+    
+    <!-- Common - CSS --> 
+    <link rel="stylesheet" href="css/theme_light/common.css">  
+    <link rel="stylesheet" href="css/theme_light.css" class="style_set">
+    
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+  <body> 
+    <div id="loader_cont"><img src="img/loaders/page_loader.gif"></div> 
+    <div class="options_cont">
+      <form name="myForm">
+        <a class="options_btn" href="#">OPTIONS</a> 
+        <div class="options group">
+          <div>
+            <p>Background image:</p>
+            <ul class="background_list">
+              <li><a class="current" id='bg_1' href="#">bg_1</a></li>
+              <li><a id='bg_2' href="#">bg_2</a></li>
+              <li><a id='bg_3' href="#">bg_3</a></li>
+              <li><a id='bg_4' href="#">bg_4</a></li>
+              <li><a id='bg_5' href="#">bg_5</a></li>
+              <li><a id='bg_6' href="#">bg_6</a></li>
+              <li><a id='bg_7' href="#">bg_7</a></li>
+              <li><a id='bg_8' href="#">bg_8</a></li>
+              <li><a id='bg_9' href="#">bg_9</a></li>
+              <li><a id='bg_10' href="#">bg_10</a></li>
+            </ul>
+          </div>
+          <div>
+            <p>Color styling:</p>
+            <ul class="color_list">
+              <li><a class="current" id='c_1' href="#" title="Rose">rose</a></li>
+              <li><a id='c_2' href="#" title="Orange">orange</a></li>
+              <li><a id='c_3' href="#" title="Apple Green">apple_green</a></li>
+              <li><a id='c_4' href="#" title="Sky Blue">sky_blue</a></li>
+              <li><a id='c_5' href="#" title="Purple">purple</a></li>
+            </ul>            
+          </div>
+          <div class="top_mn_setup">
+            <p>Display top menu on:</p>
+            <div>
+              <input id="top_menu_click" checked="checked" type="radio" value="1" class="menu_show" name="top_menu_show"><label for="top_menu_click">Click</label>
+              <input id="top_menu_hover" type="radio" value="0" class="menu_show" name="top_menu_show"><label for="top_menu_hover">Hover</label>
+            </div>            
+          </div>  
+          <div class="clear_cache_cont"><a class="btn btn-mini" href="#">Clear Cache</a></div>              
+        </div> 
+      </form> 
+    </div>    
+    <div class="navbar navbar-fixed-top">
+      <div class="navbar-inner">
+        <div class="container">
+          <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+            <span class="sweet-gray sweet-go-back-from-screen">&nbsp;</span>
+          </a>
+          <div class="nav-collapse">            
+            <ul class="nav main_nav" role="navigation">                
+                <li id="mail" class="styled dropdown mail">
+                  <a class="dropdown-toggle" data-toggle="dropdown" href="#">Mail<span class="info">2</span></a>
+                  <ul class="dropdown-menu top_menu">
+                      <li><a class="mn_new_msg" href="mail.html"><span>New Message</span></a></li>
+                      <li><a class="mn_inbox" href="mail.html"><span>Inbox</span></a></li>
+                      <li><a class="mn_outbox" href="mail.html"><span>OutBox</span></a></li>
+                      <li><a class="mn_spam" href="mail.html"><span>Spam</span></a></li>
+                      <li><a class="mn_trash" href="mail.html"><span>Trash</span></a></li>
+                  </ul>
+                </li>
+                <li id="chat" class="styled chat">
+                  <a data-toggle="modal" href="#chat_modal">Chat<span class="info">5</span></a>     
+                </li>
+                <li id="notification" class="styled dropdown notification">
+                  <a class="dropdown-toggle" data-toggle="dropdown" href="#">Notification<span class="info">4</span></a>
+                  <ul class="dropdown-menu">
+                    <li>
+                        <a href="#">                          
+                          Lorem ipsum dolor sit amet, consectetur adipiscing elit...
+                            <span>07/19/2012</span>                       
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                          Vivamus ut enim vitae nibh aliquet pre-tium lobortis sit amet tortor...
+                            <span>07/19/2012</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                          Ut id dui arcu, non tempus nunc...
+                            <span>07/19/2012</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                          Morbi faucibus suscipit nibh, ut pellen-tesque lectus pellentesque non....
+                            <span>07/19/2012</span>
+                        </a>
+                    </li>                        
+                    <li class="show_all"><a href="#">Show all notifications</a></li> 
+                  </ul>
+                </li>                          
+            </ul> 
+            <ul class="main_nav nav pull-right">                
+                <li id="search" class="search"> 
+                  <a href="#">Search</a> 
+                  <div class="search_cont">
+                      <form class="navbar-search form-search">                          
+                          <input type="text" class="input-medium search-query" placeholder="Search">
+                          <button type="submit">Search</button>
+                      </form> 
+                  </div>              
+                </li> 
+                <li id="settings" class="styled dropdown settings">
+                  <a class="dropdown-toggle" data-toggle="dropdown" href="#">Settings</a>
+                    <ul class="dropdown-menu top_menu">
+                        <li class="show_all">Settings</li>
+                        <li><a class="mn_site" href="#"><span>Site</span></a></li>
+                        <li><a class="mn_admin" href="#"><span>Admin</span></a></li>
+                        <li><a class="mn_mail" href="#"><span>Mail</span></a></li>
+                        <li><a class="mn_user" href="#"><span>User</span></a></li>
+                    </ul>
+                </li>
+                <li id="profile" class="styled dropdown profile">
+                  <a class="dropdown-toggle" data-toggle="dropdown" href="#">Profile</a>
+                    <ul class="dropdown-menu top_menu">                        
+                        <li class="profile group">
+                          <img src="img/general/user_1.jpg" width="50" height="50" alt="User">
+                          <ul>
+                            <li><strong>John Doe</strong></li>
+                            <li>@johndoe</li>
+                            <li><span>Administrator</span></li>
+                          </ul>
+                        </li>
+                        <li><a class="mn_settings" href="#"><span>My Settings</span></a></li>
+                        <li><a class="mn_profile" href="#"><span>My Profile</span></a></li>
+                        <li><a class="mn_logout" href="login.html"><span>Logout</span></a></li>
+                    </ul>
+                </li>                          
+            </ul>           
+          </div>
+          <h1 class="brand"><a href="index-2.html">PHOENIX</a></h1>                                       
+        </div>
+      </div>
+    </div>
+            
+    <div class="container">              
+      <div class="main_content row-fluid">
+
+        <div class="span3">
+
+          <div class="side_nav sidebar-nav" data-spy="affix" data-offset-top="150">
+			<h3 class="main_menu group">
+                <span class="title">Main Menu</span>
+                <a id="nav_list_btn" class="btn-collapse btn btn-inverse">
+                  <span class="sweet-gray sweet-go-back-from-screen">&nbsp;</span>              
+                </a>
+            </h3>
+            <ul class="nav nav-list">                          
+              <li><a class="home" href="index-2.html">Dashboard</a></li>
+              <li class="sub">
+                <a class="forms" href="#">Forms<span>4</span></a>
+                <ul>
+                  <li><a href="forms_layout.html">Layout</a></li>
+                  <li><a href="forms_elements.html">Elements</a></li>
+                  <li><a href="forms_validation.html">Validation</a></li>
+                  <li><a href="forms_uploader.html">File uploader &amp; WYSIWYG</a></li>                  
+                </ul>
+              </li>
+              <li><a class="charts" href="charts.html">Charts</a></li>
+              <li class="sub active open">
+                <a class="tables" href="#">Tables<span>2</span></a>
+                <ul>
+                  <li class="active"><a href="tables_basic.html">Basic</a></li>
+                  <li><a href="tables_advanced.html">Advanced</a></li>
+                </ul>
+              </li>
+              <li><a class="calendar" href="calendar.html">Calendar</a></li>
+              <li><a class="gallery" href="gallery.html">Gallery</a></li>
+              <li class="sub">
+                <a class="uielements" href="#">UI Elements<span>8</span></a>
+                <ul>
+                  <li><a href="accordions.html">Accordions</a></li>                  
+                  <li><a href="buttons_icons.html">Buttons and Icons</a></li>
+                  <li><a href="breadcrumbs.html">Breadcrumbs</a></li>
+                  <li><a href="progressbars.html">Progressbars</a></li>                  
+                  <li><a href="sliders.html">Sliders</a></li>                                    
+                  <li><a href="tabs.html">Tabs</a></li>        
+                  <li><a href="tooltips_popovers.html">Tooltips and Popovers</a></li>                                    
+                  <li><a href="miscellaneous.html">Misc</a></li>
+                </ul>
+              </li>              
+              <li><a class="filemanager" href="file_manager.html">File Manager</a></li>
+              <li><a class="typography" href="typography.html">Typography</a></li>
+              <li><a class="gridsystem" href="grid_system.html">Grid System</a></li>
+              <li><a class="widgets" href="widgets.html">Widgets</a></li>
+              <li class="sub">
+                <a class="pages" href="#">Pages<span>4</span></a>
+                <ul>
+                  <li><a href="login.html">Login</a></li>                  
+                  <li><a href="search.html">Search</a></li>
+                  <li><a href="mail.html">Mail</a></li>
+                  <li class="sub"> 
+                    <a href="#">Error<span>6</span></a>
+                    <ul>
+                      <li><a href="error_403.html">403</a></li>
+                      <li><a href="error_404.html">404</a></li>
+                      <li><a href="error_405.html">405</a></li>
+                      <li><a href="error_500.html">500</a></li>
+                      <li><a href="error_503.html">503</a></li>
+                      <li><a href="offline.html">Offline</a></li>
+                    </ul>
+                  </li>                  
+                </ul>
+              </li>                        
+            </ul>
+          </div><!--/.well -->
+        </div><!--/span-->
+        <div class="span9">
+          <div class="row-fluid">
+            <div class="span12">
+
+              <ul class="breadcrumb br_styled no_space">
+                <li>
+                  <a href="index-2.html">Dashboard</a> <span class="divider">/</span>
+                </li>                
+                <li class="active">Basic Tables</li>
+              </ul> 
+              <ul class="page_info">
+                  <li><h2>Basic Tables</h2></li>
+                  <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
+              </ul>
+
+              <div class="widget">
+                <header>
+                    <h3>Basic Table</h3>
+                    <ul class="toggle_content">                        
+                        <li class="arrow"><a href="#">Toggle Content</a></li>
+                    </ul>
+                </header>
+                <section>                         
+                     <table class="table_basic">
+                        <thead>
+                            <tr>
+                                <td>Column 1</td>
+                                <td>Column 2</td>
+                                <td>Column 3</td>
+                                <td>Column 4</td>
+                                <td>Column 5</td>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Row 1</td>
+                                <td>Row 1</td>
+                                <td>Row 1</td>
+                                <td>Row 1</td>
+                                <td>Row 1</td>
+                            </tr>
+                            <tr class="even">
+                                <td>Row 2</td>
+                                <td>Row 2</td>
+                                <td>Row 2</td>
+                                <td>Row 2</td>
+                                <td>Row 2</td>
+                            </tr>
+                            <tr>
+                                <td>Row 3</td>
+                                <td>Row 3</td>
+                                <td>Row 3</td>
+                                <td>Row 3</td>
+                                <td>Row 3</td>
+                            </tr>
+                            <tr class="even">
+                                <td>Row 4</td>
+                                <td>Row 4</td>
+                                <td>Row 4</td>
+                                <td>Row 4</td>
+                                <td>Row 4</td>
+                            </tr>
+                            <tr>
+                                <td>Row 5</td>
+                                <td>Row 5</td>
+                                <td>Row 5</td>
+                                <td>Row 5</td>
+                                <td>Row 5</td>
+                            </tr>                                    
+                        </tbody>
+                        <tfoot>
+                            <tr>
+                                <td>Column 1</td>
+                                <td>Column 2</td>
+                                <td>Column 3</td>
+                                <td>Column 4</td>
+                                <td>Column 5</td>
+                            </tr>
+                        </tfoot>
+                    </table>                      
+                </section>
+              </div>
+              <div class="widget">
+                <header>
+                    <h3>Basic Table <span>- with css3 selector</span></h3>
+                    <ul class="toggle_content">                         
+                        <li class="arrow"><a href="#">Toggle Content</a></li>
+                    </ul>
+                </header>
+                <section>                         
+                     <table class="table_basic css">
+                        <thead>
+                            <tr>
+                                <td>Column 1</td>
+                                <td>Column 2</td>
+                                <td>Column 3</td>
+                                <td>Column 4</td>
+                                <td>Column 5</td>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Row 1</td>
+                                <td>Row 1</td>
+                                <td>Row 1</td>
+                                <td>Row 1</td>
+                                <td>Row 1</td>
+                            </tr>
+                            <tr>
+                                <td>Row 2</td>
+                                <td>Row 2</td>
+                                <td>Row 2</td>
+                                <td>Row 2</td>
+                                <td>Row 2</td>
+                            </tr>
+                            <tr>
+                                <td>Row 3</td>
+                                <td>Row 3</td>
+                                <td>Row 3</td>
+                                <td>Row 3</td>
+                                <td>Row 3</td>
+                            </tr>
+                            <tr>
+                                <td>Row 4</td>
+                                <td>Row 4</td>
+                                <td>Row 4</td>
+                                <td>Row 4</td>
+                                <td>Row 4</td>
+                            </tr>
+                            <tr>
+                                <td>Row 5</td>
+                                <td>Row 5</td>
+                                <td>Row 5</td>
+                                <td>Row 5</td>
+                                <td>Row 5</td>
+                            </tr>                                   
+                        </tbody>
+                        <tfoot>
+                            <tr>
+                                <td>Column 1</td>
+                                <td>Column 2</td>
+                                <td>Column 3</td>
+                                <td>Column 4</td>
+                                <td>Column 5</td>
+                            </tr>
+                        </tfoot>
+                    </table>                      
+                </section>
+              </div>
+              <div class="widget table_basic_header">
+                <header>
+                    <h3>Basic Table</h3>
+                    <ul class="toggle_content">                         
+                        <li class="arrow"><a href="#">Toggle Content</a></li>
+                    </ul>
+                </header>
+                <section>                         
+                     <table class="table_basic">                                
+                            <tr class="th">
+                                <th>Column 1</th>
+                                <th>Column 2</th>
+                                <th>Column 3</th>
+                                <th>Column 4</th>
+                                <th>Column 5</th>
+                            </tr>                                                                
+                            <tr>
+                                <td>Row 1</td>
+                                <td>Row 1</td>
+                                <td>Row 1</td>
+                                <td>Row 1</td>
+                                <td>Row 1</td>
+                            </tr>
+                            <tr class="even">
+                                <td>Row 2</td>
+                                <td>Row 2</td>
+                                <td>Row 2</td>
+                                <td>Row 2</td>
+                                <td>Row 2</td>
+                            </tr>
+                            <tr>
+                                <td>Row 3</td>
+                                <td>Row 3</td>
+                                <td>Row 3</td>
+                                <td>Row 3</td>
+                                <td>Row 3</td>
+                            </tr>
+                            <tr class="even">
+                                <td>Row 4</td>
+                                <td>Row 4</td>
+                                <td>Row 4</td>
+                                <td>Row 4</td>
+                                <td>Row 4</td>
+                            </tr>
+                            <tr>
+                                <td>Row 5</td>
+                                <td>Row 5</td>
+                                <td>Row 5</td>
+                                <td>Row 5</td>
+                                <td>Row 5</td>
+                            </tr>                                                                   
+                    </table>                      
+                </section>
+              </div>                    
+              <div class="widget">
+                <header>
+                    <h3>Basic Table <span> - with checkboxes</span></h3>
+                    <ul class="toggle_content">                         
+                        <li class="arrow"><a href="#">Toggle Content</a></li>
+                    </ul>
+                </header>
+                <section>                         
+                     <table id="check_1" class="table_basic chbox css">
+                        <thead>
+                            <tr>
+                              <td><input name="chbox" type="checkbox" value=""></td>
+                                <td>Column 1</td>
+                                <td>Column 2</td>
+                                <td>Column 3</td>
+                                <td>Column 4</td>
+                                <td>Column 5</td>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                              <td><input name="chbox" type="checkbox" value=""></td>
+                                <td>Row 1</td>
+                                <td>Row 1</td>
+                                <td>Row 1</td>
+                                <td>Row 1</td>
+                                <td>Row 1</td>
+                            </tr>
+                            <tr>
+                                <td><input name="chbox" type="checkbox" value=""></td>                                    
+                                <td>Row 2</td>
+                                <td>Row 2</td>
+                                <td>Row 2</td>
+                                <td>Row 2</td>
+                                <td>Row 2</td>
+                            </tr>
+                            <tr>
+                                <td><input name="chbox" type="checkbox" value=""></td>                                                                        
+                                <td>Row 3</td>
+                                <td>Row 3</td>
+                                <td>Row 3</td>
+                                <td>Row 3</td>
+                                <td>Row 3</td>
+                            </tr>
+                            <tr>
+                                <td><input name="chbox" type="checkbox" value=""></td>                                                                        
+                                <td>Row 4</td>
+                                <td>Row 4</td>
+                                <td>Row 4</td>
+                                <td>Row 4</td>
+                                <td>Row 4</td>
+                            </tr>
+                            <tr>
+                                <td><input name="chbox" type="checkbox" value=""></td>                                                                        
+                                <td>Row 5</td>
+                                <td>Row 5</td>
+                                <td>Row 5</td>
+                                <td>Row 5</td>
+                                <td>Row 5</td>
+                            </tr>                                   
+                        </tbody>
+                        <tfoot>
+                            <tr>
+                                <td><input name="chbox" type="checkbox" value=""></td>                                                                        
+                                <td>Column 1</td>
+                                <td>Column 2</td>
+                                <td>Column 3</td>
+                                <td>Column 4</td>
+                                <td>Column 5</td>
+                            </tr>
+                        </tfoot>
+                    </table>                      
+                </section>
+            </div>
+            <div class="widget">
+                <header>
+                    <h3>Basic Table <span> - with sortable handles</span></h3>
+                    <ul class="toggle_content">                         
+                        <li class="arrow"><a href="#">Toggle Content</a></li>
+                    </ul>
+                </header>
+                <section>                         
+                     <table class="table_basic sortable">
+                        <thead>
+                            <tr>                                      
+                                <td><a class="sort_desc" href="#">Column 1</a></td>
+                                <td><a class="sort_asc" href="#">Column 2</a></td>
+                                <td><a href="#">Column 3</a></td>
+                                <td><a href="#">Column 4</a></td>
+                                <td><a href="#">Column 5</a></td>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Row 1</td>
+                                <td>Row 1</td>
+                                <td>Row 1</td>
+                                <td>Row 1</td>
+                                <td>Row 1</td>
+                            </tr>
+                            <tr class="even">
+                                <td>Row 2</td>
+                                <td>Row 2</td>
+                                <td>Row 2</td>
+                                <td>Row 2</td>
+                                <td>Row 2</td>
+                            </tr>
+                            <tr>
+                                <td>Row 3</td>
+                                <td>Row 3</td>
+                                <td>Row 3</td>
+                                <td>Row 3</td>
+                                <td>Row 3</td>
+                            </tr>
+                            <tr class="even">
+                                <td>Row 4</td>
+                                <td>Row 4</td>
+                                <td>Row 4</td>
+                                <td>Row 4</td>
+                                <td>Row 4</td>
+                            </tr>
+                            <tr>
+                                <td>Row 5</td>
+                                <td>Row 5</td>
+                                <td>Row 5</td>
+                                <td>Row 5</td>
+                                <td>Row 5</td>
+                            </tr>                                    
+                        </tbody>
+                        <tfoot>
+                            <tr>                                                                                            
+                                <td>Column 1</td>
+                                <td>Column 2</td>
+                                <td>Column 3</td>
+                                <td>Column 4</td>
+                                <td>Column 5</td>
+                            </tr>
+                        </tfoot>
+                    </table>                      
+                </section>
+            </div>
+            <div class="widget">
+                <header>
+                    <h3>Basic Table <span> - with checkboxes and sortable handles</span></h3>
+                    <ul class="toggle_content">                         
+                        <li class="arrow"><a href="#">Toggle Content</a></li>
+                    </ul>
+                </header>
+                <section>                         
+                     <table id="check_2" class="table_basic sortable chbox css">
+                        <thead>
+                            <tr>
+                              <td><input name="chbox" type="checkbox" value=""></td>
+                                <td><a class="sort_desc" href="#">Column 1</a></td>
+                                <td><a class="sort_asc" href="#">Column 2</a></td>
+                                <td><a href="#">Column 3</a></td>
+                                <td><a href="#">Column 4</a></td>
+                                <td><a href="#">Column 5</a></td>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                              <td><input name="chbox" type="checkbox" value=""></td>
+                                <td>Row 1</td>
+                                <td>Row 1</td>
+                                <td>Row 1</td>
+                                <td>Row 1</td>
+                                <td>Row 1</td>
+                            </tr>
+                            <tr>
+                                <td><input name="chbox" type="checkbox" value=""></td>                                    
+                                <td>Row 2</td>
+                                <td>Row 2</td>
+                                <td>Row 2</td>
+                                <td>Row 2</td>
+                                <td>Row 2</td>
+                            </tr>
+                            <tr>
+                                <td><input name="chbox" type="checkbox" value=""></td>                                                                        
+                                <td>Row 3</td>
+                                <td>Row 3</td>
+                                <td>Row 3</td>
+                                <td>Row 3</td>
+                                <td>Row 3</td>
+                            </tr>
+                            <tr>
+                                <td><input name="chbox" type="checkbox" value=""></td>                                                                        
+                                <td>Row 4</td>
+                                <td>Row 4</td>
+                                <td>Row 4</td>
+                                <td>Row 4</td>
+                                <td>Row 4</td>
+                            </tr>
+                            <tr>
+                                <td><input name="chbox" type="checkbox" value=""></td>                                                                        
+                                <td>Row 5</td>
+                                <td>Row 5</td>
+                                <td>Row 5</td>
+                                <td>Row 5</td>
+                                <td>Row 5</td>
+                            </tr>                                   
+                        </tbody>
+                        <tfoot>
+                            <tr>
+                                <td><input name="chbox" type="checkbox" value=""></td>                                                                        
+                                <td>Column 1</td>
+                                <td>Column 2</td>
+                                <td>Column 3</td>
+                                <td>Column 4</td>
+                                <td>Column 5</td>
+                            </tr>
+                        </tfoot>
+                    </table>                      
+                </section>
+            </div>
+
+
+            </div>                  
+          </div><!--/row-->
+        
+        </div><!--/span-->
+      </div><!--/row-->      
+      <hr>
+
+      <footer>
+        <p>&copy; LoxDesign.net - Phoenix 2012</p>
+      </footer>
+
+    </div><!--/.fluid-container-->
+
+    <!-- ===================== CHAT - Modal ===================== -->
+    <div id="chat_modal" class="chat_modal modal fade hide">
+      <div class="modal-header">
+        <ul>
+          <li class="toggle_users"><a href="#">Show Users</a></li>
+          <li class="status">
+            <a class="online" href="#"><span>Status</span></a>  
+            <ul>
+               <li><a class="online" href="#" title="Online"><span>Online</span></a></li>
+               <li><a class="away" href="#" title="Away"><span>Away</span></a></li>
+               <li><a class="busy" href="#" title="Busy"><span>Busy</span></a></li>
+               <li><a class="invisiblee" href="#" title="Invisible"><span>Invisible</span></a></li>
+               <li><a class="offline" href="#" title="Offline"><span>Offline</span></a></li>
+             </ul> 
+          </li>
+          <li class="chat_name">John Doe</li>
+        </ul>       
+        <button type="button" class="close" data-dismiss="modal">x</button>        
+      </div>
+      <div class="modal-body">
+        <div class="msg_cont left">
+          <img src="img/general/user_1.jpg" width="50" height="50" alt="User">
+          <ul>
+            <li>
+              <h3>John Doe:</h3> 
+              <span>16 minutes ago</span>
+            </li>
+            <li>Aliquam iaculis volutpat ipsum ullamcorper tempus. In in dui tortor. Mauris sed volutpat
+metus. Duis ut sapien sapien, id pellentesque orci. Nullam nisl metus, sodales ut laoreet 
+eget, pretium porttitor quam. Sed varius vulputate lacinia. </li>
+          </ul>    
+        </div>
+        <div class="msg_cont right">
+          <img src="img/general/user_2.jpg" width="50" height="50" alt="User">
+          <ul>
+            <li>
+              <h3>Jessie Doe:</h3> 
+              <span>16 minutes ago</span>
+            </li>
+            <li>Aliquam iaculis volutpat ipsum ullamcorper tempus. In in dui tortor. Mauris sed volutpat
+metus. Duis ut sapien sapien, id pellentesque orci. Nullam nisl metus, sodales ut laoreet 
+eget, pretium porttitor quam. Sed varius vulputate lacinia. </li>
+          </ul>    
+        </div>
+        <div class="msg_cont left">
+          <img src="img/general/user_1.jpg" width="50" height="50" alt="User">
+          <ul>
+            <li>
+              <h3>John Doe:</h3> 
+              <span>16 minutes ago</span>
+            </li>
+            <li>Aliquam iaculis volutpat ipsum ullamcorper tempus. In in dui tortor. Mauris sed volutpat
+metus. Duis ut sapien sapien, id pellentesque orci. Nullam nisl metus, sodales ut laoreet 
+eget, pretium porttitor quam. Sed varius vulputate lacinia. </li>
+          </ul>    
+        </div>        
+      </div>
+      <div class="modal-footer">        
+        <textarea></textarea>
+        <a href="#" class="btn btn-inverse">Send</a>
+      </div>
+    </div>
+
+    <!-- ===================== JS ===================== -->
+    <script src="js/libs/jquery-1.7.2.min.js"></script>    
+    <script src="js/libs/bootstrap.min.js"></script>   
+    <script src="js/libs/ios-orientationchange-fix.js"></script>      
+    <script src="js/libs/jquery-ui-1.8.20.custom.min.js"></script>      
+    <script src="js/common.js"></script>                 
+    
+    <!-- Site specific - JS -->  
+    <script src="js/script.js"></script>
+    <script src="js/specific/tables_basic.js"></script>  
+
+    <script type="text/javascript">
+
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-31818910-2']);
+      _gaq.push(['_setDomainName', 'loxdesign.net']);
+      _gaq.push(['_trackPageview']);
+
+      (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+
+    </script>
+  </body>
+</html>

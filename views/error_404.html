@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Phoenix - 404 Error Page</title>
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!-- ===================== Touch Icons ===================== -->
+    <link rel="shortcut icon" href="favicon.ico">
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="apple-touch-icon-144-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="apple-touch-icon-114-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="apple-touch-icon-72-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" href="apple-touch-icon-57-precomposed.png">
+
+    <!-- ===================== CSS ===================== -->    
+    <link href='http://fonts.googleapis.com/css?family=Nobile' rel='stylesheet' type='text/css'>  
+    <link rel="stylesheet" href="css/bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="css/bootstrap/bootstrap-responsive.min.css">    
+
+    <!-- Common - CSS --> 
+    <link rel="stylesheet" href="css/theme_light/common.css">  
+    <link rel="stylesheet" href="css/theme_light.css" class="style_set">
+    
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+  <body> 
+    <div id="loader_cont"><img src="img/loaders/page_loader.gif"></div> 
+    <div class="options_cont">
+      <form name="myForm">
+        <a class="options_btn" href="#">OPTIONS</a> 
+        <div class="options group">
+          <div>
+            <p>Background image:</p>
+            <ul class="background_list">
+              <li><a class="current" id='bg_1' href="#">bg_1</a></li>
+              <li><a id='bg_2' href="#">bg_2</a></li>
+              <li><a id='bg_3' href="#">bg_3</a></li>
+              <li><a id='bg_4' href="#">bg_4</a></li>
+              <li><a id='bg_5' href="#">bg_5</a></li>
+              <li><a id='bg_6' href="#">bg_6</a></li>
+              <li><a id='bg_7' href="#">bg_7</a></li>
+              <li><a id='bg_8' href="#">bg_8</a></li>
+              <li><a id='bg_9' href="#">bg_9</a></li>
+              <li><a id='bg_10' href="#">bg_10</a></li>
+            </ul>
+          </div>
+          <div>
+            <p>Color styling:</p>
+            <ul class="color_list">
+              <li><a class="current" id='c_1' href="#" title="Rose">rose</a></li>
+              <li><a id='c_2' href="#" title="Orange">orange</a></li>
+              <li><a id='c_3' href="#" title="Apple Green">apple_green</a></li>
+              <li><a id='c_4' href="#" title="Sky Blue">sky_blue</a></li>
+              <li><a id='c_5' href="#" title="Purple">purple</a></li>
+            </ul>            
+          </div>           
+          <div class="clear_cache_cont"><a class="btn btn-mini" href="#">Clear Cache</a></div>              
+        </div> 
+      </form> 
+    </div>    
+              
+    <div class="container">        
+      <div class="row-fluid">
+        <div class="span12">
+            <div class="error_container">
+              <h1>404</h1>
+              <h2>Page not found !</h2>
+              <hr>
+              <p>Please try the following options instead:</p>
+              <ul>
+                <li><a class="btn btn-small btn-inverse" href="index-2.html">Go to dashboard</a></li>
+                <li><a class="btn btn-small btn-inverse" href="#">Go to website</a></li>
+              </ul>
+            </div>
+        </div><!--/span-->        
+      </div><!--/row-->      
+    </div><!--/.fluid-container-->
+    
+    <!-- ===================== JS ===================== -->
+    <script src="js/libs/jquery-1.7.2.min.js"></script>    
+    <script src="js/libs/bootstrap.min.js"></script>   
+    <script src="js/libs/ios-orientationchange-fix.js"></script>      
+    <script src="js/libs/jquery-ui-1.8.20.custom.min.js"></script>      
+    <script src="js/common.js"></script>                 
+    
+    <script src="js/script.js"></script>    
+
+    <script type="text/javascript">
+
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-31818910-2']);
+      _gaq.push(['_setDomainName', 'loxdesign.net']);
+      _gaq.push(['_trackPageview']);
+
+      (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+
+    </script>
+  </body>
+</html>

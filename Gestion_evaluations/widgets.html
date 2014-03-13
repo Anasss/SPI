@@ -1,0 +1,1156 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+	<head>
+    <meta charset="utf-8">
+    <title>Phoenix - Widgets</title>
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!-- ===================== Touch Icons ===================== -->
+    <link rel="shortcut icon" href="favicon.ico">
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="apple-touch-icon-144-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="apple-touch-icon-114-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="apple-touch-icon-72-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" href="apple-touch-icon-57-precomposed.png">
+
+    <!-- ===================== CSS ===================== -->    
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>  
+    <link rel="stylesheet" href="css/bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="css/bootstrap/bootstrap-responsive.min.css">    
+
+    <!-- Site specific - CSS -->   
+    <link rel="stylesheet" href="css/theme_light/prettify.css">
+    <link rel="stylesheet" href="css/theme_light/jquery-ui-1.8.20.custom.css">
+    <link rel="stylesheet" href="css/theme_light/tagedit/jquery.tagedit.css">    
+    <link rel="stylesheet" href="css/theme_light/widgets/calendar_default.css">    
+    <link rel="stylesheet" href="css/theme_light/widgets/calendar_dark.css">    
+    <link rel="stylesheet" href="css/theme_light/widgets/jquery.miniColors.css"> 
+    <link rel="stylesheet" href="css/theme_light/widgets/colorpicker.css">    
+
+    <!-- Common - CSS -->     
+    <link rel="stylesheet" href="css/theme_light/common.css">  
+    <link rel="stylesheet" href="css/theme_light.css" class="style_set">
+    
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+  <body> 
+    <div id="loader_cont"><img src="img/loaders/page_loader.gif"></div> 
+    <div class="options_cont">
+      <form name="myForm">
+        <a class="options_btn" href="#">OPTIONS</a> 
+        <div class="options group">
+          <div>
+            <p>Background image:</p>
+            <ul class="background_list">
+              <li><a class="current" id='bg_1' href="#">bg_1</a></li>
+              <li><a id='bg_2' href="#">bg_2</a></li>
+              <li><a id='bg_3' href="#">bg_3</a></li>
+              <li><a id='bg_4' href="#">bg_4</a></li>
+              <li><a id='bg_5' href="#">bg_5</a></li>
+              <li><a id='bg_6' href="#">bg_6</a></li>
+              <li><a id='bg_7' href="#">bg_7</a></li>
+              <li><a id='bg_8' href="#">bg_8</a></li>
+              <li><a id='bg_9' href="#">bg_9</a></li>
+              <li><a id='bg_10' href="#">bg_10</a></li>
+            </ul>
+          </div>
+          <div>
+            <p>Color styling:</p>
+            <ul class="color_list">
+              <li><a class="current" id='c_1' href="#" title="Rose">rose</a></li>
+              <li><a id='c_2' href="#" title="Orange">orange</a></li>
+              <li><a id='c_3' href="#" title="Apple Green">apple_green</a></li>
+              <li><a id='c_4' href="#" title="Sky Blue">sky_blue</a></li>
+              <li><a id='c_5' href="#" title="Purple">purple</a></li>
+            </ul>            
+          </div>
+          <div class="top_mn_setup">
+            <p>Display top menu on:</p>
+            <div>
+              <input id="top_menu_click" checked="checked" type="radio" value="1" class="menu_show" name="top_menu_show"><label for="top_menu_click">Click</label>
+              <input id="top_menu_hover" type="radio" value="0" class="menu_show" name="top_menu_show"><label for="top_menu_hover">Hover</label>
+            </div>            
+          </div>  
+          <div class="clear_cache_cont"><a class="btn btn-mini" href="#">Clear Cache</a></div>              
+        </div> 
+      </form> 
+    </div>    
+    <div class="navbar navbar-fixed-top">
+      <div class="navbar-inner">
+        <div class="container">
+          <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+            <span class="sweet-gray sweet-go-back-from-screen">&nbsp;</span>
+          </a>
+          <div class="nav-collapse">            
+            <ul class="nav main_nav" role="navigation">                
+                <li id="mail" class="styled dropdown mail">
+                  <a class="dropdown-toggle" data-toggle="dropdown" href="#">Mail<span class="info">2</span></a>
+                  <ul class="dropdown-menu top_menu">
+                      <li><a class="mn_new_msg" href="mail.html"><span>New Message</span></a></li>
+                      <li><a class="mn_inbox" href="mail.html"><span>Inbox</span></a></li>
+                      <li><a class="mn_outbox" href="mail.html"><span>OutBox</span></a></li>
+                      <li><a class="mn_spam" href="mail.html"><span>Spam</span></a></li>
+                      <li><a class="mn_trash" href="mail.html"><span>Trash</span></a></li>
+                  </ul>
+                </li>
+                <li id="chat" class="styled chat">
+                  <a data-toggle="modal" href="#chat_modal">Chat<span class="info">5</span></a>     
+                </li>
+                <li id="notification" class="styled dropdown notification">
+                  <a class="dropdown-toggle" data-toggle="dropdown" href="#">Notification<span class="info">4</span></a>
+                  <ul class="dropdown-menu">
+                    <li>
+                        <a href="#">                          
+                          Lorem ipsum dolor sit amet, consectetur adipiscing elit...
+                            <span>07/19/2012</span>                       
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                          Vivamus ut enim vitae nibh aliquet pre-tium lobortis sit amet tortor...
+                            <span>07/19/2012</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                          Ut id dui arcu, non tempus nunc...
+                            <span>07/19/2012</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                          Morbi faucibus suscipit nibh, ut pellen-tesque lectus pellentesque non....
+                            <span>07/19/2012</span>
+                        </a>
+                    </li>                        
+                    <li class="show_all"><a href="#">Show all notifications</a></li> 
+                  </ul>
+                </li>                          
+            </ul> 
+            <ul class="main_nav nav pull-right">                
+                <li id="search" class="search"> 
+                  <a href="#">Search</a> 
+                  <div class="search_cont">
+                      <form class="navbar-search form-search">                          
+                          <input type="text" class="input-medium search-query" placeholder="Search">
+                          <button type="submit">Search</button>
+                      </form> 
+                  </div>              
+                </li> 
+                <li id="settings" class="styled dropdown settings">
+                  <a class="dropdown-toggle" data-toggle="dropdown" href="#">Settings</a>
+                    <ul class="dropdown-menu top_menu">
+                        <li class="show_all">Settings</li>
+                        <li><a class="mn_site" href="#"><span>Site</span></a></li>
+                        <li><a class="mn_admin" href="#"><span>Admin</span></a></li>
+                        <li><a class="mn_mail" href="#"><span>Mail</span></a></li>
+                        <li><a class="mn_user" href="#"><span>User</span></a></li>
+                    </ul>
+                </li>
+                <li id="profile" class="styled dropdown profile">
+                  <a class="dropdown-toggle" data-toggle="dropdown" href="#">Profile</a>
+                    <ul class="dropdown-menu top_menu">                        
+                        <li class="profile group">
+                          <img src="img/general/user_1.jpg" width="50" height="50" alt="User">
+                          <ul>
+                            <li><strong>John Doe</strong></li>
+                            <li>@johndoe</li>
+                            <li><span>Administrator</span></li>
+                          </ul>
+                        </li>
+                        <li><a class="mn_settings" href="#"><span>My Settings</span></a></li>
+                        <li><a class="mn_profile" href="#"><span>My Profile</span></a></li>
+                        <li><a class="mn_logout" href="login.html"><span>Logout</span></a></li>
+                    </ul>
+                </li>                          
+            </ul>           
+          </div>
+          <h1 class="brand"><a href="index-2.html">PHOENIX</a></h1>                                       
+        </div>
+      </div>
+    </div>
+            
+    <div class="container">      
+      <div class="sub_nav">
+        <ul class="nav nav-pills">
+          <li class="first">
+            <div class="sub_top">
+              <h2>TOTAL VISITS</h2>
+              <a href="#">452,729</a>
+            </div>
+            <div class="sub_bottom">              
+              <div class="up"><i>&nbsp;</i>18.4%</div>
+            </div>
+          </li>          
+          <li>
+            <div class="sub_top">
+              <h2>Pageviews</h2>
+              <a href="#">14,374</a>
+            </div>
+            <div class="sub_bottom">
+              <div class="spark">  
+                <span class="spark_1">&nbsp;</span>                
+              </div>
+            </div>
+          </li>
+          <li>
+            <div class="sub_top">
+              <h2>Unique Visitors</h2>
+              <a href="#">21,456</a>
+            </div>
+            <div class="sub_bottom">              
+              <div class="down"><i>&nbsp;</i>2.8%</div>
+            </div>
+          </li>
+          <li class="fourth">
+            <div class="sub_top">
+              <h2>Total Sales</h2>
+              <a href="#">$374,235</a>
+            </div>
+            <div class="sub_bottom">
+              <div class="spark">  
+                <span class="spark_2">&nbsp;</span>               
+              </div>
+            </div>
+          </li>
+          <li class="fifth">
+            <div class="sub_top">
+              <h2>TOTAL Responses</h2>
+              <a href="#">1,234</a>
+            </div>
+            <div class="sub_bottom">              
+              <div class="up_t"><b>&nbsp;</b>7.3%</div>
+            </div>
+          </li>     
+          <li>
+            <div class="sub_top">
+              <h2>Location</h2>
+              <a href="#">284</a>
+            </div>
+            <div class="sub_bottom">
+              <div class="spark">  
+                <span class="spark_4">&nbsp;</span>                
+                12.6%
+              </div>
+            </div>
+          </li>     
+          <li>
+            <div class="sub_top">
+              <h2>Crawls</h2>
+              <a href="#">17,205</a>
+            </div>
+            <div class="sub_bottom">              
+              <div class="down_t"><b>&nbsp;</b>5.7%</div>
+            </div>
+          </li>
+          <li class="eighth">
+            <div class="sub_top">
+              <h2>Emails Sent</h2>
+              <a href="#">1,816</a>
+            </div>
+            <div class="sub_bottom">
+              <div class="spark">  
+                <span class="spark_5">&nbsp;</span>   
+              </div>
+            </div>
+          </li>  
+          <li class="ninth">
+            <div class="sub_top">
+              <h2>Bounce Rate</h2>
+              <a href="#">5,251</a>
+            </div>
+            <div class="sub_bottom">
+              <div class="spark">  
+                <span class="spark_6">&nbsp;</span>   
+              </div>
+            </div>
+          </li> 
+          <li class="last">
+            <div class="sub_top">
+              <h2>Keywords</h2>
+              <a href="#">8,662</a>
+            </div>
+            <div class="sub_bottom">              
+              <div class="equal_t"><b>=</b>0%</div>
+            </div>
+          </li>                  
+        </ul>
+      </div>    
+      <div class="main_content row-fluid">
+
+        <div class="span3">
+
+          <div class="side_nav sidebar-nav" data-spy="affix" data-offset-top="150">
+            <div class="sidebar_widget first_widget group">
+              <form class="sidebar_search form-search">
+                <input type="text" class="input-medium search-query" placeholder="Quick search">
+                <button type="submit" class="btn btn-inverse"><i class="icon-search icon-gray"></i></button>
+              </form>
+            </div>
+            <h3 class="main_menu group">
+                <span class="title">Main Menu</span>
+                <a id="nav_list_btn" class="btn-collapse btn btn-inverse">
+                  <span class="sweet-gray sweet-go-back-from-screen">&nbsp;</span>              
+                </a>
+            </h3>
+            <ul class="nav nav-list">                          
+              <li><a class="home" href="index-2.html">Dashboard</a></li>
+              <li class="sub">
+                <a class="forms" href="#">Forms<span>4</span></a>
+                <ul>
+                  <li><a href="forms_layout.html">Layout</a></li>
+                  <li><a href="forms_elements.html">Elements</a></li>
+                  <li><a href="forms_validation.html">Validation</a></li>
+                  <li><a href="forms_uploader.html">File uploader &amp; WYSIWYG</a></li>                  
+                </ul>
+              </li>
+              <li><a class="charts" href="charts.html">Charts</a></li>
+              <li class="sub">
+                <a class="tables" href="#">Tables<span>2</span></a>
+                <ul>
+                  <li><a href="tables_basic.html">Basic</a></li>
+                  <li><a href="tables_advanced.html">Advanced</a></li>
+                </ul>
+              </li>
+              <li><a class="calendar" href="calendar.html">Calendar</a></li>
+              <li><a class="gallery" href="gallery.html">Gallery</a></li>
+              <li class="sub">
+                <a class="uielements" href="#">UI Elements<span>8</span></a>
+                <ul>
+                  <li><a href="accordions.html">Accordions</a></li>                  
+                  <li><a href="buttons_icons.html">Buttons and Icons</a></li>
+                  <li><a href="breadcrumbs.html">Breadcrumbs</a></li>
+                  <li><a href="progressbars.html">Progressbars</a></li>                  
+                  <li><a href="sliders.html">Sliders</a></li>                                    
+                  <li><a href="tabs.html">Tabs</a></li>        
+                  <li><a href="tooltips_popovers.html">Tooltips and Popovers</a></li>                                    
+                  <li><a href="miscellaneous.html">Misc</a></li>
+                </ul>
+              </li>              
+              <li><a class="filemanager" href="file_manager.html">File Manager</a></li>
+              <li><a class="typography" href="typography.html">Typography</a></li>
+              <li><a class="gridsystem" href="grid_system.html">Grid System</a></li>
+              <li class="active"><a class="widgets" href="widgets.html">Widgets</a></li>
+              <li class="sub">
+                <a class="pages" href="#">Pages<span>4</span></a>
+                <ul>
+                  <li><a href="login.html">Login</a></li>                  
+                  <li><a href="search.html">Search</a></li>
+                  <li><a href="mail.html">Mail</a></li>
+                  <li class="sub"> 
+                    <a href="#">Error<span>6</span></a>
+                    <ul>
+                      <li><a href="error_403.html">403</a></li>
+                      <li><a href="error_404.html">404</a></li>
+                      <li><a href="error_405.html">405</a></li>
+                      <li><a href="error_500.html">500</a></li>
+                      <li><a href="error_503.html">503</a></li>
+                      <li><a href="offline.html">Offline</a></li>
+                    </ul>
+                  </li>                  
+                </ul>
+              </li>                        
+            </ul>
+             
+            <div class="sidebar_widget group">
+			  <div class="sidebar_widget group">
+              <form class="sidebar_search form-search">
+                <input type="text" class="input-medium search-query" placeholder="quick search">
+                <button type="submit" class="btn btn-inverse"><i class="icon-search icon-gray"></i></button>
+              </form>
+            </div>	
+              <ul class="sidebar_list">                
+                <li>
+                  <p>Pages/Visit</p>
+                  <input class="knob" data-width="100" data-angleOffset=-125 data-angleArc=250 data-bgColor="#252525" data-fgColor="#F26C4F" data-skin="tron" value="20.5">
+                </li>                
+                <li>
+                  <p>Exit</p>
+                  <input class="knob" data-width="100" data-angleOffset=-125 data-angleArc=250 data-bgColor="#252525" data-fgColor="#8DC63F" data-skin="tron" value="35">
+                </li>                                
+              </ul>              
+            </div>
+            <div class="sidebar_widget group">
+              <h3 class="group">
+                Statistic
+                <a id="toggle_widget_statistic" class=" btn-side-collapse btn btn-inverse" >
+                  <span class="sweet-gray sweet-go-back-from-screen">&nbsp;</span>              
+                </a>
+              </h3>
+              <ul class="widget_statistic">                
+                <li>
+                  <p>Partnership <span>34%</span></p>                        
+                  <div class="progress progress-color-1 progress-striped progress-mini active">
+                    <div class="bar" style="width: 34%"></div>
+                  </div>
+                </li>                
+                <li>
+                  <p>Corporation <span>57%</span></p>                  
+                  <div class="progress progress-color-2 progress-striped progress-mini active">
+                    <div class="bar" style="width: 57%"></div>
+                  </div>
+                </li> 
+                <li>
+                  <p>Completion rate <span>72%</span></p>                  
+                  <div class="progress progress-warning progress-striped progress-mini active">
+                    <div class="bar" style="width: 72%"></div>
+                  </div>
+                </li>  
+                <li>
+                  <p>Pageviews <span>93%</span></p>                  
+                  <div class="progress progress-success progress-striped progress-mini active">
+                    <div class="bar" style="width: 93%"></div>
+                  </div>
+                </li>                                                
+              </ul>              
+            </div>
+            <div class="sidebar_widget group">
+              <h3>
+                Content Overview
+                <a id="toggle_widget_info" class="btn-side-collapse btn btn-inverse" >
+                  <span class="sweet-gray sweet-go-back-from-screen">&nbsp;</span>              
+                </a>
+              </h3>
+              <ul class="widget_info">                
+                <li><a href="#"><i class="sweet-mail sweet-gray"></i><span>25</span> - Post</a></li>                
+                <li><a href="#"><i class="sweet-document sweet-gray"></i><span>6</span> - Page</a></li>                                
+                <li><a href="#"><i class="sweet-list-images sweet-gray"></i><span>21</span> - Category</a></li>                                
+                <li><a href="#"><i class="sweet-tag-2 sweet-gray"></i><span>134</span> - Tags</a></li>
+              </ul>              
+            </div>
+            
+          </div><!--/.well -->
+        </div><!--/span-->
+        <div class="span9">
+          <div class="row-fluid">
+            <div class="span12">
+
+              <ul class="breadcrumb br_styled no_space">
+                <li>
+                  <a href="index-2.html">Dashboard</a> <span class="divider">/</span>
+                </li>                
+                <li class="active">Widgets</li>
+              </ul> 
+              <ul class="page_info">
+                <li><h2>Widgets</h2></li>
+                <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
+              </ul>     
+
+              <div class="span12 no_space">
+
+                  <div class="widget">
+                    <header>
+                      <h3>Typeahead</h3>
+                      <ul class="toggle_content">
+                          <li class="arrow"><a href="#">Toggle Content</a></li>
+                      </ul>
+                    </header>
+                    <section class="welly form_align"> 
+                      <h5 class="titlee group">
+                        Light and Dark style - Bootstrap <span>- body class="light_typeahead" for light style</span>
+                        <div class="btn-group-cont">
+                          <div class="btn-group" data-toggle="buttons-radio" data-original-title="Style">
+                            <button type="button" class="typeahead_style btn btn-mini btn-inverse">Dark</button>                          
+                          </div>
+                        </div>
+                      </h5>                        
+                      <input id="th_setup" type="text" data-provide="typeahead">    
+                      <hr>
+                      <h5 class="titlee group">
+                        Light and Dark style - jQuery UI <span>- body class="light_typeahead" for light style</span>
+                        <div class="btn-group-cont">
+                          <div class="btn-group" data-toggle="buttons-radio" data-original-title="Style">
+                            <button type="button" class="typeahead_style btn btn-mini btn-inverse">Dark</button>
+                          </div>
+                        </div>
+                      </h5>                        
+                      <input id="th_setup_ui" type="text" data-provide="typeahead">                                              
+                    </section>
+                  </div>
+                  <div class="widget">
+                    <header>
+                      <h3>Tags</h3>
+                      <ul class="toggle_content">
+                          <li class="arrow"><a href="#">Toggle Content</a></li>
+                      </ul>
+                    </header>
+                    <section class="welly form_align">                                             
+                      <p id="tag_setup">
+                        <input type="text" name="tag[19-a]" value="Merlin" class="tag"/>
+                        <input type="text" name="tag[15-d]" value="Big daddy" class="tag"/>                        
+                      </p>                      
+                    </section>
+                  </div>
+                  <div class="widget">
+                    <header>
+                      <h3>Date and Time pickers</h3>
+                      <ul class="toggle_content">
+                          <li class="arrow"><a href="#">Toggle Content</a></li>
+                      </ul>
+                    </header>
+                    <section class="welly form_align">                                             
+                      <h5 class="titlee">Light and Dark style - glDatePicker</h5>
+                      <input type="text" id="date_light"> 
+                      <input type="text" id="date_dark">
+                      <hr>                    
+                      <h5 class="titlee group">
+                        Light and Dark style - jQuery UI <span> - body class="light_typeahead" for light style</span>
+                        <div class="btn-group-cont">
+                          <div class="btn-group" data-toggle="buttons-radio" data-original-title="Style">
+                            <button type="button" class="typeahead_style btn btn-mini btn-inverse">Dark</button>
+                          </div>
+                        </div>
+                      </h5>
+                      <input type="text" id="datepicker_ui">                                                                
+                      <hr> 
+                      <h5 class="titlee">Light and Dark style - Timepicker <span> - body class="light_typeahead" for light style</span>
+                        <div class="btn-group-cont">
+                          <div class="btn-group" data-toggle="buttons-radio" data-original-title="Style">
+                            <button type="button" class="typeahead_style btn btn-mini btn-inverse">Dark</button>
+                          </div>
+                        </div>
+                      </h5>
+                      <input type="text" id="timepicker">                       
+                      <hr>                      
+                    </section>
+                  </div>
+                  <div class="widget">
+                    <header>
+                      <h3>Colorpickers</h3>
+                      <ul class="toggle_content">
+                          <li class="arrow"><a href="#">Toggle Content</a></li>
+                      </ul>
+                    </header>
+                    <section class="welly form_align"> 
+                      <input type="text" name="color3" class="color-picker-opacity" size="7" value="#005294" data-opacity=".5" />         
+                      <hr>
+                      <input type="text" maxlength="6" size="6" id="colorpickerField1" value="00ff00" />
+                    </section>
+                  </div>
+                  <div class="widget">
+                    <header>
+                      <h3>Custom content scroller</h3>
+                      <ul class="toggle_content">
+                          <li class="arrow"><a href="#">Toggle Content</a></li>
+                      </ul>
+                    </header>
+                    <section class="welly form_align"> 
+                      <h5 class="titlee group">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h5>                                                          
+                      <div class="custom_scroller_container">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin magna lectus, cursus vitae facilisis ac, adipiscing vitae erat. Mauris sed tellus sapien. Fusce quis felis ut mi pretium placerat. Morbi laoreet lacinia hendrerit. Nullam nec nulla in tortor dictum fringilla. Aliquam luctus mattis aliquet. Proin sagittis, augue in scelerisque adipiscing, orci arcu euismod nibh, ut fringilla erat leo in purus. Sed volutpat elementum eros, nec tincidunt magna porta ut. Morbi gravida, dui quis pulvinar blandit, nulla lorem pharetra libero, sit amet convallis urna libero nec ipsum.</p>
+                        <p>Nam egestas massa a augue varius ullamcorper. Mauris quis libero risus, nec adipiscing quam. Pellentesque erat felis, fringilla bibendum venenatis bibendum, tincidunt at nisi. Maecenas pulvinar libero vel lectus tristique quis dignissim magna posuere. Nam vel neque ac orci molestie mattis non sed leo. Nunc in augue laoreet nisl adipiscing posuere. Cras id eleifend libero. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum at magna vitae elit hendrerit mattis posuere quis libero. Pellentesque ac facilisis ante. In consequat rutrum justo, in bibendum sem feugiat quis. Sed porttitor tristique mattis. Aenean vitae sem sit amet nunc iaculis ornare. Donec mauris dolor, lobortis eu convallis vitae, sodales sit amet nisi.</p>
+                        <p>Nulla pharetra libero scelerisque neque luctus vitae auctor ante volutpat. Suspendisse risus ipsum, semper eget semper nec, laoreet a nisi. Nulla at est pellentesque libero tincidunt vulputate eu quis arcu. Etiam scelerisque accumsan elit vel viverra. Integer gravida velit et metus porta eu iaculis sapien tristique. Phasellus nec orci vel tortor dignissim posuere id vel est. Sed accumsan sollicitudin elit, a dapibus nunc fermentum hendrerit. Morbi pharetra odio eget leo interdum pretium. Curabitur convallis consectetur varius. Aenean magna est, dapibus nec aliquet sed, aliquam vel magna. Cras vel est at quam malesuada varius sed nec mi. Sed et ligula augue.</p>
+                        <p>Cras blandit commodo tristique. Vivamus turpis risus, cursus ac laoreet vel, consequat non arcu. Ut congue adipiscing egestas. Nulla non adipiscing massa. In viverra porta mattis. Mauris laoreet hendrerit nunc, vitae accumsan erat euismod sit amet. Duis eget orci eget erat interdum faucibus. Cras ac magna nulla, vitae molestie nulla.</p>
+                        <p>Sed rhoncus tellus ac nibh varius placerat. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Phasellus eu arcu sit amet purus egestas condimentum vel in ante. Pellentesque luctus venenatis lectus, at lobortis velit tincidunt nec. Duis quis odio eros. Fusce accumsan dui non libero fermentum ut consectetur sapien laoreet. Curabitur vel luctus augue.</p>
+                      </div>          
+                    </section>
+                  </div>
+                  <div class="widget">
+                    <header>
+                      <h3>Contact List</h3>
+                      <ul class="toggle_content">
+                          <li class="arrow"><a href="#">Toggle Content</a></li>
+                      </ul>
+                    </header>
+                    <section>                       
+                      <div id="slider">
+                        <div class="slider-content">
+                          <ul>
+                            <li id="a"><a name="a" class="title">A</a>
+                              <ul>
+                                <li><a href="#">Adam</a></li>
+                                <li><a href="#">Alex</a></li>
+                                <li><a href="#">Ali</a></li>
+                                <li><a href="#">Apple</a></li>
+                                <li><a href="#">Arthur</a></li>
+                                <li><a href="#">Ashley</a></li>
+                              </ul>
+                            </li>
+                            <li id="b"><a name="b" class="title">B</a>
+                              <ul>
+                                <li><a href="#">Barry</a></li>
+                                <li><a href="#">Becky</a></li>
+                                <li><a href="#">Biff</a></li>
+                                <li><a href="#">Billy</a></li>
+                                <li><a href="#">Bozarking</a></li>
+                                <li><a href="#">Bryan</a></li>
+                              </ul>
+                            </li>
+                            <li id="c"><a name="c" class="title">c</a>
+                              <ul>
+                                <li><a href="#">Calista</a></li>
+                                <li><a href="#">Cathy</a></li>
+                                <li><a href="#">Chris</a></li>
+                                <li><a href="#">Cinderella</a></li>
+                                <li><a href="#">Corky</a></li>
+                                <li><a href="#">Cypher</a></li>
+                              </ul>
+                            </li>
+                            <li id="d"><a name="d" class="title">d</a>
+                              <ul>
+                                <li><a href="#">damien</a></li>
+                                <li><a href="#">danny</a></li>
+                                <li><a href="#">denver</a></li>
+                                <li><a href="#">devon</a></li>
+                                <li><a href="#">doug</a></li>
+                                <li><a href="#">dustin</a></li>
+                              </ul>
+                            </li>
+                            <li id="e"><a name="e" class="title">E</a>
+                              <ul>
+                                <li><a href="#">Barry</a></li>
+                                <li><a href="#">Becky</a></li>
+                                <li><a href="#">Biff</a></li>
+                                <li><a href="#">Billy</a></li>
+                                <li><a href="#">Bozarking</a></li>
+                                <li><a href="#">Bryan</a></li>
+                              </ul>
+                            </li>
+                            <li id="f"><a name="f" class="title">f</a>
+                              <ul>
+                                <li><a href="#">Calista</a></li>
+                                <li><a href="#">Cathy</a></li>
+                                <li><a href="#">Chris</a></li>
+                                <li><a href="#">Cinderella</a></li>
+                                <li><a href="#">Corky</a></li>
+                                <li><a href="#">Cypher</a></li>
+                              </ul>
+                            </li>
+                            <li id="g"><a name="g" class="title">g</a>
+                              <ul>
+                                <li><a href="#">damien</a></li>
+                                <li><a href="#">danny</a></li>
+                                <li><a href="#">denver</a></li>
+                                <li><a href="#">devon</a></li>
+                                <li><a href="#">doug</a></li>
+                                <li><a href="#">dustin</a></li>
+                              </ul>
+                            </li>
+                            <li id="h"><a name="h" class="title">h</a>
+                              <ul>
+                                <li><a href="#">Barry</a></li>
+                                <li><a href="#">Becky</a></li>
+                                <li><a href="#">Biff</a></li>
+                                <li><a href="#">Billy</a></li>
+                                <li><a href="#">Bozarking</a></li>
+                                <li><a href="#">Bryan</a></li>
+                              </ul>
+                            </li>
+                            <li id="i"><a name="i" class="title">i</a>
+                              <ul>
+                                <li><a href="#">Calista</a></li>
+                                <li><a href="#">Cathy</a></li>
+                                <li><a href="#">Chris</a></li>
+                                <li><a href="#">Cinderella</a></li>
+                                <li><a href="#">Corky</a></li>
+                                <li><a href="#">Cypher</a></li>
+                              </ul>
+                            </li>
+                            <li id="j"><a name="j" class="title">j</a>
+                              <ul>
+                                <li><a href="#">damien</a></li>
+                                <li><a href="#">danny</a></li>
+                                <li><a href="#">denver</a></li>
+                                <li><a href="#">devon</a></li>
+                                <li><a href="#">doug</a></li>
+                                <li><a href="#">dustin</a></li>
+                              </ul>
+                            </li>
+                            <li id="k"><a name="k" class="title">k</a>
+                              <ul>
+                                <li><a href="#">Barry</a></li>
+                                <li><a href="#">Becky</a></li>
+                                <li><a href="#">Biff</a></li>
+                                <li><a href="#">Billy</a></li>
+                                <li><a href="#">Bozarking</a></li>
+                                <li><a href="#">Bryan</a></li>
+                              </ul>
+                            </li>
+                            <li id="l"><a name="l" class="title">l</a>
+                              <ul>
+                                <li><a href="#">Calista</a></li>
+                                <li><a href="#">Cathy</a></li>
+                                <li><a href="#">Chris</a></li>
+                                <li><a href="#">Cinderella</a></li>
+                                <li><a href="#">Corky</a></li>
+                                <li><a href="#">Cypher</a></li>
+                              </ul>
+                            </li>
+                            <li id="m"><a name="m" class="title">m</a>
+                              <ul>
+                                <li><a href="#">damien</a></li>
+                                <li><a href="#">danny</a></li>
+                                <li><a href="#">denver</a></li>
+                                <li><a href="#">devon</a></li>
+                                <li><a href="#">doug</a></li>
+                                <li><a href="#">dustin</a></li>
+                              </ul>
+                            </li>
+                            <li id="n"><a name="n" class="title">n</a>
+                              <ul>
+                                <li><a href="#">damien</a></li>
+                                <li><a href="#">danny</a></li>
+                                <li><a href="#">denver</a></li>
+                                <li><a href="#">devon</a></li>
+                                <li><a href="#">doug</a></li>
+                                <li><a href="#">dustin</a></li>
+                              </ul>
+                            </li>
+                            <li id="o"><a name="o" class="title">o</a>
+                              <ul>
+                                <li><a href="#">damien</a></li>
+                                <li><a href="#">danny</a></li>
+                                <li><a href="#">denver</a></li>
+                                <li><a href="#">devon</a></li>
+                                <li><a href="#">doug</a></li>
+                                <li><a href="#">dustin</a></li>
+                              </ul>
+                            </li>
+                            <li id="p"><a name="p" class="title">p</a>
+                              <ul>
+                                <li><a href="#">Barry</a></li>
+                                <li><a href="#">Becky</a></li>
+                                <li><a href="#">Biff</a></li>
+                                <li><a href="#">Billy</a></li>
+                                <li><a href="#">Bozarking</a></li>
+                                <li><a href="#">Bryan</a></li>
+                              </ul>
+                            </li>
+                            <li id="q"><a name="q" class="title">q</a>
+                              <ul>
+                                <li><a href="#">Calista</a></li>
+                                <li><a href="#">Cathy</a></li>
+                                <li><a href="#">Chris</a></li>
+                                <li><a href="#">Cinderella</a></li>
+                                <li><a href="#">Corky</a></li>
+                                <li><a href="#">Cypher</a></li>
+                              </ul>
+                            </li>
+                            <li id="r"><a name="r" class="title">r</a>
+                              <ul>
+                                <li><a href="#">damien</a></li>
+                                <li><a href="#">danny</a></li>
+                                <li><a href="#">denver</a></li>
+                                <li><a href="#">devon</a></li>
+                                <li><a href="#">doug</a></li>
+                                <li><a href="#">dustin</a></li>
+                              </ul>
+                            </li>
+                            <li id="s"><a name="s" class="title">s</a>
+                              <ul>
+                                <li><a href="#">Barry</a></li>
+                                <li><a href="#">Becky</a></li>
+                                <li><a href="#">Biff</a></li>
+                                <li><a href="#">Billy</a></li>
+                                <li><a href="#">Bozarking</a></li>
+                                <li><a href="#">Bryan</a></li>
+                              </ul>
+                            </li>
+                            <li id="t"><a name="t" class="title">t</a>
+                              <ul>
+                                <li><a href="#">Calista</a></li>
+                                <li><a href="#">Cathy</a></li>
+                                <li><a href="#">Chris</a></li>
+                                <li><a href="#">Cinderella</a></li>
+                                <li><a href="#">Corky</a></li>
+                                <li><a href="#">Cypher</a></li>
+                              </ul>
+                            </li>
+                            <li id="u"><a name="u" class="title">u</a>
+                              <ul>
+                                <li><a href="#">damien</a></li>
+                                <li><a href="#">danny</a></li>
+                                <li><a href="#">denver</a></li>
+                                <li><a href="#">devon</a></li>
+                                <li><a href="#">doug</a></li>
+                                <li><a href="#">dustin</a></li>
+                              </ul>
+                            </li>
+                            <li id="v"><a name="v" class="title">v</a>
+                              <ul>
+                                <li><a href="#">Barry</a></li>
+                                <li><a href="#">Becky</a></li>
+                                <li><a href="#">Biff</a></li>
+                                <li><a href="#">Billy</a></li>
+                                <li><a href="#">Bozarking</a></li>
+                                <li><a href="#">Bryan</a></li>
+                              </ul>
+                            </li>
+                            <li id="w"><a name="w" class="title">w</a>
+                              <ul>
+                                <li><a href="#">Calista</a></li>
+                                <li><a href="#">Cathy</a></li>
+                                <li><a href="#">Chris</a></li>
+                                <li><a href="#">Cinderella</a></li>
+                                <li><a href="#">Corky</a></li>
+                                <li><a href="#">Cypher</a></li>
+                              </ul>
+                            </li>
+                            <li id="x"><a name="x" class="title">x</a>
+                              <ul>
+                                <li><a href="#">damien</a></li>
+                                <li><a href="#">danny</a></li>
+                                <li><a href="#">denver</a></li>
+                                <li><a href="#">devon</a></li>
+                                <li><a href="#">doug</a></li>
+                                <li><a href="#">dustin</a></li>
+                              </ul>
+                            </li>
+                            <li id="y"><a name="y" class="title">y</a>
+                              <ul>
+                                <li><a href="#">damien</a></li>
+                                <li><a href="#">danny</a></li>
+                                <li><a href="#">denver</a></li>
+                                <li><a href="#">devon</a></li>
+                                <li><a href="#">doug</a></li>
+                                <li><a href="#">dustin</a></li>
+                              </ul>
+                            </li>
+                            <li id="z"><a name="z" class="title">z</a>
+                              <ul>
+                                <li><a href="#">damien</a></li>
+                                <li><a href="#">danny</a></li>
+                                <li><a href="#">denver</a></li>
+                                <li><a href="#">devon</a></li>
+                                <li><a href="#">doug</a></li>
+                                <li><a href="#">dustin</a></li>
+                              </ul>
+                            </li>
+                          </ul>
+                        </div>
+                      </div>         
+                    </section>
+                  </div>
+
+                  <div class="widget">
+                    <header>
+                      <h3>Modals</h3>
+                      <ul class="toggle_content">                         
+                          <li class="arrow"><a href="#">Toggle Content</a></li>
+                      </ul>
+                    </header>
+                    <section class="welly"> 
+                      <h5 class="titlee group">Modal - Bootstrap</h5>                                                          
+                      <div id="myModal" class="modal modal_styled_light hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                        <div class="modal-header">
+                          <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                          <h3 id="myModalLabel">Modal Heading</h3>
+                        </div>
+                        <div class="modal-body">
+                          <h4>Text in a modal</h4>
+                          <p>Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem.</p>
+                          
+                          <h4>Overflowing text to show optional scrollbar</h4>
+                          <p>We set a fixed <code>max-height</code> on the <code>.modal-body</code>. Watch it overflow with all this extra lorem ipsum text we have included.</p>
+                          <p>Cras mattis consectetur purus sit amet fermentum. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.</p>
+                          <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.</p>
+                          <p>Aenean lacinia bibendum nulla sed consectetur. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Donec sed odio dui. Donec ullamcorper nulla non metus auctor fringilla.</p>
+                          <p>Cras mattis consectetur purus sit amet fermentum. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.</p>
+                          <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.</p>
+                          <p>Aenean lacinia bibendum nulla sed consectetur. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Donec sed odio dui. Donec ullamcorper nulla non metus auctor fringilla.</p>
+                        </div>
+                        <div class="modal-footer">                          
+                          <button class="btn btn-inverse">Save changes</button>
+                          <button class="btn" data-dismiss="modal">Close</button>
+                        </div>
+                      </div>                      
+                      <a data-toggle="modal" href="#myModal" id="light_modal" class="btn">Launch light modal</a> 
+                      <a data-toggle="modal" href="#myModal" id="dark_modal" class="btn btn-inverse">Launch dark modal</a>                                           
+                      <hr>
+                      <h5 class="titlee group">Modal - jQuery UI</h5>                       
+                      <div class="ui_dialog_l" title="Basic dialog">
+                          <h4>Text in a modal</h4>
+                          <p>Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem.</p>                          
+                          <h4>Lorem ipsum dolor</h4>                          
+                          <p>Cras mattis consectetur purus sit amet fermentum. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.</p>
+                          <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.</p>
+                          <p>Aenean lacinia bibendum nulla sed consectetur. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Donec sed odio dui. Donec ullamcorper nulla non metus auctor fringilla.</p>
+                          <p>Cras mattis consectetur purus sit amet fermentum. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.</p>
+                          <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.</p>
+                          <p>Aenean lacinia bibendum nulla sed consectetur. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Donec sed odio dui. Donec ullamcorper nulla non metus auctor fringilla.</p>
+                      </div>
+                      <div class="ui_dialog_d" title="Basic dialog">
+                          <h4>Text in a modal</h4>
+                          <p>Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem.</p>                          
+                          <h4>Lorem ipsum dolor</h4>                          
+                          <p>Cras mattis consectetur purus sit amet fermentum. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.</p>
+                          <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.</p>
+                          <p>Aenean lacinia bibendum nulla sed consectetur. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Donec sed odio dui. Donec ullamcorper nulla non metus auctor fringilla.</p>
+                          <p>Cras mattis consectetur purus sit amet fermentum. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.</p>
+                          <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.</p>
+                          <p>Aenean lacinia bibendum nulla sed consectetur. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Donec sed odio dui. Donec ullamcorper nulla non metus auctor fringilla.</p>
+                      </div>                        
+                      <a href="#" id="light_modal_ui" class="btn">Launch light ui modal</a>
+                      <a href="#" id="dark_modal_ui" class="btn btn-inverse">Launch dark ui modal</a>
+                    </section>
+                  </div>
+
+                  <div class="widget">
+                    <header>
+                      <h3>Notifications</h3>
+                      <ul class="toggle_content">
+                          <li class="arrow"><a href="#">Toggle Content</a></li>
+                      </ul>
+                    </header>
+                    <section class="welly noti">                                                                                                               
+                      <a href="#" id="notification_1" class="btn">Default style</a>
+                      <a href="#" id="notification_2" class="btn">Light style</a>
+                      <a href="#" id="notification_3" class="btn btn-inverse">Dark style</a>     
+                      <a href="#" id="notification_4" class="btn btn-warning">Warning</a>                      
+                      <a href="#" id="notification_5" class="btn btn-danger">Error</a>                        
+                      <a href="#" id="notification_6" class="btn btn-success">Success</a>                                     
+                      <a href="#" id="notification_7" class="btn btn-info">Information</a>                                     
+                    </section>
+                  </div>
+                  <div class="row-fluid">
+                    <div class="span6">
+                      <div class="widget">
+                        <header>
+                            <h3><i class="sweet-alert-2 sweet-gray"></i>With Icon</h3>                            
+                        </header>
+                        <section class="code_align">
+                              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                        </section>
+                      </div>
+                    </div>
+                    <div class="span6">
+                      <div class="widget">
+                        <header>
+                            <h3>Button</h3>                                                        
+                            <div class="widget_right">
+                              <a href="#" class="btn btn-mini">Button</a>
+                            </div>
+                        </header>
+                        <section class="code_align">
+                              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                        </section>
+                      </div>
+                    </div>  
+                  </div>
+                  <div class="row-fluid">
+                    <div class="span6">
+                      <div class="widget">
+                        <header>
+                            <h3>Search</h3> 
+                            <div class="widget_search">
+                              <form class="sidebar_search form-search">
+                                <input type="text" class="input-medium search-query" placeholder="Quick search">
+                                <button type="submit" class="btn btn-inverse"><i class="icon-search icon-gray"></i></button>
+                              </form>
+                            </div>
+                        </header>
+                        <section class="code_align">
+                              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                        </section>
+                      </div>
+                    </div>                    
+                    <div class="span6">
+                      <div class="widget">
+                        <header>
+                            <h3>Dropdown</h3>                                                        
+                            <div class="widget_right">
+                              <div class="btn-group">
+                                <button data-toggle="dropdown" class="btn btn-mini dropdown-toggle">Dropdown<span class="caret"></span></button>
+                                  <ul class="dropdown-menu">
+                                    <li><a href="#">Action</a></li>
+                                    <li><a href="#">Another action</a></li>
+                                    <li><a href="#">Something else here</a></li>
+                                    <li class="divider"></li>
+                                    <li><a href="#">Separated link</a></li>
+                                  </ul>
+                                </div><!-- /btn-group -->
+                            </div>
+                        </header>
+                        <section class="code_align">
+                              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                        </section>
+                      </div>
+                    </div>  
+                  </div>
+                  <div class="row-fluid">
+                    <div class="span6">
+                      <div class="widget">
+                        <header>
+                            <h3>Progress bar</h3> 
+                            <div class="widget_progress">
+                              <div class="progress progress-color-1 progress-striped active progress-small" style="margin-bottom: 9px;">
+                                <div class="bar" style="width: 80%"></div>
+                              </div>
+                            </div>
+                        </header>
+                        <section class="code_align">
+                              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                        </section>
+                      </div>
+                    </div>
+                    <div class="span6">
+                      <div class="widget">
+                        <header>
+                            <h3>Spark</h3>                                                        
+                            <div class="widget_right">
+                              <span class="spark_widget">&nbsp;</span>
+                            </div>
+                        </header>
+                        <section class="code_align">
+                              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                        </section>
+                      </div>
+                    </div>  
+                  </div>
+                  <div class="row-fluid">
+                    <div class="span6">
+                      <div class="widget">
+                        <header>
+                            <h3>Progress bar</h3> 
+                            <div class="widget_progress">                              
+                              <div id="slider_1" class="slider_styled"></div>
+                            </div>
+                        </header>
+                        <section class="code_align">
+                              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                        </section>
+                      </div>
+                    </div>
+                    <div class="span6">
+                      <div class="widget">
+                        <header>
+                            <h3>Loader</h3>                                                        
+                            <div class="widget_right">
+                              <img src="img/loaders/257_d.gif" height="20" width="20">
+                            </div>
+                        </header>
+                        <section class="code_align">
+                              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                        </section>
+                      </div>
+                    </div>  
+                  </div>
+
+
+
+              </div>
+
+            </div>                  
+          </div><!--/row-->
+        
+        </div><!--/span-->
+      </div><!--/row-->      
+      <hr>
+
+      <footer>
+        <p>&copy; LoxDesign.net - Phoenix 2012</p>
+      </footer>
+
+    </div><!--/.fluid-container-->
+
+    <!-- ===================== CHAT - Modal ===================== -->
+    <div id="chat_modal" class="chat_modal modal fade hide">
+      <div class="modal-header">
+        <ul>
+          <li class="toggle_users"><a href="#">Show Users</a></li>
+          <li class="status">
+            <a class="online" href="#"><span>Status</span></a>  
+            <ul>
+               <li><a class="online" href="#" title="Online"><span>Online</span></a></li>
+               <li><a class="away" href="#" title="Away"><span>Away</span></a></li>
+               <li><a class="busy" href="#" title="Busy"><span>Busy</span></a></li>
+               <li><a class="invisiblee" href="#" title="Invisible"><span>Invisible</span></a></li>
+               <li><a class="offline" href="#" title="Offline"><span>Offline</span></a></li>
+             </ul> 
+          </li>
+          <li class="chat_name">John Doe</li>
+        </ul>       
+        <button type="button" class="close" data-dismiss="modal">x</button>        
+      </div>
+      <div class="modal-body">
+        <div class="msg_cont left">
+          <img src="img/general/user_1.jpg" width="50" height="50" alt="User">
+          <ul>
+            <li>
+              <h3>John Doe:</h3> 
+              <span>16 minutes ago</span>
+            </li>
+            <li>Aliquam iaculis volutpat ipsum ullamcorper tempus. In in dui tortor. Mauris sed volutpat
+metus. Duis ut sapien sapien, id pellentesque orci. Nullam nisl metus, sodales ut laoreet 
+eget, pretium porttitor quam. Sed varius vulputate lacinia. </li>
+          </ul>    
+        </div>
+        <div class="msg_cont right">
+          <img src="img/general/user_2.jpg" width="50" height="50" alt="User">
+          <ul>
+            <li>
+              <h3>Jessie Doe:</h3> 
+              <span>16 minutes ago</span>
+            </li>
+            <li>Aliquam iaculis volutpat ipsum ullamcorper tempus. In in dui tortor. Mauris sed volutpat
+metus. Duis ut sapien sapien, id pellentesque orci. Nullam nisl metus, sodales ut laoreet 
+eget, pretium porttitor quam. Sed varius vulputate lacinia. </li>
+          </ul>    
+        </div>
+        <div class="msg_cont left">
+          <img src="img/general/user_1.jpg" width="50" height="50" alt="User">
+          <ul>
+            <li>
+              <h3>John Doe:</h3> 
+              <span>16 minutes ago</span>
+            </li>
+            <li>Aliquam iaculis volutpat ipsum ullamcorper tempus. In in dui tortor. Mauris sed volutpat
+metus. Duis ut sapien sapien, id pellentesque orci. Nullam nisl metus, sodales ut laoreet 
+eget, pretium porttitor quam. Sed varius vulputate lacinia. </li>
+          </ul>    
+        </div>        
+      </div>
+      <div class="modal-footer">        
+        <textarea></textarea>
+        <a href="#" class="btn btn-inverse">Send</a>
+      </div>
+    </div>
+
+    <!-- ===================== JS ===================== -->
+    <script src="js/libs/jquery-1.7.2.min.js"></script>    
+    <script src="js/libs/bootstrap.min.js"></script>   
+    <script src="js/libs/ios-orientationchange-fix.js"></script>      
+    <script src="js/libs/jquery-ui-1.8.20.custom.min.js"></script>
+    <script src="js/plugins/widgets/jquery.sparkline.min.js"></script>
+    <script src="js/common.js"></script>  
+
+    <!-- Site specific --> 
+    <script src="js/libs/prettify.js"></script>      
+    <script src="js/plugins/tagedit/jquery.autoGrowInput.js"></script>
+    <script src="js/plugins/tagedit/jquery.tagedit.js"></script>
+    <script src="js/plugins/widgets/slidernav-min.js"></script>    
+    <script src="js/plugins/widgets/glDatePicker.min.js"></script>    
+    <script src="js/plugins/widgets/jquery-ui-timepicker-addon.js"></script>    
+    <script src="js/plugins/widgets/jquery-ui-sliderAccess.js"></script>    
+    <script src="js/plugins/widgets/jquery.miniColors.min.js"></script>    
+    <script src="js/plugins/widgets/colorpicker.js"></script>  
+    <script src="js/plugins/widgets/jquery.knob.js"></script>      
+
+    <script src="js/script.js"></script>
+    <script src="js/specific/sparks.js"></script>
+    <script src="js/specific/widgets.js"></script>
+
+    <script type="text/javascript">
+
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-31818910-2']);
+      _gaq.push(['_setDomainName', 'loxdesign.net']);
+      _gaq.push(['_trackPageview']);
+
+      (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+
+    </script>
+  </body>
+</html>

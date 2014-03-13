@@ -1,0 +1,291 @@
+--
+-- Structure de la table `candidat`
+--
+
+CREATE TABLE IF NOT EXISTS `candidat` (
+  `NO_ETUDIANT_NAT` varchar(50) COLLATE utf8_bin DEFAULT NULL,
+  `CODE_FORMATION` varchar(8) COLLATE utf8_bin DEFAULT NULL,
+  `ANNEE_PRO` varchar(10) COLLATE utf8_bin DEFAULT NULL,
+  `SEXE` varchar(1) COLLATE utf8_bin DEFAULT NULL,
+  `NOM` varchar(50) COLLATE utf8_bin DEFAULT NULL,
+  `PRENOM` varchar(50) COLLATE utf8_bin DEFAULT NULL,
+  `DATE_NAISSANCE` datetime DEFAULT NULL,
+  `LIEU_NAISSANCE` varchar(255) COLLATE utf8_bin DEFAULT NULL,
+  `SITUATION` varchar(3) COLLATE utf8_bin DEFAULT NULL,
+  `NATIONALITE` varchar(50) COLLATE utf8_bin DEFAULT NULL,
+  `TEL_FIXE` varchar(20) COLLATE utf8_bin DEFAULT NULL,
+  `TEL_PORT` varchar(20) COLLATE utf8_bin DEFAULT NULL,
+  `EMAIL` varchar(255) COLLATE utf8_bin DEFAULT NULL,
+  `ACTU_ADRESSE` varchar(255) COLLATE utf8_bin DEFAULT NULL,
+  `ACTU_CP` varchar(10) COLLATE utf8_bin DEFAULT NULL,
+  `ACTU_VILLE` varchar(255) COLLATE utf8_bin DEFAULT NULL,
+  `ACTU_PAYS` varchar(255) COLLATE utf8_bin DEFAULT NULL,
+  `PERM_ADRESSE` varchar(255) COLLATE utf8_bin DEFAULT NULL,
+  `PERM_CP` varchar(10) COLLATE utf8_bin DEFAULT NULL,
+  `PERM_VILLE` varchar(255) COLLATE utf8_bin DEFAULT NULL,
+  `PERM_PAYS` varchar(255) COLLATE utf8_bin DEFAULT NULL,
+  `DERNIER_DIPLOME` varchar(255) COLLATE utf8_bin DEFAULT NULL,
+  `UNIVERSITE` varchar(255) COLLATE utf8_bin DEFAULT NULL,
+  `SELECTION_ORIGINE` varchar(2) COLLATE utf8_bin DEFAULT NULL,
+  `SELECTION_COURANTE` varchar(2) COLLATE utf8_bin DEFAULT NULL,
+  `REPONSE_ILI` varchar(1) COLLATE utf8_bin DEFAULT NULL,
+  `DATE_REPONSE_ILI` datetime DEFAULT NULL,
+  `REPONSE_CAN` varchar(3) COLLATE utf8_bin DEFAULT NULL,
+  `DATE_REPONSE_CAN` datetime DEFAULT NULL,
+  `NO_ORDRE` double DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
+
+
+--
+-- Structure de la table `diplome`
+--
+
+CREATE TABLE IF NOT EXISTS `diplome` (
+  `NO_ETUDIANT_NAT` varchar(50) COLLATE utf8_bin DEFAULT NULL,
+  `NOM` varchar(50) COLLATE utf8_bin DEFAULT NULL,
+  `PRENOM` varchar(50) COLLATE utf8_bin DEFAULT NULL,
+  `AUTORISATION_ANNUAIRE` varchar(1) COLLATE utf8_bin DEFAULT NULL,
+  `TYPE_EMPLOI` varchar(3) COLLATE utf8_bin DEFAULT NULL,
+  `MAIL_PRO` varchar(100) COLLATE utf8_bin DEFAULT NULL,
+  `TEL_PRO` varchar(20) COLLATE utf8_bin DEFAULT NULL,
+  `ADRESSE` varchar(100) COLLATE utf8_bin DEFAULT NULL,
+  `CP` varchar(10) COLLATE utf8_bin DEFAULT NULL,
+  `VILLE` varchar(50) COLLATE utf8_bin DEFAULT NULL,
+  `EMAIL_PERSO` varchar(100) COLLATE utf8_bin DEFAULT NULL,
+  `TEL_PERSO` varchar(20) COLLATE utf8_bin DEFAULT NULL,
+  `PORTABLE` varchar(20) COLLATE utf8_bin DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
+
+
+
+--
+-- Structure de la table `element_constitutif`
+--
+
+CREATE TABLE IF NOT EXISTS `element_constitutif` (
+  `CODE_FORMATION` varchar(8) COLLATE utf8_bin DEFAULT NULL,
+  `CODE_UE` varchar(8) COLLATE utf8_bin DEFAULT NULL,
+  `CODE_EC` varchar(8) COLLATE utf8_bin DEFAULT NULL,
+  `NO_ENSEIGNANT` decimal(5,0) DEFAULT NULL,
+  `DESIGNATION` varchar(64) COLLATE utf8_bin DEFAULT NULL,
+  `DESCRIPTION` varchar(240) COLLATE utf8_bin DEFAULT NULL,
+  `NBH_CM` decimal(2,0) DEFAULT NULL,
+  `NBH_TD` decimal(2,0) DEFAULT NULL,
+  `NBH_TP` decimal(2,0) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
+
+
+--
+-- Structure de la table `employe`
+--
+
+CREATE TABLE IF NOT EXISTS `employe` (
+  `NO_CONTACT_ILI` double DEFAULT NULL,
+  `NO_ENTREPRISE` double DEFAULT NULL,
+  `NO_ETUDIANT_NAT` varchar(50) COLLATE utf8_bin DEFAULT NULL,
+  `NOM` varchar(50) COLLATE utf8_bin DEFAULT NULL,
+  `PRENOM` varchar(50) COLLATE utf8_bin DEFAULT NULL,
+  `MAIL_PRO` varchar(100) COLLATE utf8_bin DEFAULT NULL,
+  `TEL_PRO` varchar(20) COLLATE utf8_bin DEFAULT NULL,
+  `FONCTION` varchar(5) COLLATE utf8_bin DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
+
+
+--
+-- Structure de la table `enseignant`
+--
+
+CREATE TABLE IF NOT EXISTS `enseignant` (
+  `NO_ENSEIGNANT` decimal(5,0) DEFAULT NULL,
+  `TYPE` varchar(10) COLLATE utf8_bin DEFAULT NULL,
+  `SEXE` varchar(1) COLLATE utf8_bin DEFAULT NULL,
+  `NOM` varchar(50) COLLATE utf8_bin DEFAULT NULL,
+  `PRENOM` varchar(50) COLLATE utf8_bin DEFAULT NULL,
+  `ADRESSE` varchar(255) COLLATE utf8_bin DEFAULT NULL,
+  `CP` varchar(10) COLLATE utf8_bin DEFAULT NULL,
+  `VILLE` varchar(255) COLLATE utf8_bin DEFAULT NULL,
+  `PAYS` varchar(255) COLLATE utf8_bin DEFAULT NULL,
+  `TEL_PORT` varchar(20) COLLATE utf8_bin DEFAULT NULL,
+  `ENC_PERSO_TEL` varchar(20) COLLATE utf8_bin DEFAULT NULL,
+  `ENC_UBO_TEL` varchar(20) COLLATE utf8_bin DEFAULT NULL,
+  `ENC_PERSO_EMAIL` varchar(255) COLLATE utf8_bin DEFAULT NULL,
+  `ENC_UBO_EMAIL` varchar(255) COLLATE utf8_bin DEFAULT NULL,
+  `INT_NO_INSEE` varchar(50) COLLATE utf8_bin DEFAULT NULL,
+  `INT_SOC_NOM` varchar(50) COLLATE utf8_bin DEFAULT NULL,
+  `INT_SOC_ADRESSE` varchar(255) COLLATE utf8_bin DEFAULT NULL,
+  `INT_SOC_CP` varchar(10) COLLATE utf8_bin DEFAULT NULL,
+  `INT_SOC_VILLE` varchar(255) COLLATE utf8_bin DEFAULT NULL,
+  `INT_SOC_PAYS` varchar(255) COLLATE utf8_bin DEFAULT NULL,
+  `INT_FONCTION` varchar(50) COLLATE utf8_bin DEFAULT NULL,
+  `INT_PROF_EMAIL` varchar(255) COLLATE utf8_bin DEFAULT NULL,
+  `INT_PROF_TEL` varchar(20) COLLATE utf8_bin DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
+
+
+--
+-- Structure de la table `entreprise`
+--
+
+CREATE TABLE IF NOT EXISTS `entreprise` (
+  `NO_ENTREPRISE` double DEFAULT NULL,
+  `REFERENCEE` varchar(1) COLLATE utf8_bin DEFAULT NULL,
+  `DATE_REFERENCEMENT` datetime DEFAULT NULL,
+  `LOGIN_CREA` varchar(8) COLLATE utf8_bin DEFAULT NULL,
+  `DATE_CREA` datetime DEFAULT NULL,
+  `NOM` varchar(100) COLLATE utf8_bin DEFAULT NULL,
+  `SIEGE_SOCIAL` varchar(100) COLLATE utf8_bin DEFAULT NULL,
+  `DOMAINE_ACTIVITE` varchar(5) COLLATE utf8_bin DEFAULT NULL,
+  `ADRESSE` varchar(255) COLLATE utf8_bin DEFAULT NULL,
+  `CP` varchar(10) COLLATE utf8_bin DEFAULT NULL,
+  `VILLE` varchar(100) COLLATE utf8_bin DEFAULT NULL,
+  `PAYS` varchar(100) COLLATE utf8_bin DEFAULT NULL,
+  `TEL` varchar(20) COLLATE utf8_bin DEFAULT NULL,
+  `SITE_INTERNET` varchar(150) COLLATE utf8_bin DEFAULT NULL,
+  `NOM_REPRESENTANT` varchar(50) COLLATE utf8_bin DEFAULT NULL,
+  `PRENOM_REPRESENTANT` varchar(50) COLLATE utf8_bin DEFAULT NULL,
+  `LOGIN_MAJ` varchar(8) COLLATE utf8_bin DEFAULT NULL,
+  `DATE_MAJ` datetime DEFAULT NULL,
+  `OFFRE_STAGE` varchar(1) COLLATE utf8_bin DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
+
+
+--
+-- Structure de la table `entreprise_jn`
+--
+
+CREATE TABLE IF NOT EXISTS `entreprise_jn` (
+  `JN_OPERATION` varchar(3) COLLATE utf8_bin DEFAULT NULL,
+  `JN_ORACLE_USER` varchar(30) COLLATE utf8_bin DEFAULT NULL,
+  `JN_DATETIME` datetime DEFAULT NULL,
+  `JN_NOTES` varchar(240) COLLATE utf8_bin DEFAULT NULL,
+  `JN_APPLN` varchar(35) COLLATE utf8_bin DEFAULT NULL,
+  `JN_SESSION` double DEFAULT NULL,
+  `NO_ENTREPRISE` double DEFAULT NULL,
+  `REFERENCEE` varchar(1) COLLATE utf8_bin DEFAULT NULL,
+  `DATE_REFERENCEMENT` datetime DEFAULT NULL,
+  `LOGIN_CREA` varchar(8) COLLATE utf8_bin DEFAULT NULL,
+  `DATE_CREA` datetime DEFAULT NULL,
+  `NOM` varchar(100) COLLATE utf8_bin DEFAULT NULL,
+  `SIEGE_SOCIAL` varchar(100) COLLATE utf8_bin DEFAULT NULL,
+  `DOMAINE_ACTIVITE` varchar(5) COLLATE utf8_bin DEFAULT NULL,
+  `ADRESSE` varchar(255) COLLATE utf8_bin DEFAULT NULL,
+  `CP` varchar(10) COLLATE utf8_bin DEFAULT NULL,
+  `VILLE` varchar(100) COLLATE utf8_bin DEFAULT NULL,
+  `PAYS` varchar(100) COLLATE utf8_bin DEFAULT NULL,
+  `TEL` varchar(20) COLLATE utf8_bin DEFAULT NULL,
+  `SITE_INTERNET` varchar(150) COLLATE utf8_bin DEFAULT NULL,
+  `NOM_REPRESENTANT` varchar(50) COLLATE utf8_bin DEFAULT NULL,
+  `PRENOM_REPRESENTANT` varchar(50) COLLATE utf8_bin DEFAULT NULL,
+  `LOGIN_MAJ` varchar(8) COLLATE utf8_bin DEFAULT NULL,
+  `DATE_MAJ` datetime DEFAULT NULL,
+  `OFFRE_STAGE` varchar(1) COLLATE utf8_bin DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
+
+
+--
+-- Structure de la table `etudiant`
+--
+
+CREATE TABLE IF NOT EXISTS `etudiant` (
+  `NO_ETUDIANT_NAT` varchar(50) COLLATE utf8_bin DEFAULT NULL,
+  `CODE_FORMATION` varchar(8) COLLATE utf8_bin DEFAULT NULL,
+  `ANNEE_PRO` varchar(10) COLLATE utf8_bin DEFAULT NULL,
+  `CODE_COM` varchar(10) COLLATE utf8_bin DEFAULT NULL,
+  `NO_ETUDIANT_UBO` varchar(20) COLLATE utf8_bin DEFAULT NULL,
+  `SEXE` varchar(1) COLLATE utf8_bin DEFAULT NULL,
+  `NOM` varchar(50) COLLATE utf8_bin DEFAULT NULL,
+  `PRENOM` varchar(50) COLLATE utf8_bin DEFAULT NULL,
+  `DATE_NAISSANCE` datetime DEFAULT NULL,
+  `LIEU_NAISSANCE` varchar(255) COLLATE utf8_bin DEFAULT NULL,
+  `SITUATION` varchar(3) COLLATE utf8_bin DEFAULT NULL,
+  `NATIONALITE` varchar(50) COLLATE utf8_bin DEFAULT NULL,
+  `TEL_PORT` varchar(20) COLLATE utf8_bin DEFAULT NULL,
+  `TEL_FIXE` varchar(20) COLLATE utf8_bin DEFAULT NULL,
+  `EMAIL` varchar(255) COLLATE utf8_bin DEFAULT NULL,
+  `ACTU_ADRESSE` varchar(255) COLLATE utf8_bin DEFAULT NULL,
+  `ACTU_CP` varchar(10) COLLATE utf8_bin DEFAULT NULL,
+  `ACTU_VILLE` varchar(255) COLLATE utf8_bin DEFAULT NULL,
+  `ACTU_PAYS` varchar(255) COLLATE utf8_bin DEFAULT NULL,
+  `PERM_ADRESSE` varchar(255) COLLATE utf8_bin DEFAULT NULL,
+  `PERM_CP` varchar(10) COLLATE utf8_bin DEFAULT NULL,
+  `PERM_VILLE` varchar(255) COLLATE utf8_bin DEFAULT NULL,
+  `PERM_PAYS` varchar(255) COLLATE utf8_bin DEFAULT NULL,
+  `DERNIER_DIPLOME` varchar(255) COLLATE utf8_bin DEFAULT NULL,
+  `UNIVERSITE` varchar(255) COLLATE utf8_bin DEFAULT NULL,
+  `SIGLE_ETU` varchar(3) COLLATE utf8_bin DEFAULT NULL,
+  `COMPTE_CRI` varchar(10) COLLATE utf8_bin DEFAULT NULL,
+  `UBO_EMAIL` varchar(255) COLLATE utf8_bin DEFAULT NULL,
+  `GRPE_ANGLAIS` decimal(1,0) DEFAULT NULL,
+  `ABANDON_MOTIF` varchar(255) COLLATE utf8_bin DEFAULT NULL,
+  `ABANDON_DATE` datetime DEFAULT NULL,
+  `EST_DIPLOME` varchar(1) COLLATE utf8_bin DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
+
+
+--
+-- Structure de la table `formation`
+--
+
+CREATE TABLE IF NOT EXISTS `formation` (
+  `CODE_FORMATION` varchar(8) COLLATE utf8_bin DEFAULT NULL,
+  `DIPLOME` varchar(3) COLLATE utf8_bin DEFAULT NULL,
+  `N0_ANNEE` decimal(1,0) DEFAULT NULL,
+  `NOM_FORMATION` varchar(64) COLLATE utf8_bin DEFAULT NULL,
+  `DOUBLE_DIPLOME` varchar(1) COLLATE utf8_bin DEFAULT NULL,
+  `DEBUT_HABILITATION` datetime DEFAULT NULL,
+  `FIN_HABILITATION` datetime DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
+
+
+--
+-- Structure de la table `poste_entreprise`
+--
+
+CREATE TABLE IF NOT EXISTS `poste_entreprise` (
+  `NO_ETUDIANT_NAT` varchar(50) COLLATE utf8_bin DEFAULT NULL,
+  `NO_ENTREPRISE` double DEFAULT NULL,
+  `FONCTION` varchar(5) COLLATE utf8_bin DEFAULT NULL,
+  `DATE_EMBAUCHE` datetime DEFAULT NULL,
+  `MOYEN_OBTENTION` varchar(3) COLLATE utf8_bin DEFAULT NULL,
+  `SERVICE` varchar(5) COLLATE utf8_bin DEFAULT NULL,
+  `BRUT_ANNUEL` decimal(7,0) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
+
+
+--
+-- Structure de la table `promotion`
+--
+
+CREATE TABLE IF NOT EXISTS `promotion` (
+  `CODE_FORMATION` varchar(8) COLLATE utf8_bin DEFAULT NULL,
+  `ANNEE_PRO` varchar(10) COLLATE utf8_bin DEFAULT NULL,
+  `NO_ENSEIGNANT` decimal(5,0) DEFAULT NULL,
+  `SIGLE_PRO` varchar(5) COLLATE utf8_bin DEFAULT NULL,
+  `NB_ETU_SOUHAITE` decimal(3,0) DEFAULT NULL,
+  `ETAT_PRESELECTION` varchar(3) COLLATE utf8_bin DEFAULT NULL,
+  `DATE_RENTREE` datetime DEFAULT NULL,
+  `LIEU_RENTREE` varchar(255) COLLATE utf8_bin DEFAULT NULL,
+  `DATE_REPONSE_LP` datetime DEFAULT NULL,
+  `COMMENTAIRE` varchar(255) COLLATE utf8_bin DEFAULT NULL,
+  `DATE_REPONSE_LALP` datetime DEFAULT NULL,
+  `PROCESSUS_STAGE` varchar(5) COLLATE utf8_bin DEFAULT NULL,
+  `NO_EVALUATION` double DEFAULT NULL,
+  `NO_BAREME` double DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
+
+--
+-- Structure de la table `unite_enseignement`
+--
+
+CREATE TABLE IF NOT EXISTS `unite_enseignement` (
+  `CODE_FORMATION` varchar(8) COLLATE utf8_bin DEFAULT NULL,
+  `CODE_UE` varchar(8) COLLATE utf8_bin DEFAULT NULL,
+  `NO_ENSEIGNANT` decimal(5,0) DEFAULT NULL,
+  `DESIGNATION` varchar(64) COLLATE utf8_bin DEFAULT NULL,
+  `SEMESTRE` varchar(3) COLLATE utf8_bin DEFAULT NULL,
+  `DESCRIPTION` varchar(256) COLLATE utf8_bin DEFAULT NULL,
+  `NBH_CM` double DEFAULT NULL,
+  `NBH_TD` decimal(2,0) DEFAULT NULL,
+  `NBH_TP` decimal(2,0) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
+

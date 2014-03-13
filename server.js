@@ -1,11 +1,11 @@
 // Chargement de modules utilisés. 
 var express = require('express')
-  ,path = require('path')
-  ,app = express()
+  , path = require('path')
+  , app = express()
+  , mysql      = require('mysql')
   , accueil = require('./routes/accueil')  // routes par defaut
-  , eval = require('./routes/eval') // eval
-  , Afficher = require('./routes/accueil');
- 
+  , eval = require('./routes/eval')
+  , evalDao = require('./dao/evalDao'); // eval
  
 // les vues seront placées dans le répertoire views
 app.set('views', __dirname + '/views');
@@ -31,58 +31,88 @@ app.configure(function(){
 
 
 
-// la liste des evaluations -- Définie dans routes/eval.js
-
-app.get('/eval/liste', eval.listeEvaluation);
-app.get('/index', accueil.index);
-app.post('/eval/edit/:titre', eval.NouvelleEvaluation);
-
-// Paramètres de connexion à la base de données
-module.exports = require('./lib/oracle');
-
-var oracle = require('./lib/oracle');
-var Enseignants = {};
-var connectData = {
-    hostname: "localhost",
-    port: 1521,
-    database: "xe", // System ID (SID)
-    user: "nodejs",
-    password: "12345"
-}
-
-
-
-oracle.connect(connectData, function(err, connection) {
-    if (err) { console.log("Error connecting to db:", err); return; }
-// Execution d'une requete et affichage du résultat dans les logs
-    connection.execute("select EVE_ANNEE_PRO,FRM_NOM_FORMATION FROM V_EVALUATION", [], function(err, results) {
-        if (err) { console.log("Error executing query:", err); return; }
-        accueil.afficher(results);
-		// Affiche le premier nom récupèré depuis la base de données 
-		// results[0].nom donne Clochette
-		Enseignants = results[0].FRM_NOM_FORMATION ;
-		console.log("-------------------------");
-		console.log(Enseignants);		
-        connection.close(); // call only when query is finished executing
+var connection = mysql.createConnection({
+        host     : 'localhost',
+        user     : 'root',
+        password : ''
     });
+ 
+var Enseignant1 ={};
+var Enseignant2 ={};
+var Enseignant3 ={};
+ 
+connection.query('CREATE DATABASE IF NOT EXISTS evaespi', function (err) {
+    if (err) throw err;
+    connection.query('USE evaespi', function (err) {
+        if (err) throw err;
+        
+			
+			
+    connection.query("SELECT * from ENSEIGNANT", function(err, rows){
+        // There was a error or not?
+        if(err != null) {
+            res.end("Query error:" + err);
+        } else {
+		
+            // Shows the result on console window
+            console.log(rows[0].NOM+' '+rows[0].PRENOM);
+			console.log(rows[1].NOM);
+			console.log(rows[2].NOM);
+			console.log(rows[3].NOM);
+			
+        Enseignant1= rows[0].PRENOM+' '+rows[0].NOM;
+		Enseignant2= rows[1].PRENOM+' '+rows[1].NOM;
+		Enseignant3= rows[2].PRENOM+' '+rows[2].NOM;
+		Enseignant4= rows[3].PRENOM+' '+rows[3].NOM;
+		
+		
+        }
+			
+    });
+});
 
-	
-	app.get('/', function(req, res){
+// Database setup
 
-    var data = {
-	// Affichage du nom de la formation à partir de la BDD 
-        title: Enseignants,
-        body: "Hello World using handlebars depuis server.js !"
+
+
+app.get('/handlebars', eval.testerHandlebars);
+app.get('/eval/edit/:titre', eval.NouvelleEvaluationParams);
+app.post('/eval/editEvaluation/', eval.NouvelleEvaluationData);
+app.get('/eval/liste', evalDao.listeEvaluation);
+app.get('/index', accueil.index);
+
+
+app.get('/', function(req, res) {
+
+var data = {
+        Enseignant1: Enseignant1,
+		Enseignant2: Enseignant2,
+		Enseignant3: Enseignant3,
+		Enseignant4: Enseignant4
+        
+		//type: rubriques[0].type;
+		//designation:
     }
+
+
+    res.render('login.hbs',data);
 	
-    res.render('index.hbs', data);
-
-    //Tell Express to render views/index.html
-    //res.render('index.html', data);
-
-});
 	
 });
+
+
+
+app.get('/eval/listeRubrique/', eval.listeRubrique);
+app.get('/eval/listeRubriqueEvaluation/', eval.listeRubriqueEvaluation);
+//app.post('/eval/editRubrique/', eval.NouvelleRubrique);
+app.get('/eval/injecterEvaluation', eval.InjecterNouvelleEvaluation);
+app.get('/ajouterEval', eval.ajouterEval);
+app.get('/listeEval', eval.listeEvaluation);
+
+
+
 
 app.listen(9090);
 console.log('Server running at http://127.0.0.1:9090/');
+
+});
